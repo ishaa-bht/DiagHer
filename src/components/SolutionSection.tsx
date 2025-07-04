@@ -30,7 +30,7 @@ const SolutionSection: React.FC<SolutionSectionProps> = () => {
       icon: CheckCircle,
       title: 'Safe Treatment',
       description: 'Analyzes prescribed medications for women-specific side effects and suggests safer alternatives with transparent risk analysis.',
-      image: 'src/assets/treatment.jpg',
+      image: 'src/assets/treatment(1).jpg',
       color: 'emerald-600',
       alert: 'Safer Alternative Found'
     }
