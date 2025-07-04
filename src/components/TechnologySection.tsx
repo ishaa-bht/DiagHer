@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Brain, TrendingUp, Users, Sparkles } from 'lucide-react';
 
 interface TechnologySectionProps {
@@ -7,6 +7,27 @@ interface TechnologySectionProps {
 
 const TechnologySection: React.FC<TechnologySectionProps> = ({ scrollY }) => {
   const baseScroll = scrollY - 2200;
+
+  // Float animation state
+  const [floatY, setFloatY] = useState(0);
+
+  useEffect(() => {
+    let frame: number;
+    let start: number;
+
+    const animate = (time: number) => {
+      if (!start) start = time;
+      const elapsed = time - start;
+
+      // Looping sine wave for float effect
+      setFloatY(Math.sin(elapsed * 0.002) * 5); // ±5px float
+
+      frame = requestAnimationFrame(animate);
+    };
+
+    frame = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(frame);
+  }, []);
 
   return (
     <section
@@ -93,13 +114,13 @@ const TechnologySection: React.FC<TechnologySectionProps> = ({ scrollY }) => {
                   backgroundPosition: 'center 30%'
                 }}
               ></div>
-              
+
               {/* Scroll Zoom Parallax Layer 1 - second.png */}
               <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-300 pointer-events-none"
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 ease-out pointer-events-none"
                 style={{
                   backgroundImage: `url('src/assets/second.png')`,
-                  transform: `scale(${Math.max(0, baseScroll * 0.002)})`,
+                  transform: `scale(${Math.max(1, 1.2 - baseScroll * 0.0003)}) translateY(${floatY}px)`,
                   transformOrigin: 'center center',
                   backgroundPosition: 'center center',
                   backgroundSize: 'cover',
@@ -109,17 +130,17 @@ const TechnologySection: React.FC<TechnologySectionProps> = ({ scrollY }) => {
               
               {/* Scroll Zoom Parallax Layer 2 - third.png */}
               <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-300 pointer-events-none"
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 ease-out pointer-events-none"
                 style={{
                   backgroundImage: `url('src/assets/third.png')`,
-                  transform: `scale(${Math.max(0, baseScroll * 0.003)})`,
+                  transform: `scale(${Math.max(1, 1.3 - baseScroll * 0.0004)}) translateY(${-floatY}px)`,
                   transformOrigin: 'center center',
                   backgroundPosition: 'center center',
                   backgroundSize: 'cover',
                   opacity: 0.7
                 }}
               ></div>
-              
+
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
             </div>
 
