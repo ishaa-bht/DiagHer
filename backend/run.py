@@ -88,7 +88,7 @@ def create_app(config_name='default'):
 
     return app
 
-# ✅ Create and run the app only if executed directly
+# Create and run the app only if executed directly
 if __name__ == '__main__':
     app = create_app()
     app.run(debug=True)

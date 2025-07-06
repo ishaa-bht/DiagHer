@@ -17,3 +17,33 @@
 2025-07-06 08:32:04,415 - root - INFO - Diagnosis model loaded successfully
 2025-07-06 08:32:04,434 - root - INFO - Generated 1 diagnosis predictions
 2025-07-06 08:32:04,434 - root - INFO - Diagnosis prediction made for Female, age 30
+2025-07-06 08:46:00,767 - root - INFO - Starting DiagHer app with default config
+2025-07-06 08:46:01,880 - root - INFO - Starting DiagHer app with default config
+2025-07-06 08:46:01,899 - werkzeug - WARNING -  * Debugger is active!
+2025-07-06 08:47:22,359 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-06 08:47:23,523 - root - INFO - Model loaded from ml/models\diagnosis_model.pkl
+2025-07-06 08:47:23,528 - root - INFO - Model loaded from ml/models\diagnosis_scaler.pkl
+2025-07-06 08:47:23,528 - root - INFO - Model loaded from ml/models\diagnosis_encoder.pkl
+2025-07-06 08:47:23,528 - root - INFO - Model loaded from ml/models\diagnosis_features.pkl
+2025-07-06 08:47:23,528 - root - INFO - Diagnosis model loaded successfully
+2025-07-06 08:47:23,536 - root - INFO - Generated 1 diagnosis predictions
+2025-07-06 08:47:23,541 - root - ERROR - Error in diagnosis endpoint: tuple indices must be integers or slices, not str
+2025-07-06 08:47:39,172 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-06 08:47:39,181 - root - INFO - Generated 1 diagnosis predictions
+2025-07-06 08:47:39,181 - root - ERROR - Error in diagnosis endpoint: tuple indices must be integers or slices, not str
+2025-07-06 08:48:17,952 - root - INFO - Starting DiagHer app with default config
+2025-07-06 08:48:17,964 - werkzeug - WARNING -  * Debugger is active!
+2025-07-06 08:49:53,670 - root - INFO - Starting DiagHer app with default config
+2025-07-06 08:49:53,691 - werkzeug - WARNING -  * Debugger is active!
+2025-07-06 08:49:57,357 - root - INFO - Starting DiagHer app with default config
+2025-07-06 08:49:57,375 - werkzeug - WARNING -  * Debugger is active!
+2025-07-06 08:50:10,696 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-06 08:50:10,696 - root - INFO - Received data: {'age': 30, 'gender': 'Female', 'symptoms': {'pelvic_pain': 1, 'heavy_periods': 0, 'painful_periods': 0, 'fatigue': 1, 'nausea': 1, 'irregular_periods': 0}}
+2025-07-06 08:50:11,625 - root - INFO - Model loaded from ml/models\diagnosis_model.pkl
+2025-07-06 08:50:11,625 - root - INFO - Model loaded from ml/models\diagnosis_scaler.pkl
+2025-07-06 08:50:11,625 - root - INFO - Model loaded from ml/models\diagnosis_encoder.pkl
+2025-07-06 08:50:11,625 - root - INFO - Model loaded from ml/models\diagnosis_features.pkl
+2025-07-06 08:50:11,625 - root - INFO - Diagnosis model loaded successfully
+2025-07-06 08:50:11,625 - root - INFO - Generated 1 diagnosis predictions
+2025-07-06 08:50:11,625 - root - INFO - Predictions: [('Healthy', np.float64(0.8280618168517795))]
+2025-07-06 08:50:11,625 - root - INFO - Diagnosis prediction made for Female, age 30
