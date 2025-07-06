@@ -1,0 +1,29 @@
+{
+  "trained_date": "2025-07-06T08:00:15.463230",
+  "feature_count": 97,
+  "class_count": 22,
+  "classes": [
+    "Adrenal_Fatigue",
+    "Anemia",
+    "Autoimmune_Thyroiditis",
+    "Celiac_Disease",
+    "Chronic_Fatigue_Syndrome",
+    "Ehlers_Danlos_Syndrome",
+    "Endometriosis",
+    "Female_Heart_Disease",
+    "Fibromyalgia",
+    "Healthy",
+    "Hypothyroidism",
+    "Irritable_Bowel_Syndrome",
+    "Lupus",
+    "Menopause_Perimenopause",
+    "Migraine",
+    "Multiple_Sclerosis",
+    "Osteoporosis",
+    "PCOS",
+    "Parkinsons_Disease",
+    "Restless_Leg_Syndrome",
+    "Sleep_Apnea",
+    "UTI"
+  ]
+}

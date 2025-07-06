@@ -1,0 +1,19 @@
+2025-07-06 08:05:15,465 - root - INFO - Starting DiagHer app with default config
+2025-07-06 08:05:16,519 - root - INFO - Starting DiagHer app with default config
+2025-07-06 08:05:16,527 - werkzeug - WARNING -  * Debugger is active!
+2025-07-06 08:07:53,218 - root - INFO - Starting DiagHer app with default config
+2025-07-06 08:08:03,007 - root - INFO - Starting DiagHer app with default config
+2025-07-06 08:27:39,158 - root - INFO - Starting DiagHer app with default config
+2025-07-06 08:27:40,150 - root - INFO - Starting DiagHer app with default config
+2025-07-06 08:27:40,176 - werkzeug - WARNING -  * Debugger is active!
+2025-07-06 08:30:37,042 - root - INFO - Starting DiagHer app with default config
+2025-07-06 08:30:38,027 - root - INFO - Starting DiagHer app with default config
+2025-07-06 08:30:38,054 - werkzeug - WARNING -  * Debugger is active!
+2025-07-06 08:32:00,296 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-06 08:32:04,398 - root - INFO - Model loaded from ml/models\diagnosis_model.pkl
+2025-07-06 08:32:04,406 - root - INFO - Model loaded from ml/models\diagnosis_scaler.pkl
+2025-07-06 08:32:04,406 - root - INFO - Model loaded from ml/models\diagnosis_encoder.pkl
+2025-07-06 08:32:04,412 - root - INFO - Model loaded from ml/models\diagnosis_features.pkl
+2025-07-06 08:32:04,415 - root - INFO - Diagnosis model loaded successfully
+2025-07-06 08:32:04,434 - root - INFO - Generated 1 diagnosis predictions
+2025-07-06 08:32:04,434 - root - INFO - Diagnosis prediction made for Female, age 30
