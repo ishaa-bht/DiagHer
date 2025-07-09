@@ -1,0 +1,1273 @@
+drug_name,side_effect,gender_specific,severity,age_group,frequency_in_females,category,risk_level,requires_monitoring,safer_alternative,pregnancy_risk,breastfeeding_risk
+ACE_Inhibitors,dry_cough,General,Mild,18-30,Rare,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Unknown,Low
+ACE_Inhibitors,dizziness,General,Mild,18-30,Rare,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Medium,High
+ACE_Inhibitors,fatigue,General,Mild,18-30,Frequent,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Unknown,High
+ACE_Inhibitors,angioedema_higher_risk,Female_Specific,Mild,18-30,Frequent,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Medium,Medium
+ACE_Inhibitors,cough_3x_more_common,Female_Specific,Mild,18-30,Common,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Medium,Medium
+ACE_Inhibitors,dry_cough,General,Moderate,18-30,Common,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Medium,High
+ACE_Inhibitors,dizziness,General,Moderate,18-30,Common,Cardiovascular,Higher,No,ARBs (Angiotensin Receptor Blockers),High,Medium
+ACE_Inhibitors,fatigue,General,Moderate,18-30,Common,Cardiovascular,Higher,No,ARBs (Angiotensin Receptor Blockers),Unknown,Medium
+ACE_Inhibitors,angioedema_higher_risk,Female_Specific,Moderate,18-30,Frequent,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),High,High
+ACE_Inhibitors,cough_3x_more_common,Female_Specific,Moderate,18-30,Common,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Medium,High
+ACE_Inhibitors,dry_cough,General,Severe,18-30,Common,Cardiovascular,Higher,No,ARBs (Angiotensin Receptor Blockers),High,Unknown
+ACE_Inhibitors,dizziness,General,Severe,18-30,Rare,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Low,Unknown
+ACE_Inhibitors,fatigue,General,Severe,18-30,Rare,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Unknown,Low
+ACE_Inhibitors,angioedema_higher_risk,Female_Specific,Severe,18-30,Frequent,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),High,Medium
+ACE_Inhibitors,cough_3x_more_common,Female_Specific,Severe,18-30,Frequent,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),High,Medium
+ACE_Inhibitors,dry_cough,General,Mild,31-45,Frequent,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Medium,High
+ACE_Inhibitors,dizziness,General,Mild,31-45,Common,Cardiovascular,Higher,No,ARBs (Angiotensin Receptor Blockers),Low,Unknown
+ACE_Inhibitors,fatigue,General,Mild,31-45,Frequent,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Low,Low
+ACE_Inhibitors,angioedema_higher_risk,Female_Specific,Mild,31-45,Frequent,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Medium,Medium
+ACE_Inhibitors,cough_3x_more_common,Female_Specific,Mild,31-45,Common,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Medium,High
+ACE_Inhibitors,dry_cough,General,Moderate,31-45,Frequent,Cardiovascular,Higher,No,ARBs (Angiotensin Receptor Blockers),Low,High
+ACE_Inhibitors,dizziness,General,Moderate,31-45,Frequent,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Low,Unknown
+ACE_Inhibitors,fatigue,General,Moderate,31-45,Rare,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),High,Medium
+ACE_Inhibitors,angioedema_higher_risk,Female_Specific,Moderate,31-45,Frequent,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),High,Medium
+ACE_Inhibitors,cough_3x_more_common,Female_Specific,Moderate,31-45,Frequent,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),High,High
+ACE_Inhibitors,dry_cough,General,Severe,31-45,Frequent,Cardiovascular,Higher,No,ARBs (Angiotensin Receptor Blockers),High,Low
+ACE_Inhibitors,dizziness,General,Severe,31-45,Rare,Cardiovascular,Higher,No,ARBs (Angiotensin Receptor Blockers),High,Unknown
+ACE_Inhibitors,fatigue,General,Severe,31-45,Frequent,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),High,High
+ACE_Inhibitors,angioedema_higher_risk,Female_Specific,Severe,31-45,Frequent,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),High,High
+ACE_Inhibitors,cough_3x_more_common,Female_Specific,Severe,31-45,Frequent,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),High,Medium
+ACE_Inhibitors,dry_cough,General,Mild,46-60,Frequent,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Medium,Medium
+ACE_Inhibitors,dizziness,General,Mild,46-60,Rare,Cardiovascular,Higher,No,ARBs (Angiotensin Receptor Blockers),Medium,Low
+ACE_Inhibitors,fatigue,General,Mild,46-60,Common,Cardiovascular,Higher,No,ARBs (Angiotensin Receptor Blockers),Unknown,High
+ACE_Inhibitors,angioedema_higher_risk,Female_Specific,Mild,46-60,Common,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Medium,Medium
+ACE_Inhibitors,cough_3x_more_common,Female_Specific,Mild,46-60,Frequent,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),High,Medium
+ACE_Inhibitors,dry_cough,General,Moderate,46-60,Rare,Cardiovascular,Higher,No,ARBs (Angiotensin Receptor Blockers),High,Unknown
+ACE_Inhibitors,dizziness,General,Moderate,46-60,Rare,Cardiovascular,Higher,No,ARBs (Angiotensin Receptor Blockers),High,Unknown
+ACE_Inhibitors,fatigue,General,Moderate,46-60,Frequent,Cardiovascular,Higher,No,ARBs (Angiotensin Receptor Blockers),High,High
+ACE_Inhibitors,angioedema_higher_risk,Female_Specific,Moderate,46-60,Common,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Medium,Medium
+ACE_Inhibitors,cough_3x_more_common,Female_Specific,Moderate,46-60,Common,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Medium,High
+ACE_Inhibitors,dry_cough,General,Severe,46-60,Common,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Unknown,Low
+ACE_Inhibitors,dizziness,General,Severe,46-60,Rare,Cardiovascular,Higher,No,ARBs (Angiotensin Receptor Blockers),High,Unknown
+ACE_Inhibitors,fatigue,General,Severe,46-60,Common,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Medium,Unknown
+ACE_Inhibitors,angioedema_higher_risk,Female_Specific,Severe,46-60,Frequent,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),High,Medium
+ACE_Inhibitors,cough_3x_more_common,Female_Specific,Severe,46-60,Common,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),High,High
+ACE_Inhibitors,dry_cough,General,Mild,60+,Frequent,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Low,High
+ACE_Inhibitors,dizziness,General,Mild,60+,Rare,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Unknown,Unknown
+ACE_Inhibitors,fatigue,General,Mild,60+,Rare,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Unknown,Unknown
+ACE_Inhibitors,angioedema_higher_risk,Female_Specific,Mild,60+,Frequent,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Medium,High
+ACE_Inhibitors,cough_3x_more_common,Female_Specific,Mild,60+,Frequent,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),High,Medium
+ACE_Inhibitors,dry_cough,General,Moderate,60+,Rare,Cardiovascular,Higher,No,ARBs (Angiotensin Receptor Blockers),Unknown,Low
+ACE_Inhibitors,dizziness,General,Moderate,60+,Frequent,Cardiovascular,Higher,No,ARBs (Angiotensin Receptor Blockers),High,Unknown
+ACE_Inhibitors,fatigue,General,Moderate,60+,Rare,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Low,Medium
+ACE_Inhibitors,angioedema_higher_risk,Female_Specific,Moderate,60+,Frequent,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Medium,High
+ACE_Inhibitors,cough_3x_more_common,Female_Specific,Moderate,60+,Common,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),High,Medium
+ACE_Inhibitors,dry_cough,General,Severe,60+,Common,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Unknown,Low
+ACE_Inhibitors,dizziness,General,Severe,60+,Rare,Cardiovascular,Higher,No,ARBs (Angiotensin Receptor Blockers),Unknown,Unknown
+ACE_Inhibitors,fatigue,General,Severe,60+,Frequent,Cardiovascular,Higher,No,ARBs (Angiotensin Receptor Blockers),Unknown,Unknown
+ACE_Inhibitors,angioedema_higher_risk,Female_Specific,Severe,60+,Frequent,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),Medium,High
+ACE_Inhibitors,cough_3x_more_common,Female_Specific,Severe,60+,Frequent,Cardiovascular,Higher,Yes,ARBs (Angiotensin Receptor Blockers),High,Medium
+Beta_Blockers,fatigue,General,Mild,18-30,Frequent,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Low,Medium
+Beta_Blockers,dizziness,General,Mild,18-30,Common,Cardiovascular,Higher,No,Calcium Channel Blockers,High,High
+Beta_Blockers,cold_hands,General,Mild,18-30,Rare,Cardiovascular,Higher,No,Calcium Channel Blockers,High,Medium
+Beta_Blockers,depression_risk,Female_Specific,Mild,18-30,Frequent,Cardiovascular,Higher,Yes,Calcium Channel Blockers,High,High
+Beta_Blockers,weight_gain,Female_Specific,Mild,18-30,Common,Cardiovascular,Higher,Yes,Calcium Channel Blockers,High,High
+Beta_Blockers,hair_loss,Female_Specific,Mild,18-30,Common,Cardiovascular,Higher,Yes,Calcium Channel Blockers,High,Medium
+Beta_Blockers,fatigue,General,Moderate,18-30,Common,Cardiovascular,Higher,Yes,Calcium Channel Blockers,High,High
+Beta_Blockers,dizziness,General,Moderate,18-30,Common,Cardiovascular,Higher,No,Calcium Channel Blockers,High,Medium
+Beta_Blockers,cold_hands,General,Moderate,18-30,Frequent,Cardiovascular,Higher,No,Calcium Channel Blockers,Medium,High
+Beta_Blockers,depression_risk,Female_Specific,Moderate,18-30,Frequent,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Medium,Medium
+Beta_Blockers,weight_gain,Female_Specific,Moderate,18-30,Common,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Medium,Medium
+Beta_Blockers,hair_loss,Female_Specific,Moderate,18-30,Common,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Medium,High
+Beta_Blockers,fatigue,General,Severe,18-30,Common,Cardiovascular,Higher,No,Calcium Channel Blockers,High,Unknown
+Beta_Blockers,dizziness,General,Severe,18-30,Common,Cardiovascular,Higher,No,Calcium Channel Blockers,Unknown,Low
+Beta_Blockers,cold_hands,General,Severe,18-30,Frequent,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Low,Unknown
+Beta_Blockers,depression_risk,Female_Specific,Severe,18-30,Frequent,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Medium,Medium
+Beta_Blockers,weight_gain,Female_Specific,Severe,18-30,Common,Cardiovascular,Higher,Yes,Calcium Channel Blockers,High,Medium
+Beta_Blockers,hair_loss,Female_Specific,Severe,18-30,Frequent,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Medium,High
+Beta_Blockers,fatigue,General,Mild,31-45,Frequent,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Unknown,Unknown
+Beta_Blockers,dizziness,General,Mild,31-45,Common,Cardiovascular,Higher,No,Calcium Channel Blockers,High,High
+Beta_Blockers,cold_hands,General,Mild,31-45,Common,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Low,Low
+Beta_Blockers,depression_risk,Female_Specific,Mild,31-45,Frequent,Cardiovascular,Higher,Yes,Calcium Channel Blockers,High,High
+Beta_Blockers,weight_gain,Female_Specific,Mild,31-45,Frequent,Cardiovascular,Higher,Yes,Calcium Channel Blockers,High,Medium
+Beta_Blockers,hair_loss,Female_Specific,Mild,31-45,Frequent,Cardiovascular,Higher,Yes,Calcium Channel Blockers,High,Medium
+Beta_Blockers,fatigue,General,Moderate,31-45,Frequent,Cardiovascular,Higher,Yes,Calcium Channel Blockers,High,High
+Beta_Blockers,dizziness,General,Moderate,31-45,Frequent,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Low,High
+Beta_Blockers,cold_hands,General,Moderate,31-45,Frequent,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Unknown,Low
+Beta_Blockers,depression_risk,Female_Specific,Moderate,31-45,Common,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Medium,High
+Beta_Blockers,weight_gain,Female_Specific,Moderate,31-45,Frequent,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Medium,Medium
+Beta_Blockers,hair_loss,Female_Specific,Moderate,31-45,Common,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Medium,High
+Beta_Blockers,fatigue,General,Severe,31-45,Frequent,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Low,Medium
+Beta_Blockers,dizziness,General,Severe,31-45,Frequent,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Unknown,Low
+Beta_Blockers,cold_hands,General,Severe,31-45,Rare,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Medium,Low
+Beta_Blockers,depression_risk,Female_Specific,Severe,31-45,Frequent,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Medium,High
+Beta_Blockers,weight_gain,Female_Specific,Severe,31-45,Frequent,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Medium,Medium
+Beta_Blockers,hair_loss,Female_Specific,Severe,31-45,Common,Cardiovascular,Higher,Yes,Calcium Channel Blockers,High,Medium
+Beta_Blockers,fatigue,General,Mild,46-60,Frequent,Cardiovascular,Higher,No,Calcium Channel Blockers,Unknown,Low
+Beta_Blockers,dizziness,General,Mild,46-60,Common,Cardiovascular,Higher,No,Calcium Channel Blockers,Medium,Unknown
+Beta_Blockers,cold_hands,General,Mild,46-60,Frequent,Cardiovascular,Higher,Yes,Calcium Channel Blockers,High,High
+Beta_Blockers,depression_risk,Female_Specific,Mild,46-60,Common,Cardiovascular,Higher,Yes,Calcium Channel Blockers,High,Medium
+Beta_Blockers,weight_gain,Female_Specific,Mild,46-60,Common,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Medium,High
+Beta_Blockers,hair_loss,Female_Specific,Mild,46-60,Frequent,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Medium,High
+Beta_Blockers,fatigue,General,Moderate,46-60,Frequent,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Unknown,Low
+Beta_Blockers,dizziness,General,Moderate,46-60,Rare,Cardiovascular,Higher,Yes,Calcium Channel Blockers,High,High
+Beta_Blockers,cold_hands,General,Moderate,46-60,Rare,Cardiovascular,Higher,Yes,Calcium Channel Blockers,High,Unknown
+Beta_Blockers,depression_risk,Female_Specific,Moderate,46-60,Common,Cardiovascular,Higher,Yes,Calcium Channel Blockers,High,Medium
+Beta_Blockers,weight_gain,Female_Specific,Moderate,46-60,Common,Cardiovascular,Higher,Yes,Calcium Channel Blockers,High,Medium
+Beta_Blockers,hair_loss,Female_Specific,Moderate,46-60,Common,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Medium,Medium
+Beta_Blockers,fatigue,General,Severe,46-60,Rare,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Unknown,High
+Beta_Blockers,dizziness,General,Severe,46-60,Frequent,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Low,Medium
+Beta_Blockers,cold_hands,General,Severe,46-60,Rare,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Unknown,Medium
+Beta_Blockers,depression_risk,Female_Specific,Severe,46-60,Common,Cardiovascular,Higher,Yes,Calcium Channel Blockers,High,High
+Beta_Blockers,weight_gain,Female_Specific,Severe,46-60,Common,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Medium,Medium
+Beta_Blockers,hair_loss,Female_Specific,Severe,46-60,Common,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Medium,High
+Beta_Blockers,fatigue,General,Mild,60+,Frequent,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Unknown,Low
+Beta_Blockers,dizziness,General,Mild,60+,Rare,Cardiovascular,Higher,No,Calcium Channel Blockers,Unknown,Low
+Beta_Blockers,cold_hands,General,Mild,60+,Frequent,Cardiovascular,Higher,No,Calcium Channel Blockers,Unknown,Medium
+Beta_Blockers,depression_risk,Female_Specific,Mild,60+,Common,Cardiovascular,Higher,Yes,Calcium Channel Blockers,High,High
+Beta_Blockers,weight_gain,Female_Specific,Mild,60+,Common,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Medium,Medium
+Beta_Blockers,hair_loss,Female_Specific,Mild,60+,Common,Cardiovascular,Higher,Yes,Calcium Channel Blockers,High,High
+Beta_Blockers,fatigue,General,Moderate,60+,Common,Cardiovascular,Higher,No,Calcium Channel Blockers,Low,Low
+Beta_Blockers,dizziness,General,Moderate,60+,Rare,Cardiovascular,Higher,Yes,Calcium Channel Blockers,High,Medium
+Beta_Blockers,cold_hands,General,Moderate,60+,Frequent,Cardiovascular,Higher,Yes,Calcium Channel Blockers,High,Unknown
+Beta_Blockers,depression_risk,Female_Specific,Moderate,60+,Common,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Medium,High
+Beta_Blockers,weight_gain,Female_Specific,Moderate,60+,Common,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Medium,Medium
+Beta_Blockers,hair_loss,Female_Specific,Moderate,60+,Common,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Medium,High
+Beta_Blockers,fatigue,General,Severe,60+,Common,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Low,High
+Beta_Blockers,dizziness,General,Severe,60+,Rare,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Medium,High
+Beta_Blockers,cold_hands,General,Severe,60+,Frequent,Cardiovascular,Higher,Yes,Calcium Channel Blockers,Medium,Low
+Beta_Blockers,depression_risk,Female_Specific,Severe,60+,Frequent,Cardiovascular,Higher,Yes,Calcium Channel Blockers,High,High
+Beta_Blockers,weight_gain,Female_Specific,Severe,60+,Frequent,Cardiovascular,Higher,Yes,Calcium Channel Blockers,High,Medium
+Beta_Blockers,hair_loss,Female_Specific,Severe,60+,Common,Cardiovascular,Higher,Yes,Calcium Channel Blockers,High,High
+Calcium_Channel_Blockers,ankle_swelling,General,Mild,18-30,Frequent,Cardiovascular,Higher,Yes,Consult physician for alternatives,Medium,High
+Calcium_Channel_Blockers,flushing,General,Mild,18-30,Rare,Cardiovascular,Higher,Yes,Consult physician for alternatives,Unknown,Low
+Calcium_Channel_Blockers,headache,General,Mild,18-30,Frequent,Cardiovascular,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Calcium_Channel_Blockers,gum_swelling_more_common,Female_Specific,Mild,18-30,Common,Cardiovascular,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Calcium_Channel_Blockers,ankle_edema_2x_risk,Female_Specific,Mild,18-30,Common,Cardiovascular,Higher,Yes,Consult physician for alternatives,Medium,High
+Calcium_Channel_Blockers,ankle_swelling,General,Moderate,18-30,Rare,Cardiovascular,Higher,No,Consult physician for alternatives,Medium,High
+Calcium_Channel_Blockers,flushing,General,Moderate,18-30,Common,Cardiovascular,Higher,No,Consult physician for alternatives,High,Medium
+Calcium_Channel_Blockers,headache,General,Moderate,18-30,Common,Cardiovascular,Higher,Yes,Consult physician for alternatives,Unknown,Unknown
+Calcium_Channel_Blockers,gum_swelling_more_common,Female_Specific,Moderate,18-30,Common,Cardiovascular,Higher,Yes,Consult physician for alternatives,High,High
+Calcium_Channel_Blockers,ankle_edema_2x_risk,Female_Specific,Moderate,18-30,Frequent,Cardiovascular,Higher,Yes,Consult physician for alternatives,High,High
+Calcium_Channel_Blockers,ankle_swelling,General,Severe,18-30,Rare,Cardiovascular,Higher,Yes,Consult physician for alternatives,Medium,Low
+Calcium_Channel_Blockers,flushing,General,Severe,18-30,Rare,Cardiovascular,Higher,No,Consult physician for alternatives,High,Medium
+Calcium_Channel_Blockers,headache,General,Severe,18-30,Common,Cardiovascular,Higher,Yes,Consult physician for alternatives,Unknown,Low
+Calcium_Channel_Blockers,gum_swelling_more_common,Female_Specific,Severe,18-30,Common,Cardiovascular,Higher,Yes,Consult physician for alternatives,High,Medium
+Calcium_Channel_Blockers,ankle_edema_2x_risk,Female_Specific,Severe,18-30,Frequent,Cardiovascular,Higher,Yes,Consult physician for alternatives,Medium,High
+Calcium_Channel_Blockers,ankle_swelling,General,Mild,31-45,Rare,Cardiovascular,Higher,No,Consult physician for alternatives,Medium,Low
+Calcium_Channel_Blockers,flushing,General,Mild,31-45,Rare,Cardiovascular,Higher,No,Consult physician for alternatives,Unknown,Medium
+Calcium_Channel_Blockers,headache,General,Mild,31-45,Common,Cardiovascular,Higher,No,Consult physician for alternatives,Medium,High
+Calcium_Channel_Blockers,gum_swelling_more_common,Female_Specific,Mild,31-45,Common,Cardiovascular,Higher,Yes,Consult physician for alternatives,Medium,High
+Calcium_Channel_Blockers,ankle_edema_2x_risk,Female_Specific,Mild,31-45,Frequent,Cardiovascular,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Calcium_Channel_Blockers,ankle_swelling,General,Moderate,31-45,Common,Cardiovascular,Higher,No,Consult physician for alternatives,Low,Low
+Calcium_Channel_Blockers,flushing,General,Moderate,31-45,Rare,Cardiovascular,Higher,No,Consult physician for alternatives,Unknown,High
+Calcium_Channel_Blockers,headache,General,Moderate,31-45,Common,Cardiovascular,Higher,Yes,Consult physician for alternatives,Low,Medium
+Calcium_Channel_Blockers,gum_swelling_more_common,Female_Specific,Moderate,31-45,Common,Cardiovascular,Higher,Yes,Consult physician for alternatives,High,High
+Calcium_Channel_Blockers,ankle_edema_2x_risk,Female_Specific,Moderate,31-45,Common,Cardiovascular,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Calcium_Channel_Blockers,ankle_swelling,General,Severe,31-45,Rare,Cardiovascular,Higher,Yes,Consult physician for alternatives,Unknown,High
+Calcium_Channel_Blockers,flushing,General,Severe,31-45,Rare,Cardiovascular,Higher,No,Consult physician for alternatives,Low,Low
+Calcium_Channel_Blockers,headache,General,Severe,31-45,Frequent,Cardiovascular,Higher,Yes,Consult physician for alternatives,Medium,High
+Calcium_Channel_Blockers,gum_swelling_more_common,Female_Specific,Severe,31-45,Frequent,Cardiovascular,Higher,Yes,Consult physician for alternatives,High,High
+Calcium_Channel_Blockers,ankle_edema_2x_risk,Female_Specific,Severe,31-45,Common,Cardiovascular,Higher,Yes,Consult physician for alternatives,Medium,High
+Calcium_Channel_Blockers,ankle_swelling,General,Mild,46-60,Common,Cardiovascular,Higher,No,Consult physician for alternatives,Medium,High
+Calcium_Channel_Blockers,flushing,General,Mild,46-60,Rare,Cardiovascular,Higher,No,Consult physician for alternatives,Unknown,Unknown
+Calcium_Channel_Blockers,headache,General,Mild,46-60,Common,Cardiovascular,Higher,Yes,Consult physician for alternatives,Low,Unknown
+Calcium_Channel_Blockers,gum_swelling_more_common,Female_Specific,Mild,46-60,Common,Cardiovascular,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Calcium_Channel_Blockers,ankle_edema_2x_risk,Female_Specific,Mild,46-60,Common,Cardiovascular,Higher,Yes,Consult physician for alternatives,Medium,High
+Calcium_Channel_Blockers,ankle_swelling,General,Moderate,46-60,Frequent,Cardiovascular,Higher,No,Consult physician for alternatives,High,Medium
+Calcium_Channel_Blockers,flushing,General,Moderate,46-60,Common,Cardiovascular,Higher,Yes,Consult physician for alternatives,Medium,High
+Calcium_Channel_Blockers,headache,General,Moderate,46-60,Frequent,Cardiovascular,Higher,No,Consult physician for alternatives,Low,High
+Calcium_Channel_Blockers,gum_swelling_more_common,Female_Specific,Moderate,46-60,Common,Cardiovascular,Higher,Yes,Consult physician for alternatives,High,High
+Calcium_Channel_Blockers,ankle_edema_2x_risk,Female_Specific,Moderate,46-60,Common,Cardiovascular,Higher,Yes,Consult physician for alternatives,High,Medium
+Calcium_Channel_Blockers,ankle_swelling,General,Severe,46-60,Frequent,Cardiovascular,Higher,Yes,Consult physician for alternatives,Unknown,High
+Calcium_Channel_Blockers,flushing,General,Severe,46-60,Rare,Cardiovascular,Higher,No,Consult physician for alternatives,High,High
+Calcium_Channel_Blockers,headache,General,Severe,46-60,Common,Cardiovascular,Higher,No,Consult physician for alternatives,Low,Medium
+Calcium_Channel_Blockers,gum_swelling_more_common,Female_Specific,Severe,46-60,Common,Cardiovascular,Higher,Yes,Consult physician for alternatives,High,Medium
+Calcium_Channel_Blockers,ankle_edema_2x_risk,Female_Specific,Severe,46-60,Common,Cardiovascular,Higher,Yes,Consult physician for alternatives,High,High
+Calcium_Channel_Blockers,ankle_swelling,General,Mild,60+,Rare,Cardiovascular,Higher,No,Consult physician for alternatives,Medium,Medium
+Calcium_Channel_Blockers,flushing,General,Mild,60+,Common,Cardiovascular,Higher,Yes,Consult physician for alternatives,Low,Medium
+Calcium_Channel_Blockers,headache,General,Mild,60+,Rare,Cardiovascular,Higher,Yes,Consult physician for alternatives,Medium,Low
+Calcium_Channel_Blockers,gum_swelling_more_common,Female_Specific,Mild,60+,Frequent,Cardiovascular,Higher,Yes,Consult physician for alternatives,High,Medium
+Calcium_Channel_Blockers,ankle_edema_2x_risk,Female_Specific,Mild,60+,Common,Cardiovascular,Higher,Yes,Consult physician for alternatives,High,High
+Calcium_Channel_Blockers,ankle_swelling,General,Moderate,60+,Frequent,Cardiovascular,Higher,No,Consult physician for alternatives,Low,Low
+Calcium_Channel_Blockers,flushing,General,Moderate,60+,Frequent,Cardiovascular,Higher,No,Consult physician for alternatives,Unknown,Unknown
+Calcium_Channel_Blockers,headache,General,Moderate,60+,Rare,Cardiovascular,Higher,Yes,Consult physician for alternatives,High,Low
+Calcium_Channel_Blockers,gum_swelling_more_common,Female_Specific,Moderate,60+,Common,Cardiovascular,Higher,Yes,Consult physician for alternatives,High,Medium
+Calcium_Channel_Blockers,ankle_edema_2x_risk,Female_Specific,Moderate,60+,Common,Cardiovascular,Higher,Yes,Consult physician for alternatives,Medium,High
+Calcium_Channel_Blockers,ankle_swelling,General,Severe,60+,Common,Cardiovascular,Higher,No,Consult physician for alternatives,Low,High
+Calcium_Channel_Blockers,flushing,General,Severe,60+,Frequent,Cardiovascular,Higher,Yes,Consult physician for alternatives,Medium,High
+Calcium_Channel_Blockers,headache,General,Severe,60+,Rare,Cardiovascular,Higher,Yes,Consult physician for alternatives,Medium,Low
+Calcium_Channel_Blockers,gum_swelling_more_common,Female_Specific,Severe,60+,Common,Cardiovascular,Higher,Yes,Consult physician for alternatives,Medium,High
+Calcium_Channel_Blockers,ankle_edema_2x_risk,Female_Specific,Severe,60+,Frequent,Cardiovascular,Higher,Yes,Consult physician for alternatives,High,Medium
+Antidepressants_SSRI,nausea,General,Mild,18-30,Rare,Psychiatric,Higher,No,Therapy + Lifestyle changes,High,Low
+Antidepressants_SSRI,drowsiness,General,Mild,18-30,Common,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Medium,Medium
+Antidepressants_SSRI,dry_mouth,General,Mild,18-30,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Unknown,Unknown
+Antidepressants_SSRI,sexual_dysfunction,Female_Specific,Mild,18-30,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Medium,High
+Antidepressants_SSRI,weight_gain,Female_Specific,Mild,18-30,Common,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,bone_density_loss,Female_Specific,Mild,18-30,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,irregular_periods,Menstrual_Related,Mild,18-30,Common,Psychiatric,Female_Specific,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,heavy_bleeding,Menstrual_Related,Mild,18-30,Common,Psychiatric,Female_Specific,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,nausea,General,Moderate,18-30,Common,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Low,Medium
+Antidepressants_SSRI,drowsiness,General,Moderate,18-30,Common,Psychiatric,Higher,No,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,dry_mouth,General,Moderate,18-30,Common,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Medium,Low
+Antidepressants_SSRI,sexual_dysfunction,Female_Specific,Moderate,18-30,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Medium,Medium
+Antidepressants_SSRI,weight_gain,Female_Specific,Moderate,18-30,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Medium,Medium
+Antidepressants_SSRI,bone_density_loss,Female_Specific,Moderate,18-30,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Medium,Medium
+Antidepressants_SSRI,irregular_periods,Menstrual_Related,Moderate,18-30,Common,Psychiatric,Female_Specific,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,heavy_bleeding,Menstrual_Related,Moderate,18-30,Common,Psychiatric,Female_Specific,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,nausea,General,Severe,18-30,Rare,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Low,Low
+Antidepressants_SSRI,drowsiness,General,Severe,18-30,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Low,Medium
+Antidepressants_SSRI,dry_mouth,General,Severe,18-30,Rare,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,High,Low
+Antidepressants_SSRI,sexual_dysfunction,Female_Specific,Severe,18-30,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Medium,High
+Antidepressants_SSRI,weight_gain,Female_Specific,Severe,18-30,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,bone_density_loss,Female_Specific,Severe,18-30,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,High,High
+Antidepressants_SSRI,irregular_periods,Menstrual_Related,Severe,18-30,Common,Psychiatric,Female_Specific,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,heavy_bleeding,Menstrual_Related,Severe,18-30,Common,Psychiatric,Female_Specific,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,nausea,General,Mild,31-45,Frequent,Psychiatric,Higher,No,Therapy + Lifestyle changes,Medium,Unknown
+Antidepressants_SSRI,drowsiness,General,Mild,31-45,Rare,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Medium,Unknown
+Antidepressants_SSRI,dry_mouth,General,Mild,31-45,Common,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Unknown,Unknown
+Antidepressants_SSRI,sexual_dysfunction,Female_Specific,Mild,31-45,Common,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Medium,Medium
+Antidepressants_SSRI,weight_gain,Female_Specific,Mild,31-45,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,bone_density_loss,Female_Specific,Mild,31-45,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Medium,Medium
+Antidepressants_SSRI,irregular_periods,Menstrual_Related,Mild,31-45,Common,Psychiatric,Female_Specific,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,heavy_bleeding,Menstrual_Related,Mild,31-45,Common,Psychiatric,Female_Specific,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,nausea,General,Moderate,31-45,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,High,High
+Antidepressants_SSRI,drowsiness,General,Moderate,31-45,Rare,Psychiatric,Higher,No,Therapy + Lifestyle changes,Unknown,Unknown
+Antidepressants_SSRI,dry_mouth,General,Moderate,31-45,Rare,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Low,High
+Antidepressants_SSRI,sexual_dysfunction,Female_Specific,Moderate,31-45,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Medium,High
+Antidepressants_SSRI,weight_gain,Female_Specific,Moderate,31-45,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,High,High
+Antidepressants_SSRI,bone_density_loss,Female_Specific,Moderate,31-45,Common,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Medium,High
+Antidepressants_SSRI,irregular_periods,Menstrual_Related,Moderate,31-45,Common,Psychiatric,Female_Specific,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,heavy_bleeding,Menstrual_Related,Moderate,31-45,Common,Psychiatric,Female_Specific,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,nausea,General,Severe,31-45,Rare,Psychiatric,Higher,No,Therapy + Lifestyle changes,Low,Unknown
+Antidepressants_SSRI,drowsiness,General,Severe,31-45,Common,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Unknown,Unknown
+Antidepressants_SSRI,dry_mouth,General,Severe,31-45,Frequent,Psychiatric,Higher,No,Therapy + Lifestyle changes,Low,Medium
+Antidepressants_SSRI,sexual_dysfunction,Female_Specific,Severe,31-45,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Medium,Medium
+Antidepressants_SSRI,weight_gain,Female_Specific,Severe,31-45,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Medium,Medium
+Antidepressants_SSRI,bone_density_loss,Female_Specific,Severe,31-45,Common,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,High,High
+Antidepressants_SSRI,irregular_periods,Menstrual_Related,Severe,31-45,Common,Psychiatric,Female_Specific,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,heavy_bleeding,Menstrual_Related,Severe,31-45,Common,Psychiatric,Female_Specific,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,nausea,General,Mild,46-60,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Unknown,Unknown
+Antidepressants_SSRI,drowsiness,General,Mild,46-60,Rare,Psychiatric,Higher,No,Therapy + Lifestyle changes,Unknown,Medium
+Antidepressants_SSRI,dry_mouth,General,Mild,46-60,Common,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,High,High
+Antidepressants_SSRI,sexual_dysfunction,Female_Specific,Mild,46-60,Common,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,High,High
+Antidepressants_SSRI,weight_gain,Female_Specific,Mild,46-60,Common,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Medium,Medium
+Antidepressants_SSRI,bone_density_loss,Female_Specific,Mild,46-60,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,irregular_periods,Menstrual_Related,Mild,46-60,Common,Psychiatric,Female_Specific,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,heavy_bleeding,Menstrual_Related,Mild,46-60,Common,Psychiatric,Female_Specific,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,nausea,General,Moderate,46-60,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Low,Unknown
+Antidepressants_SSRI,drowsiness,General,Moderate,46-60,Rare,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,High,Unknown
+Antidepressants_SSRI,dry_mouth,General,Moderate,46-60,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,High,High
+Antidepressants_SSRI,sexual_dysfunction,Female_Specific,Moderate,46-60,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Medium,High
+Antidepressants_SSRI,weight_gain,Female_Specific,Moderate,46-60,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,High,High
+Antidepressants_SSRI,bone_density_loss,Female_Specific,Moderate,46-60,Common,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,High,High
+Antidepressants_SSRI,irregular_periods,Menstrual_Related,Moderate,46-60,Common,Psychiatric,Female_Specific,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,heavy_bleeding,Menstrual_Related,Moderate,46-60,Common,Psychiatric,Female_Specific,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,nausea,General,Severe,46-60,Rare,Psychiatric,Higher,No,Therapy + Lifestyle changes,Low,High
+Antidepressants_SSRI,drowsiness,General,Severe,46-60,Common,Psychiatric,Higher,No,Therapy + Lifestyle changes,Unknown,Medium
+Antidepressants_SSRI,dry_mouth,General,Severe,46-60,Common,Psychiatric,Higher,No,Therapy + Lifestyle changes,High,High
+Antidepressants_SSRI,sexual_dysfunction,Female_Specific,Severe,46-60,Common,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,High,High
+Antidepressants_SSRI,weight_gain,Female_Specific,Severe,46-60,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Medium,High
+Antidepressants_SSRI,bone_density_loss,Female_Specific,Severe,46-60,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,High,High
+Antidepressants_SSRI,irregular_periods,Menstrual_Related,Severe,46-60,Common,Psychiatric,Female_Specific,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,heavy_bleeding,Menstrual_Related,Severe,46-60,Common,Psychiatric,Female_Specific,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,nausea,General,Mild,60+,Common,Psychiatric,Higher,No,Therapy + Lifestyle changes,High,Unknown
+Antidepressants_SSRI,drowsiness,General,Mild,60+,Common,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Low,High
+Antidepressants_SSRI,dry_mouth,General,Mild,60+,Frequent,Psychiatric,Higher,No,Therapy + Lifestyle changes,Unknown,Low
+Antidepressants_SSRI,sexual_dysfunction,Female_Specific,Mild,60+,Common,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Medium,Medium
+Antidepressants_SSRI,weight_gain,Female_Specific,Mild,60+,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Medium,High
+Antidepressants_SSRI,bone_density_loss,Female_Specific,Mild,60+,Common,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Medium,High
+Antidepressants_SSRI,irregular_periods,Menstrual_Related,Mild,60+,Common,Psychiatric,Female_Specific,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,heavy_bleeding,Menstrual_Related,Mild,60+,Common,Psychiatric,Female_Specific,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,nausea,General,Moderate,60+,Common,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Low,Low
+Antidepressants_SSRI,drowsiness,General,Moderate,60+,Rare,Psychiatric,Higher,No,Therapy + Lifestyle changes,Medium,Unknown
+Antidepressants_SSRI,dry_mouth,General,Moderate,60+,Common,Psychiatric,Higher,No,Therapy + Lifestyle changes,Medium,Medium
+Antidepressants_SSRI,sexual_dysfunction,Female_Specific,Moderate,60+,Common,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,weight_gain,Female_Specific,Moderate,60+,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Medium,Medium
+Antidepressants_SSRI,bone_density_loss,Female_Specific,Moderate,60+,Common,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,irregular_periods,Menstrual_Related,Moderate,60+,Common,Psychiatric,Female_Specific,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,heavy_bleeding,Menstrual_Related,Moderate,60+,Common,Psychiatric,Female_Specific,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,nausea,General,Severe,60+,Rare,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Unknown,Unknown
+Antidepressants_SSRI,drowsiness,General,Severe,60+,Frequent,Psychiatric,Higher,No,Therapy + Lifestyle changes,Medium,Unknown
+Antidepressants_SSRI,dry_mouth,General,Severe,60+,Rare,Psychiatric,Higher,No,Therapy + Lifestyle changes,High,Unknown
+Antidepressants_SSRI,sexual_dysfunction,Female_Specific,Severe,60+,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Medium,High
+Antidepressants_SSRI,weight_gain,Female_Specific,Severe,60+,Common,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,High,High
+Antidepressants_SSRI,bone_density_loss,Female_Specific,Severe,60+,Frequent,Psychiatric,Higher,Yes,Therapy + Lifestyle changes,Medium,Medium
+Antidepressants_SSRI,irregular_periods,Menstrual_Related,Severe,60+,Common,Psychiatric,Female_Specific,Yes,Therapy + Lifestyle changes,High,Medium
+Antidepressants_SSRI,heavy_bleeding,Menstrual_Related,Severe,60+,Common,Psychiatric,Female_Specific,Yes,Therapy + Lifestyle changes,High,Medium
+Antipsychotics,drowsiness,General,Mild,18-30,Common,Psychiatric,Higher,No,Lower dose + therapy,Low,Low
+Antipsychotics,weight_gain,General,Mild,18-30,Frequent,Psychiatric,Higher,No,Lower dose + therapy,Medium,Unknown
+Antipsychotics,tremor,General,Mild,18-30,Rare,Psychiatric,Higher,Yes,Lower dose + therapy,High,Medium
+Antipsychotics,prolactin_elevation,Female_Specific,Mild,18-30,Common,Psychiatric,Higher,Yes,Lower dose + therapy,Medium,High
+Antipsychotics,menstrual_irregularities,Female_Specific,Mild,18-30,Frequent,Psychiatric,Higher,Yes,Lower dose + therapy,High,High
+Antipsychotics,breast_tenderness,Female_Specific,Mild,18-30,Common,Psychiatric,Higher,Yes,Lower dose + therapy,Medium,High
+Antipsychotics,drowsiness,General,Moderate,18-30,Common,Psychiatric,Higher,No,Lower dose + therapy,High,Medium
+Antipsychotics,weight_gain,General,Moderate,18-30,Rare,Psychiatric,Higher,Yes,Lower dose + therapy,High,Medium
+Antipsychotics,tremor,General,Moderate,18-30,Frequent,Psychiatric,Higher,No,Lower dose + therapy,Low,Medium
+Antipsychotics,prolactin_elevation,Female_Specific,Moderate,18-30,Common,Psychiatric,Higher,Yes,Lower dose + therapy,Medium,High
+Antipsychotics,menstrual_irregularities,Female_Specific,Moderate,18-30,Common,Psychiatric,Higher,Yes,Lower dose + therapy,High,High
+Antipsychotics,breast_tenderness,Female_Specific,Moderate,18-30,Common,Psychiatric,Higher,Yes,Lower dose + therapy,High,High
+Antipsychotics,drowsiness,General,Severe,18-30,Rare,Psychiatric,Higher,No,Lower dose + therapy,Low,Medium
+Antipsychotics,weight_gain,General,Severe,18-30,Rare,Psychiatric,Higher,No,Lower dose + therapy,High,Low
+Antipsychotics,tremor,General,Severe,18-30,Frequent,Psychiatric,Higher,No,Lower dose + therapy,Unknown,Low
+Antipsychotics,prolactin_elevation,Female_Specific,Severe,18-30,Frequent,Psychiatric,Higher,Yes,Lower dose + therapy,High,High
+Antipsychotics,menstrual_irregularities,Female_Specific,Severe,18-30,Common,Psychiatric,Higher,Yes,Lower dose + therapy,Medium,Medium
+Antipsychotics,breast_tenderness,Female_Specific,Severe,18-30,Frequent,Psychiatric,Higher,Yes,Lower dose + therapy,High,Medium
+Antipsychotics,drowsiness,General,Mild,31-45,Rare,Psychiatric,Higher,No,Lower dose + therapy,Medium,High
+Antipsychotics,weight_gain,General,Mild,31-45,Rare,Psychiatric,Higher,Yes,Lower dose + therapy,Low,Medium
+Antipsychotics,tremor,General,Mild,31-45,Frequent,Psychiatric,Higher,Yes,Lower dose + therapy,Low,Low
+Antipsychotics,prolactin_elevation,Female_Specific,Mild,31-45,Common,Psychiatric,Higher,Yes,Lower dose + therapy,Medium,Medium
+Antipsychotics,menstrual_irregularities,Female_Specific,Mild,31-45,Common,Psychiatric,Higher,Yes,Lower dose + therapy,High,Medium
+Antipsychotics,breast_tenderness,Female_Specific,Mild,31-45,Common,Psychiatric,Higher,Yes,Lower dose + therapy,Medium,High
+Antipsychotics,drowsiness,General,Moderate,31-45,Frequent,Psychiatric,Higher,No,Lower dose + therapy,Unknown,Unknown
+Antipsychotics,weight_gain,General,Moderate,31-45,Frequent,Psychiatric,Higher,Yes,Lower dose + therapy,Medium,Unknown
+Antipsychotics,tremor,General,Moderate,31-45,Rare,Psychiatric,Higher,Yes,Lower dose + therapy,Low,Low
+Antipsychotics,prolactin_elevation,Female_Specific,Moderate,31-45,Common,Psychiatric,Higher,Yes,Lower dose + therapy,High,Medium
+Antipsychotics,menstrual_irregularities,Female_Specific,Moderate,31-45,Frequent,Psychiatric,Higher,Yes,Lower dose + therapy,Medium,High
+Antipsychotics,breast_tenderness,Female_Specific,Moderate,31-45,Frequent,Psychiatric,Higher,Yes,Lower dose + therapy,High,High
+Antipsychotics,drowsiness,General,Severe,31-45,Frequent,Psychiatric,Higher,Yes,Lower dose + therapy,Medium,Medium
+Antipsychotics,weight_gain,General,Severe,31-45,Rare,Psychiatric,Higher,No,Lower dose + therapy,Medium,Unknown
+Antipsychotics,tremor,General,Severe,31-45,Rare,Psychiatric,Higher,No,Lower dose + therapy,Low,High
+Antipsychotics,prolactin_elevation,Female_Specific,Severe,31-45,Frequent,Psychiatric,Higher,Yes,Lower dose + therapy,Medium,Medium
+Antipsychotics,menstrual_irregularities,Female_Specific,Severe,31-45,Common,Psychiatric,Higher,Yes,Lower dose + therapy,Medium,Medium
+Antipsychotics,breast_tenderness,Female_Specific,Severe,31-45,Frequent,Psychiatric,Higher,Yes,Lower dose + therapy,High,High
+Antipsychotics,drowsiness,General,Mild,46-60,Frequent,Psychiatric,Higher,No,Lower dose + therapy,Unknown,High
+Antipsychotics,weight_gain,General,Mild,46-60,Common,Psychiatric,Higher,Yes,Lower dose + therapy,Unknown,Low
+Antipsychotics,tremor,General,Mild,46-60,Frequent,Psychiatric,Higher,No,Lower dose + therapy,Unknown,High
+Antipsychotics,prolactin_elevation,Female_Specific,Mild,46-60,Frequent,Psychiatric,Higher,Yes,Lower dose + therapy,Medium,High
+Antipsychotics,menstrual_irregularities,Female_Specific,Mild,46-60,Frequent,Psychiatric,Higher,Yes,Lower dose + therapy,Medium,Medium
+Antipsychotics,breast_tenderness,Female_Specific,Mild,46-60,Frequent,Psychiatric,Higher,Yes,Lower dose + therapy,High,Medium
+Antipsychotics,drowsiness,General,Moderate,46-60,Common,Psychiatric,Higher,No,Lower dose + therapy,High,Low
+Antipsychotics,weight_gain,General,Moderate,46-60,Rare,Psychiatric,Higher,Yes,Lower dose + therapy,Medium,Unknown
+Antipsychotics,tremor,General,Moderate,46-60,Frequent,Psychiatric,Higher,No,Lower dose + therapy,Low,Medium
+Antipsychotics,prolactin_elevation,Female_Specific,Moderate,46-60,Common,Psychiatric,Higher,Yes,Lower dose + therapy,High,High
+Antipsychotics,menstrual_irregularities,Female_Specific,Moderate,46-60,Common,Psychiatric,Higher,Yes,Lower dose + therapy,High,High
+Antipsychotics,breast_tenderness,Female_Specific,Moderate,46-60,Common,Psychiatric,Higher,Yes,Lower dose + therapy,Medium,Medium
+Antipsychotics,drowsiness,General,Severe,46-60,Frequent,Psychiatric,Higher,No,Lower dose + therapy,Medium,Unknown
+Antipsychotics,weight_gain,General,Severe,46-60,Frequent,Psychiatric,Higher,Yes,Lower dose + therapy,Medium,High
+Antipsychotics,tremor,General,Severe,46-60,Common,Psychiatric,Higher,Yes,Lower dose + therapy,Low,High
+Antipsychotics,prolactin_elevation,Female_Specific,Severe,46-60,Common,Psychiatric,Higher,Yes,Lower dose + therapy,Medium,High
+Antipsychotics,menstrual_irregularities,Female_Specific,Severe,46-60,Common,Psychiatric,Higher,Yes,Lower dose + therapy,Medium,Medium
+Antipsychotics,breast_tenderness,Female_Specific,Severe,46-60,Frequent,Psychiatric,Higher,Yes,Lower dose + therapy,High,Medium
+Antipsychotics,drowsiness,General,Mild,60+,Common,Psychiatric,Higher,Yes,Lower dose + therapy,Unknown,High
+Antipsychotics,weight_gain,General,Mild,60+,Frequent,Psychiatric,Higher,No,Lower dose + therapy,Medium,Low
+Antipsychotics,tremor,General,Mild,60+,Common,Psychiatric,Higher,Yes,Lower dose + therapy,Low,Low
+Antipsychotics,prolactin_elevation,Female_Specific,Mild,60+,Common,Psychiatric,Higher,Yes,Lower dose + therapy,Medium,High
+Antipsychotics,menstrual_irregularities,Female_Specific,Mild,60+,Frequent,Psychiatric,Higher,Yes,Lower dose + therapy,High,Medium
+Antipsychotics,breast_tenderness,Female_Specific,Mild,60+,Common,Psychiatric,Higher,Yes,Lower dose + therapy,High,Medium
+Antipsychotics,drowsiness,General,Moderate,60+,Frequent,Psychiatric,Higher,No,Lower dose + therapy,Unknown,Medium
+Antipsychotics,weight_gain,General,Moderate,60+,Common,Psychiatric,Higher,No,Lower dose + therapy,High,Medium
+Antipsychotics,tremor,General,Moderate,60+,Frequent,Psychiatric,Higher,No,Lower dose + therapy,Low,Unknown
+Antipsychotics,prolactin_elevation,Female_Specific,Moderate,60+,Common,Psychiatric,Higher,Yes,Lower dose + therapy,Medium,Medium
+Antipsychotics,menstrual_irregularities,Female_Specific,Moderate,60+,Common,Psychiatric,Higher,Yes,Lower dose + therapy,High,High
+Antipsychotics,breast_tenderness,Female_Specific,Moderate,60+,Common,Psychiatric,Higher,Yes,Lower dose + therapy,High,Medium
+Antipsychotics,drowsiness,General,Severe,60+,Rare,Psychiatric,Higher,Yes,Lower dose + therapy,Unknown,Low
+Antipsychotics,weight_gain,General,Severe,60+,Rare,Psychiatric,Higher,No,Lower dose + therapy,High,Unknown
+Antipsychotics,tremor,General,Severe,60+,Rare,Psychiatric,Higher,No,Lower dose + therapy,High,Unknown
+Antipsychotics,prolactin_elevation,Female_Specific,Severe,60+,Common,Psychiatric,Higher,Yes,Lower dose + therapy,High,High
+Antipsychotics,menstrual_irregularities,Female_Specific,Severe,60+,Frequent,Psychiatric,Higher,Yes,Lower dose + therapy,High,High
+Antipsychotics,breast_tenderness,Female_Specific,Severe,60+,Frequent,Psychiatric,Higher,Yes,Lower dose + therapy,High,Medium
+Benzodiazepines,drowsiness,General,Mild,18-30,Common,Psychiatric,Higher,Yes,Consult physician for alternatives,Low,Low
+Benzodiazepines,confusion,General,Mild,18-30,Rare,Psychiatric,Higher,No,Consult physician for alternatives,Medium,Low
+Benzodiazepines,memory_problems,General,Mild,18-30,Rare,Psychiatric,Higher,Yes,Consult physician for alternatives,High,Medium
+Benzodiazepines,dependency_risk_higher,Female_Specific,Mild,18-30,Frequent,Psychiatric,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Benzodiazepines,withdrawal_more_severe,Female_Specific,Mild,18-30,Frequent,Psychiatric,Higher,Yes,Consult physician for alternatives,Medium,High
+Benzodiazepines,drowsiness,General,Moderate,18-30,Rare,Psychiatric,Higher,Yes,Consult physician for alternatives,Unknown,Unknown
+Benzodiazepines,confusion,General,Moderate,18-30,Frequent,Psychiatric,Higher,No,Consult physician for alternatives,Low,Medium
+Benzodiazepines,memory_problems,General,Moderate,18-30,Rare,Psychiatric,Higher,Yes,Consult physician for alternatives,High,Low
+Benzodiazepines,dependency_risk_higher,Female_Specific,Moderate,18-30,Common,Psychiatric,Higher,Yes,Consult physician for alternatives,High,High
+Benzodiazepines,withdrawal_more_severe,Female_Specific,Moderate,18-30,Frequent,Psychiatric,Higher,Yes,Consult physician for alternatives,High,Medium
+Benzodiazepines,drowsiness,General,Severe,18-30,Common,Psychiatric,Higher,Yes,Consult physician for alternatives,Unknown,Low
+Benzodiazepines,confusion,General,Severe,18-30,Common,Psychiatric,Higher,Yes,Consult physician for alternatives,High,High
+Benzodiazepines,memory_problems,General,Severe,18-30,Frequent,Psychiatric,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Benzodiazepines,dependency_risk_higher,Female_Specific,Severe,18-30,Common,Psychiatric,Higher,Yes,Consult physician for alternatives,High,High
+Benzodiazepines,withdrawal_more_severe,Female_Specific,Severe,18-30,Common,Psychiatric,Higher,Yes,Consult physician for alternatives,High,High
+Benzodiazepines,drowsiness,General,Mild,31-45,Rare,Psychiatric,Higher,Yes,Consult physician for alternatives,Low,Medium
+Benzodiazepines,confusion,General,Mild,31-45,Common,Psychiatric,Higher,No,Consult physician for alternatives,Unknown,Unknown
+Benzodiazepines,memory_problems,General,Mild,31-45,Rare,Psychiatric,Higher,No,Consult physician for alternatives,Unknown,Unknown
+Benzodiazepines,dependency_risk_higher,Female_Specific,Mild,31-45,Frequent,Psychiatric,Higher,Yes,Consult physician for alternatives,Medium,High
+Benzodiazepines,withdrawal_more_severe,Female_Specific,Mild,31-45,Common,Psychiatric,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Benzodiazepines,drowsiness,General,Moderate,31-45,Common,Psychiatric,Higher,No,Consult physician for alternatives,Medium,High
+Benzodiazepines,confusion,General,Moderate,31-45,Rare,Psychiatric,Higher,Yes,Consult physician for alternatives,Low,Low
+Benzodiazepines,memory_problems,General,Moderate,31-45,Rare,Psychiatric,Higher,Yes,Consult physician for alternatives,Medium,High
+Benzodiazepines,dependency_risk_higher,Female_Specific,Moderate,31-45,Frequent,Psychiatric,Higher,Yes,Consult physician for alternatives,High,Medium
+Benzodiazepines,withdrawal_more_severe,Female_Specific,Moderate,31-45,Frequent,Psychiatric,Higher,Yes,Consult physician for alternatives,High,Medium
+Benzodiazepines,drowsiness,General,Severe,31-45,Rare,Psychiatric,Higher,Yes,Consult physician for alternatives,Medium,Unknown
+Benzodiazepines,confusion,General,Severe,31-45,Common,Psychiatric,Higher,No,Consult physician for alternatives,Medium,Medium
+Benzodiazepines,memory_problems,General,Severe,31-45,Common,Psychiatric,Higher,No,Consult physician for alternatives,Low,Low
+Benzodiazepines,dependency_risk_higher,Female_Specific,Severe,31-45,Common,Psychiatric,Higher,Yes,Consult physician for alternatives,Medium,High
+Benzodiazepines,withdrawal_more_severe,Female_Specific,Severe,31-45,Frequent,Psychiatric,Higher,Yes,Consult physician for alternatives,High,High
+Benzodiazepines,drowsiness,General,Mild,46-60,Frequent,Psychiatric,Higher,No,Consult physician for alternatives,Unknown,Medium
+Benzodiazepines,confusion,General,Mild,46-60,Frequent,Psychiatric,Higher,Yes,Consult physician for alternatives,Medium,Unknown
+Benzodiazepines,memory_problems,General,Mild,46-60,Rare,Psychiatric,Higher,Yes,Consult physician for alternatives,High,Unknown
+Benzodiazepines,dependency_risk_higher,Female_Specific,Mild,46-60,Common,Psychiatric,Higher,Yes,Consult physician for alternatives,High,Medium
+Benzodiazepines,withdrawal_more_severe,Female_Specific,Mild,46-60,Common,Psychiatric,Higher,Yes,Consult physician for alternatives,High,Medium
+Benzodiazepines,drowsiness,General,Moderate,46-60,Frequent,Psychiatric,Higher,No,Consult physician for alternatives,Unknown,High
+Benzodiazepines,confusion,General,Moderate,46-60,Frequent,Psychiatric,Higher,No,Consult physician for alternatives,Low,Low
+Benzodiazepines,memory_problems,General,Moderate,46-60,Frequent,Psychiatric,Higher,No,Consult physician for alternatives,Medium,Low
+Benzodiazepines,dependency_risk_higher,Female_Specific,Moderate,46-60,Common,Psychiatric,Higher,Yes,Consult physician for alternatives,High,High
+Benzodiazepines,withdrawal_more_severe,Female_Specific,Moderate,46-60,Common,Psychiatric,Higher,Yes,Consult physician for alternatives,High,Medium
+Benzodiazepines,drowsiness,General,Severe,46-60,Frequent,Psychiatric,Higher,Yes,Consult physician for alternatives,High,High
+Benzodiazepines,confusion,General,Severe,46-60,Frequent,Psychiatric,Higher,No,Consult physician for alternatives,High,Unknown
+Benzodiazepines,memory_problems,General,Severe,46-60,Common,Psychiatric,Higher,No,Consult physician for alternatives,High,Medium
+Benzodiazepines,dependency_risk_higher,Female_Specific,Severe,46-60,Frequent,Psychiatric,Higher,Yes,Consult physician for alternatives,Medium,High
+Benzodiazepines,withdrawal_more_severe,Female_Specific,Severe,46-60,Common,Psychiatric,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Benzodiazepines,drowsiness,General,Mild,60+,Frequent,Psychiatric,Higher,Yes,Consult physician for alternatives,Medium,Low
+Benzodiazepines,confusion,General,Mild,60+,Rare,Psychiatric,Higher,No,Consult physician for alternatives,Medium,Unknown
+Benzodiazepines,memory_problems,General,Mild,60+,Common,Psychiatric,Higher,Yes,Consult physician for alternatives,High,High
+Benzodiazepines,dependency_risk_higher,Female_Specific,Mild,60+,Common,Psychiatric,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Benzodiazepines,withdrawal_more_severe,Female_Specific,Mild,60+,Common,Psychiatric,Higher,Yes,Consult physician for alternatives,High,High
+Benzodiazepines,drowsiness,General,Moderate,60+,Frequent,Psychiatric,Higher,Yes,Consult physician for alternatives,High,Medium
+Benzodiazepines,confusion,General,Moderate,60+,Common,Psychiatric,Higher,No,Consult physician for alternatives,Unknown,Unknown
+Benzodiazepines,memory_problems,General,Moderate,60+,Rare,Psychiatric,Higher,No,Consult physician for alternatives,Unknown,Medium
+Benzodiazepines,dependency_risk_higher,Female_Specific,Moderate,60+,Common,Psychiatric,Higher,Yes,Consult physician for alternatives,Medium,High
+Benzodiazepines,withdrawal_more_severe,Female_Specific,Moderate,60+,Common,Psychiatric,Higher,Yes,Consult physician for alternatives,Medium,High
+Benzodiazepines,drowsiness,General,Severe,60+,Rare,Psychiatric,Higher,No,Consult physician for alternatives,High,Medium
+Benzodiazepines,confusion,General,Severe,60+,Common,Psychiatric,Higher,No,Consult physician for alternatives,Unknown,High
+Benzodiazepines,memory_problems,General,Severe,60+,Common,Psychiatric,Higher,No,Consult physician for alternatives,High,Medium
+Benzodiazepines,dependency_risk_higher,Female_Specific,Severe,60+,Common,Psychiatric,Higher,Yes,Consult physician for alternatives,High,High
+Benzodiazepines,withdrawal_more_severe,Female_Specific,Severe,60+,Common,Psychiatric,Higher,Yes,Consult physician for alternatives,High,Medium
+Zolpidem_Ambien,drowsiness,General,Mild,18-30,Rare,Sleep_Aid,Much_Higher,Yes,Melatonin + Sleep hygiene,Unknown,Unknown
+Zolpidem_Ambien,dizziness,General,Mild,18-30,Rare,Sleep_Aid,Much_Higher,Yes,Melatonin + Sleep hygiene,Unknown,Unknown
+Zolpidem_Ambien,headache,General,Mild,18-30,Rare,Sleep_Aid,Much_Higher,No,Melatonin + Sleep hygiene,Unknown,Medium
+Zolpidem_Ambien,next_day_impairment,Female_Specific,Mild,18-30,Frequent,Sleep_Aid,Higher,Yes,Melatonin + Sleep hygiene,High,Medium
+Zolpidem_Ambien,requires_lower_dose,Female_Specific,Mild,18-30,Common,Sleep_Aid,Higher,Yes,Melatonin + Sleep hygiene,High,Medium
+Zolpidem_Ambien,drowsiness,General,Moderate,18-30,Common,Sleep_Aid,Much_Higher,Yes,Melatonin + Sleep hygiene,Low,High
+Zolpidem_Ambien,dizziness,General,Moderate,18-30,Common,Sleep_Aid,Much_Higher,No,Melatonin + Sleep hygiene,Low,Low
+Zolpidem_Ambien,headache,General,Moderate,18-30,Rare,Sleep_Aid,Much_Higher,No,Melatonin + Sleep hygiene,High,Low
+Zolpidem_Ambien,next_day_impairment,Female_Specific,Moderate,18-30,Frequent,Sleep_Aid,Higher,Yes,Melatonin + Sleep hygiene,High,High
+Zolpidem_Ambien,requires_lower_dose,Female_Specific,Moderate,18-30,Frequent,Sleep_Aid,Higher,Yes,Melatonin + Sleep hygiene,High,High
+Zolpidem_Ambien,drowsiness,General,Severe,18-30,Rare,Sleep_Aid,Much_Higher,No,Melatonin + Sleep hygiene,Medium,Low
+Zolpidem_Ambien,dizziness,General,Severe,18-30,Common,Sleep_Aid,Much_Higher,Yes,Melatonin + Sleep hygiene,High,High
+Zolpidem_Ambien,headache,General,Severe,18-30,Frequent,Sleep_Aid,Much_Higher,Yes,Melatonin + Sleep hygiene,Medium,High
+Zolpidem_Ambien,next_day_impairment,Female_Specific,Severe,18-30,Common,Sleep_Aid,Higher,Yes,Melatonin + Sleep hygiene,Medium,Medium
+Zolpidem_Ambien,requires_lower_dose,Female_Specific,Severe,18-30,Frequent,Sleep_Aid,Higher,Yes,Melatonin + Sleep hygiene,Medium,High
+Zolpidem_Ambien,drowsiness,General,Mild,31-45,Rare,Sleep_Aid,Much_Higher,Yes,Melatonin + Sleep hygiene,Low,Unknown
+Zolpidem_Ambien,dizziness,General,Mild,31-45,Rare,Sleep_Aid,Much_Higher,No,Melatonin + Sleep hygiene,Medium,Unknown
+Zolpidem_Ambien,headache,General,Mild,31-45,Rare,Sleep_Aid,Much_Higher,No,Melatonin + Sleep hygiene,Medium,High
+Zolpidem_Ambien,next_day_impairment,Female_Specific,Mild,31-45,Common,Sleep_Aid,Higher,Yes,Melatonin + Sleep hygiene,High,High
+Zolpidem_Ambien,requires_lower_dose,Female_Specific,Mild,31-45,Frequent,Sleep_Aid,Higher,Yes,Melatonin + Sleep hygiene,High,High
+Zolpidem_Ambien,drowsiness,General,Moderate,31-45,Frequent,Sleep_Aid,Much_Higher,Yes,Melatonin + Sleep hygiene,High,Medium
+Zolpidem_Ambien,dizziness,General,Moderate,31-45,Common,Sleep_Aid,Much_Higher,No,Melatonin + Sleep hygiene,Unknown,High
+Zolpidem_Ambien,headache,General,Moderate,31-45,Common,Sleep_Aid,Much_Higher,No,Melatonin + Sleep hygiene,Low,Medium
+Zolpidem_Ambien,next_day_impairment,Female_Specific,Moderate,31-45,Common,Sleep_Aid,Higher,Yes,Melatonin + Sleep hygiene,High,Medium
+Zolpidem_Ambien,requires_lower_dose,Female_Specific,Moderate,31-45,Frequent,Sleep_Aid,Higher,Yes,Melatonin + Sleep hygiene,High,Medium
+Zolpidem_Ambien,drowsiness,General,Severe,31-45,Common,Sleep_Aid,Much_Higher,No,Melatonin + Sleep hygiene,High,Low
+Zolpidem_Ambien,dizziness,General,Severe,31-45,Rare,Sleep_Aid,Much_Higher,Yes,Melatonin + Sleep hygiene,High,Unknown
+Zolpidem_Ambien,headache,General,Severe,31-45,Frequent,Sleep_Aid,Much_Higher,Yes,Melatonin + Sleep hygiene,High,High
+Zolpidem_Ambien,next_day_impairment,Female_Specific,Severe,31-45,Frequent,Sleep_Aid,Higher,Yes,Melatonin + Sleep hygiene,High,High
+Zolpidem_Ambien,requires_lower_dose,Female_Specific,Severe,31-45,Frequent,Sleep_Aid,Higher,Yes,Melatonin + Sleep hygiene,High,Medium
+Zolpidem_Ambien,drowsiness,General,Mild,46-60,Rare,Sleep_Aid,Much_Higher,No,Melatonin + Sleep hygiene,Medium,High
+Zolpidem_Ambien,dizziness,General,Mild,46-60,Frequent,Sleep_Aid,Much_Higher,Yes,Melatonin + Sleep hygiene,High,High
+Zolpidem_Ambien,headache,General,Mild,46-60,Frequent,Sleep_Aid,Much_Higher,No,Melatonin + Sleep hygiene,Unknown,Low
+Zolpidem_Ambien,next_day_impairment,Female_Specific,Mild,46-60,Frequent,Sleep_Aid,Higher,Yes,Melatonin + Sleep hygiene,High,High
+Zolpidem_Ambien,requires_lower_dose,Female_Specific,Mild,46-60,Frequent,Sleep_Aid,Higher,Yes,Melatonin + Sleep hygiene,High,Medium
+Zolpidem_Ambien,drowsiness,General,Moderate,46-60,Frequent,Sleep_Aid,Much_Higher,Yes,Melatonin + Sleep hygiene,Low,Unknown
+Zolpidem_Ambien,dizziness,General,Moderate,46-60,Rare,Sleep_Aid,Much_Higher,Yes,Melatonin + Sleep hygiene,High,Medium
+Zolpidem_Ambien,headache,General,Moderate,46-60,Rare,Sleep_Aid,Much_Higher,No,Melatonin + Sleep hygiene,Unknown,Medium
+Zolpidem_Ambien,next_day_impairment,Female_Specific,Moderate,46-60,Common,Sleep_Aid,Higher,Yes,Melatonin + Sleep hygiene,High,High
+Zolpidem_Ambien,requires_lower_dose,Female_Specific,Moderate,46-60,Common,Sleep_Aid,Higher,Yes,Melatonin + Sleep hygiene,Medium,Medium
+Zolpidem_Ambien,drowsiness,General,Severe,46-60,Rare,Sleep_Aid,Much_Higher,Yes,Melatonin + Sleep hygiene,Medium,High
+Zolpidem_Ambien,dizziness,General,Severe,46-60,Rare,Sleep_Aid,Much_Higher,Yes,Melatonin + Sleep hygiene,Unknown,Low
+Zolpidem_Ambien,headache,General,Severe,46-60,Frequent,Sleep_Aid,Much_Higher,No,Melatonin + Sleep hygiene,Medium,Unknown
+Zolpidem_Ambien,next_day_impairment,Female_Specific,Severe,46-60,Common,Sleep_Aid,Higher,Yes,Melatonin + Sleep hygiene,High,Medium
+Zolpidem_Ambien,requires_lower_dose,Female_Specific,Severe,46-60,Frequent,Sleep_Aid,Higher,Yes,Melatonin + Sleep hygiene,High,High
+Zolpidem_Ambien,drowsiness,General,Mild,60+,Common,Sleep_Aid,Much_Higher,No,Melatonin + Sleep hygiene,High,Unknown
+Zolpidem_Ambien,dizziness,General,Mild,60+,Rare,Sleep_Aid,Much_Higher,Yes,Melatonin + Sleep hygiene,High,Unknown
+Zolpidem_Ambien,headache,General,Mild,60+,Common,Sleep_Aid,Much_Higher,Yes,Melatonin + Sleep hygiene,Medium,High
+Zolpidem_Ambien,next_day_impairment,Female_Specific,Mild,60+,Common,Sleep_Aid,Higher,Yes,Melatonin + Sleep hygiene,High,Medium
+Zolpidem_Ambien,requires_lower_dose,Female_Specific,Mild,60+,Common,Sleep_Aid,Higher,Yes,Melatonin + Sleep hygiene,Medium,Medium
+Zolpidem_Ambien,drowsiness,General,Moderate,60+,Rare,Sleep_Aid,Much_Higher,Yes,Melatonin + Sleep hygiene,Medium,Medium
+Zolpidem_Ambien,dizziness,General,Moderate,60+,Rare,Sleep_Aid,Much_Higher,Yes,Melatonin + Sleep hygiene,Low,High
+Zolpidem_Ambien,headache,General,Moderate,60+,Rare,Sleep_Aid,Much_Higher,No,Melatonin + Sleep hygiene,Medium,Medium
+Zolpidem_Ambien,next_day_impairment,Female_Specific,Moderate,60+,Frequent,Sleep_Aid,Higher,Yes,Melatonin + Sleep hygiene,Medium,High
+Zolpidem_Ambien,requires_lower_dose,Female_Specific,Moderate,60+,Frequent,Sleep_Aid,Higher,Yes,Melatonin + Sleep hygiene,Medium,Medium
+Zolpidem_Ambien,drowsiness,General,Severe,60+,Frequent,Sleep_Aid,Much_Higher,No,Melatonin + Sleep hygiene,Low,High
+Zolpidem_Ambien,dizziness,General,Severe,60+,Rare,Sleep_Aid,Much_Higher,No,Melatonin + Sleep hygiene,High,High
+Zolpidem_Ambien,headache,General,Severe,60+,Rare,Sleep_Aid,Much_Higher,No,Melatonin + Sleep hygiene,Unknown,Unknown
+Zolpidem_Ambien,next_day_impairment,Female_Specific,Severe,60+,Common,Sleep_Aid,Higher,Yes,Melatonin + Sleep hygiene,Medium,Medium
+Zolpidem_Ambien,requires_lower_dose,Female_Specific,Severe,60+,Frequent,Sleep_Aid,Higher,Yes,Melatonin + Sleep hygiene,High,Medium
+Opioids,constipation,General,Mild,18-30,Frequent,Pain_Management,Higher,No,Physical therapy + NSAIDs,Low,Medium
+Opioids,drowsiness,General,Mild,18-30,Rare,Pain_Management,Higher,No,Physical therapy + NSAIDs,Unknown,High
+Opioids,nausea,General,Mild,18-30,Frequent,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Low,Medium
+Opioids,respiratory_depression_risk,Female_Specific,Mild,18-30,Common,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,High,Medium
+Opioids,hormonal_disruption,Female_Specific,Mild,18-30,Frequent,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,High,Medium
+Opioids,addiction_risk_higher,Female_Specific,Mild,18-30,Frequent,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Medium,Medium
+Opioids,constipation,General,Moderate,18-30,Common,Pain_Management,Higher,No,Physical therapy + NSAIDs,Unknown,Low
+Opioids,drowsiness,General,Moderate,18-30,Frequent,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,High,Unknown
+Opioids,nausea,General,Moderate,18-30,Frequent,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,High,Low
+Opioids,respiratory_depression_risk,Female_Specific,Moderate,18-30,Frequent,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Medium,Medium
+Opioids,hormonal_disruption,Female_Specific,Moderate,18-30,Common,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Medium,Medium
+Opioids,addiction_risk_higher,Female_Specific,Moderate,18-30,Frequent,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Medium,High
+Opioids,constipation,General,Severe,18-30,Common,Pain_Management,Higher,No,Physical therapy + NSAIDs,Low,Unknown
+Opioids,drowsiness,General,Severe,18-30,Frequent,Pain_Management,Higher,No,Physical therapy + NSAIDs,Low,Low
+Opioids,nausea,General,Severe,18-30,Rare,Pain_Management,Higher,No,Physical therapy + NSAIDs,High,Medium
+Opioids,respiratory_depression_risk,Female_Specific,Severe,18-30,Common,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Medium,Medium
+Opioids,hormonal_disruption,Female_Specific,Severe,18-30,Common,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,High,High
+Opioids,addiction_risk_higher,Female_Specific,Severe,18-30,Common,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,High,Medium
+Opioids,constipation,General,Mild,31-45,Frequent,Pain_Management,Higher,No,Physical therapy + NSAIDs,Low,High
+Opioids,drowsiness,General,Mild,31-45,Rare,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Medium,Medium
+Opioids,nausea,General,Mild,31-45,Common,Pain_Management,Higher,No,Physical therapy + NSAIDs,Low,Medium
+Opioids,respiratory_depression_risk,Female_Specific,Mild,31-45,Common,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Medium,Medium
+Opioids,hormonal_disruption,Female_Specific,Mild,31-45,Common,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,High,High
+Opioids,addiction_risk_higher,Female_Specific,Mild,31-45,Common,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Medium,Medium
+Opioids,constipation,General,Moderate,31-45,Common,Pain_Management,Higher,No,Physical therapy + NSAIDs,High,High
+Opioids,drowsiness,General,Moderate,31-45,Rare,Pain_Management,Higher,No,Physical therapy + NSAIDs,Medium,Low
+Opioids,nausea,General,Moderate,31-45,Rare,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,High,Low
+Opioids,respiratory_depression_risk,Female_Specific,Moderate,31-45,Common,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Medium,Medium
+Opioids,hormonal_disruption,Female_Specific,Moderate,31-45,Frequent,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,High,Medium
+Opioids,addiction_risk_higher,Female_Specific,Moderate,31-45,Frequent,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,High,Medium
+Opioids,constipation,General,Severe,31-45,Frequent,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Unknown,Unknown
+Opioids,drowsiness,General,Severe,31-45,Common,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Medium,Medium
+Opioids,nausea,General,Severe,31-45,Rare,Pain_Management,Higher,No,Physical therapy + NSAIDs,High,High
+Opioids,respiratory_depression_risk,Female_Specific,Severe,31-45,Common,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,High,High
+Opioids,hormonal_disruption,Female_Specific,Severe,31-45,Common,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Medium,Medium
+Opioids,addiction_risk_higher,Female_Specific,Severe,31-45,Frequent,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Medium,High
+Opioids,constipation,General,Mild,46-60,Common,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,High,Unknown
+Opioids,drowsiness,General,Mild,46-60,Common,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Medium,High
+Opioids,nausea,General,Mild,46-60,Rare,Pain_Management,Higher,No,Physical therapy + NSAIDs,High,Unknown
+Opioids,respiratory_depression_risk,Female_Specific,Mild,46-60,Common,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Medium,High
+Opioids,hormonal_disruption,Female_Specific,Mild,46-60,Frequent,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,High,High
+Opioids,addiction_risk_higher,Female_Specific,Mild,46-60,Frequent,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,High,Medium
+Opioids,constipation,General,Moderate,46-60,Frequent,Pain_Management,Higher,No,Physical therapy + NSAIDs,High,High
+Opioids,drowsiness,General,Moderate,46-60,Common,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Low,Unknown
+Opioids,nausea,General,Moderate,46-60,Rare,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Medium,Low
+Opioids,respiratory_depression_risk,Female_Specific,Moderate,46-60,Frequent,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Medium,High
+Opioids,hormonal_disruption,Female_Specific,Moderate,46-60,Frequent,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,High,High
+Opioids,addiction_risk_higher,Female_Specific,Moderate,46-60,Frequent,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,High,Medium
+Opioids,constipation,General,Severe,46-60,Frequent,Pain_Management,Higher,No,Physical therapy + NSAIDs,High,High
+Opioids,drowsiness,General,Severe,46-60,Common,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Unknown,High
+Opioids,nausea,General,Severe,46-60,Frequent,Pain_Management,Higher,No,Physical therapy + NSAIDs,High,Unknown
+Opioids,respiratory_depression_risk,Female_Specific,Severe,46-60,Common,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,High,Medium
+Opioids,hormonal_disruption,Female_Specific,Severe,46-60,Frequent,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Medium,High
+Opioids,addiction_risk_higher,Female_Specific,Severe,46-60,Frequent,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Medium,Medium
+Opioids,constipation,General,Mild,60+,Frequent,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Unknown,Medium
+Opioids,drowsiness,General,Mild,60+,Frequent,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Medium,Medium
+Opioids,nausea,General,Mild,60+,Common,Pain_Management,Higher,No,Physical therapy + NSAIDs,High,Low
+Opioids,respiratory_depression_risk,Female_Specific,Mild,60+,Frequent,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,High,High
+Opioids,hormonal_disruption,Female_Specific,Mild,60+,Common,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Medium,High
+Opioids,addiction_risk_higher,Female_Specific,Mild,60+,Frequent,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Medium,High
+Opioids,constipation,General,Moderate,60+,Rare,Pain_Management,Higher,No,Physical therapy + NSAIDs,Medium,Medium
+Opioids,drowsiness,General,Moderate,60+,Frequent,Pain_Management,Higher,No,Physical therapy + NSAIDs,Unknown,High
+Opioids,nausea,General,Moderate,60+,Rare,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Medium,Medium
+Opioids,respiratory_depression_risk,Female_Specific,Moderate,60+,Frequent,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Medium,High
+Opioids,hormonal_disruption,Female_Specific,Moderate,60+,Common,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Medium,High
+Opioids,addiction_risk_higher,Female_Specific,Moderate,60+,Common,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,High,High
+Opioids,constipation,General,Severe,60+,Frequent,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,High,Low
+Opioids,drowsiness,General,Severe,60+,Frequent,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Low,Unknown
+Opioids,nausea,General,Severe,60+,Rare,Pain_Management,Higher,No,Physical therapy + NSAIDs,Medium,Unknown
+Opioids,respiratory_depression_risk,Female_Specific,Severe,60+,Frequent,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,High,High
+Opioids,hormonal_disruption,Female_Specific,Severe,60+,Common,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,High,High
+Opioids,addiction_risk_higher,Female_Specific,Severe,60+,Frequent,Pain_Management,Higher,Yes,Physical therapy + NSAIDs,Medium,Medium
+NSAIDs,stomach_upset,General,Mild,18-30,Common,Pain_Management,Higher,No,Acetaminophen + Topical creams,Medium,Low
+NSAIDs,headache,General,Mild,18-30,Common,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Low,Medium
+NSAIDs,dizziness,General,Mild,18-30,Common,Pain_Management,Higher,No,Acetaminophen + Topical creams,Unknown,Unknown
+NSAIDs,GI_bleeding_risk,Female_Specific,Mild,18-30,Common,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Medium,Medium
+NSAIDs,kidney_damage_risk,Female_Specific,Mild,18-30,Common,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,High,Medium
+NSAIDs,cardiovascular_events,Female_Specific,Mild,18-30,Frequent,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,High,High
+NSAIDs,stomach_upset,General,Moderate,18-30,Rare,Pain_Management,Higher,No,Acetaminophen + Topical creams,Low,Medium
+NSAIDs,headache,General,Moderate,18-30,Frequent,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,High,Unknown
+NSAIDs,dizziness,General,Moderate,18-30,Common,Pain_Management,Higher,No,Acetaminophen + Topical creams,Low,Medium
+NSAIDs,GI_bleeding_risk,Female_Specific,Moderate,18-30,Frequent,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,High,High
+NSAIDs,kidney_damage_risk,Female_Specific,Moderate,18-30,Frequent,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,High,Medium
+NSAIDs,cardiovascular_events,Female_Specific,Moderate,18-30,Common,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,High,Medium
+NSAIDs,stomach_upset,General,Severe,18-30,Common,Pain_Management,Higher,No,Acetaminophen + Topical creams,High,Unknown
+NSAIDs,headache,General,Severe,18-30,Frequent,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Low,Low
+NSAIDs,dizziness,General,Severe,18-30,Frequent,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Unknown,Medium
+NSAIDs,GI_bleeding_risk,Female_Specific,Severe,18-30,Frequent,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Medium,High
+NSAIDs,kidney_damage_risk,Female_Specific,Severe,18-30,Common,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,High,Medium
+NSAIDs,cardiovascular_events,Female_Specific,Severe,18-30,Frequent,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Medium,High
+NSAIDs,stomach_upset,General,Mild,31-45,Frequent,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,High,Low
+NSAIDs,headache,General,Mild,31-45,Frequent,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,High,Low
+NSAIDs,dizziness,General,Mild,31-45,Frequent,Pain_Management,Higher,No,Acetaminophen + Topical creams,Low,Medium
+NSAIDs,GI_bleeding_risk,Female_Specific,Mild,31-45,Common,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Medium,High
+NSAIDs,kidney_damage_risk,Female_Specific,Mild,31-45,Frequent,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Medium,High
+NSAIDs,cardiovascular_events,Female_Specific,Mild,31-45,Common,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Medium,Medium
+NSAIDs,stomach_upset,General,Moderate,31-45,Frequent,Pain_Management,Higher,No,Acetaminophen + Topical creams,High,Low
+NSAIDs,headache,General,Moderate,31-45,Common,Pain_Management,Higher,No,Acetaminophen + Topical creams,Unknown,High
+NSAIDs,dizziness,General,Moderate,31-45,Rare,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,High,Medium
+NSAIDs,GI_bleeding_risk,Female_Specific,Moderate,31-45,Frequent,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Medium,High
+NSAIDs,kidney_damage_risk,Female_Specific,Moderate,31-45,Common,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,High,High
+NSAIDs,cardiovascular_events,Female_Specific,Moderate,31-45,Common,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,High,High
+NSAIDs,stomach_upset,General,Severe,31-45,Common,Pain_Management,Higher,No,Acetaminophen + Topical creams,Low,Unknown
+NSAIDs,headache,General,Severe,31-45,Common,Pain_Management,Higher,No,Acetaminophen + Topical creams,High,High
+NSAIDs,dizziness,General,Severe,31-45,Rare,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Unknown,High
+NSAIDs,GI_bleeding_risk,Female_Specific,Severe,31-45,Common,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Medium,High
+NSAIDs,kidney_damage_risk,Female_Specific,Severe,31-45,Common,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,High,Medium
+NSAIDs,cardiovascular_events,Female_Specific,Severe,31-45,Frequent,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Medium,High
+NSAIDs,stomach_upset,General,Mild,46-60,Rare,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Medium,Medium
+NSAIDs,headache,General,Mild,46-60,Common,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Medium,High
+NSAIDs,dizziness,General,Mild,46-60,Common,Pain_Management,Higher,No,Acetaminophen + Topical creams,Low,Low
+NSAIDs,GI_bleeding_risk,Female_Specific,Mild,46-60,Frequent,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Medium,Medium
+NSAIDs,kidney_damage_risk,Female_Specific,Mild,46-60,Common,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Medium,Medium
+NSAIDs,cardiovascular_events,Female_Specific,Mild,46-60,Common,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Medium,Medium
+NSAIDs,stomach_upset,General,Moderate,46-60,Frequent,Pain_Management,Higher,No,Acetaminophen + Topical creams,Unknown,Unknown
+NSAIDs,headache,General,Moderate,46-60,Common,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,High,Unknown
+NSAIDs,dizziness,General,Moderate,46-60,Common,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Medium,Unknown
+NSAIDs,GI_bleeding_risk,Female_Specific,Moderate,46-60,Frequent,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,High,High
+NSAIDs,kidney_damage_risk,Female_Specific,Moderate,46-60,Frequent,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Medium,High
+NSAIDs,cardiovascular_events,Female_Specific,Moderate,46-60,Frequent,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Medium,High
+NSAIDs,stomach_upset,General,Severe,46-60,Rare,Pain_Management,Higher,No,Acetaminophen + Topical creams,Low,High
+NSAIDs,headache,General,Severe,46-60,Rare,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Medium,Unknown
+NSAIDs,dizziness,General,Severe,46-60,Frequent,Pain_Management,Higher,No,Acetaminophen + Topical creams,Low,High
+NSAIDs,GI_bleeding_risk,Female_Specific,Severe,46-60,Frequent,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,High,Medium
+NSAIDs,kidney_damage_risk,Female_Specific,Severe,46-60,Common,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,High,Medium
+NSAIDs,cardiovascular_events,Female_Specific,Severe,46-60,Frequent,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Medium,Medium
+NSAIDs,stomach_upset,General,Mild,60+,Rare,Pain_Management,Higher,No,Acetaminophen + Topical creams,Medium,High
+NSAIDs,headache,General,Mild,60+,Common,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Medium,Low
+NSAIDs,dizziness,General,Mild,60+,Rare,Pain_Management,Higher,No,Acetaminophen + Topical creams,Unknown,Unknown
+NSAIDs,GI_bleeding_risk,Female_Specific,Mild,60+,Common,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Medium,Medium
+NSAIDs,kidney_damage_risk,Female_Specific,Mild,60+,Common,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,High,High
+NSAIDs,cardiovascular_events,Female_Specific,Mild,60+,Common,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Medium,Medium
+NSAIDs,stomach_upset,General,Moderate,60+,Common,Pain_Management,Higher,No,Acetaminophen + Topical creams,Medium,High
+NSAIDs,headache,General,Moderate,60+,Common,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Low,Low
+NSAIDs,dizziness,General,Moderate,60+,Common,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Medium,Medium
+NSAIDs,GI_bleeding_risk,Female_Specific,Moderate,60+,Frequent,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Medium,Medium
+NSAIDs,kidney_damage_risk,Female_Specific,Moderate,60+,Common,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Medium,Medium
+NSAIDs,cardiovascular_events,Female_Specific,Moderate,60+,Common,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,High,Medium
+NSAIDs,stomach_upset,General,Severe,60+,Common,Pain_Management,Higher,No,Acetaminophen + Topical creams,Low,High
+NSAIDs,headache,General,Severe,60+,Common,Pain_Management,Higher,No,Acetaminophen + Topical creams,Low,Low
+NSAIDs,dizziness,General,Severe,60+,Rare,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,Medium,High
+NSAIDs,GI_bleeding_risk,Female_Specific,Severe,60+,Frequent,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,High,Medium
+NSAIDs,kidney_damage_risk,Female_Specific,Severe,60+,Frequent,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,High,High
+NSAIDs,cardiovascular_events,Female_Specific,Severe,60+,Frequent,Pain_Management,Higher,Yes,Acetaminophen + Topical creams,High,High
+Fluoroquinolones,nausea,General,Mild,18-30,Frequent,Antibiotic,Higher,No,Consult physician for alternatives,Medium,Medium
+Fluoroquinolones,diarrhea,General,Mild,18-30,Common,Antibiotic,Higher,No,Consult physician for alternatives,Low,Unknown
+Fluoroquinolones,headache,General,Mild,18-30,Rare,Antibiotic,Higher,No,Consult physician for alternatives,Medium,Low
+Fluoroquinolones,tendon_rupture_risk,Female_Specific,Mild,18-30,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,High,High
+Fluoroquinolones,QT_prolongation,Female_Specific,Mild,18-30,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,High
+Fluoroquinolones,nausea,General,Moderate,18-30,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,Low,High
+Fluoroquinolones,diarrhea,General,Moderate,18-30,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,Low,Medium
+Fluoroquinolones,headache,General,Moderate,18-30,Frequent,Antibiotic,Higher,No,Consult physician for alternatives,Low,Unknown
+Fluoroquinolones,tendon_rupture_risk,Female_Specific,Moderate,18-30,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,High,Medium
+Fluoroquinolones,QT_prolongation,Female_Specific,Moderate,18-30,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,High,Medium
+Fluoroquinolones,nausea,General,Severe,18-30,Frequent,Antibiotic,Higher,No,Consult physician for alternatives,High,Medium
+Fluoroquinolones,diarrhea,General,Severe,18-30,Common,Antibiotic,Higher,No,Consult physician for alternatives,Low,Low
+Fluoroquinolones,headache,General,Severe,18-30,Frequent,Antibiotic,Higher,No,Consult physician for alternatives,High,Low
+Fluoroquinolones,tendon_rupture_risk,Female_Specific,Severe,18-30,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,High,High
+Fluoroquinolones,QT_prolongation,Female_Specific,Severe,18-30,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Fluoroquinolones,nausea,General,Mild,31-45,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,Low
+Fluoroquinolones,diarrhea,General,Mild,31-45,Rare,Antibiotic,Higher,Yes,Consult physician for alternatives,Unknown,Medium
+Fluoroquinolones,headache,General,Mild,31-45,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,High,High
+Fluoroquinolones,tendon_rupture_risk,Female_Specific,Mild,31-45,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,High,Medium
+Fluoroquinolones,QT_prolongation,Female_Specific,Mild,31-45,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Fluoroquinolones,nausea,General,Moderate,31-45,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,Unknown
+Fluoroquinolones,diarrhea,General,Moderate,31-45,Frequent,Antibiotic,Higher,No,Consult physician for alternatives,Low,Unknown
+Fluoroquinolones,headache,General,Moderate,31-45,Frequent,Antibiotic,Higher,No,Consult physician for alternatives,Unknown,Medium
+Fluoroquinolones,tendon_rupture_risk,Female_Specific,Moderate,31-45,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,High
+Fluoroquinolones,QT_prolongation,Female_Specific,Moderate,31-45,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Fluoroquinolones,nausea,General,Severe,31-45,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,Low,Low
+Fluoroquinolones,diarrhea,General,Severe,31-45,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,Low,Medium
+Fluoroquinolones,headache,General,Severe,31-45,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,Unknown,Low
+Fluoroquinolones,tendon_rupture_risk,Female_Specific,Severe,31-45,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Fluoroquinolones,QT_prolongation,Female_Specific,Severe,31-45,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,High
+Fluoroquinolones,nausea,General,Mild,46-60,Common,Antibiotic,Higher,No,Consult physician for alternatives,High,Medium
+Fluoroquinolones,diarrhea,General,Mild,46-60,Rare,Antibiotic,Higher,No,Consult physician for alternatives,Medium,Low
+Fluoroquinolones,headache,General,Mild,46-60,Rare,Antibiotic,Higher,Yes,Consult physician for alternatives,High,Low
+Fluoroquinolones,tendon_rupture_risk,Female_Specific,Mild,46-60,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Fluoroquinolones,QT_prolongation,Female_Specific,Mild,46-60,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,High,Medium
+Fluoroquinolones,nausea,General,Moderate,46-60,Rare,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,High
+Fluoroquinolones,diarrhea,General,Moderate,46-60,Frequent,Antibiotic,Higher,No,Consult physician for alternatives,Low,Unknown
+Fluoroquinolones,headache,General,Moderate,46-60,Rare,Antibiotic,Higher,Yes,Consult physician for alternatives,Unknown,Unknown
+Fluoroquinolones,tendon_rupture_risk,Female_Specific,Moderate,46-60,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,High
+Fluoroquinolones,QT_prolongation,Female_Specific,Moderate,46-60,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,High
+Fluoroquinolones,nausea,General,Severe,46-60,Rare,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,Unknown
+Fluoroquinolones,diarrhea,General,Severe,46-60,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,Unknown,Low
+Fluoroquinolones,headache,General,Severe,46-60,Rare,Antibiotic,Higher,No,Consult physician for alternatives,Medium,High
+Fluoroquinolones,tendon_rupture_risk,Female_Specific,Severe,46-60,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Fluoroquinolones,QT_prolongation,Female_Specific,Severe,46-60,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,High
+Fluoroquinolones,nausea,General,Mild,60+,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,High,Medium
+Fluoroquinolones,diarrhea,General,Mild,60+,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,Low,High
+Fluoroquinolones,headache,General,Mild,60+,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,High
+Fluoroquinolones,tendon_rupture_risk,Female_Specific,Mild,60+,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,High,Medium
+Fluoroquinolones,QT_prolongation,Female_Specific,Mild,60+,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Fluoroquinolones,nausea,General,Moderate,60+,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,High,Medium
+Fluoroquinolones,diarrhea,General,Moderate,60+,Common,Antibiotic,Higher,No,Consult physician for alternatives,Medium,Unknown
+Fluoroquinolones,headache,General,Moderate,60+,Frequent,Antibiotic,Higher,No,Consult physician for alternatives,Medium,Medium
+Fluoroquinolones,tendon_rupture_risk,Female_Specific,Moderate,60+,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,High,High
+Fluoroquinolones,QT_prolongation,Female_Specific,Moderate,60+,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,High,Medium
+Fluoroquinolones,nausea,General,Severe,60+,Rare,Antibiotic,Higher,No,Consult physician for alternatives,Medium,Medium
+Fluoroquinolones,diarrhea,General,Severe,60+,Rare,Antibiotic,Higher,Yes,Consult physician for alternatives,High,Medium
+Fluoroquinolones,headache,General,Severe,60+,Frequent,Antibiotic,Higher,No,Consult physician for alternatives,Low,Low
+Fluoroquinolones,tendon_rupture_risk,Female_Specific,Severe,60+,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,High,Medium
+Fluoroquinolones,QT_prolongation,Female_Specific,Severe,60+,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Macrolides,nausea,General,Mild,18-30,Rare,Antibiotic,Higher,No,Consult physician for alternatives,Low,Unknown
+Macrolides,abdominal_pain,General,Mild,18-30,Rare,Antibiotic,Higher,Yes,Consult physician for alternatives,Low,Low
+Macrolides,diarrhea,General,Mild,18-30,Common,Antibiotic,Higher,No,Consult physician for alternatives,Medium,Medium
+Macrolides,cardiac_arrhythmia_risk,Female_Specific,Mild,18-30,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,High
+Macrolides,liver_toxicity,Female_Specific,Mild,18-30,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,High,Medium
+Macrolides,nausea,General,Moderate,18-30,Rare,Antibiotic,Higher,Yes,Consult physician for alternatives,High,High
+Macrolides,abdominal_pain,General,Moderate,18-30,Rare,Antibiotic,Higher,No,Consult physician for alternatives,High,Unknown
+Macrolides,diarrhea,General,Moderate,18-30,Rare,Antibiotic,Higher,No,Consult physician for alternatives,Medium,Unknown
+Macrolides,cardiac_arrhythmia_risk,Female_Specific,Moderate,18-30,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,High
+Macrolides,liver_toxicity,Female_Specific,Moderate,18-30,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Macrolides,nausea,General,Severe,18-30,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,Unknown,Unknown
+Macrolides,abdominal_pain,General,Severe,18-30,Common,Antibiotic,Higher,No,Consult physician for alternatives,Medium,High
+Macrolides,diarrhea,General,Severe,18-30,Frequent,Antibiotic,Higher,No,Consult physician for alternatives,High,Low
+Macrolides,cardiac_arrhythmia_risk,Female_Specific,Severe,18-30,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,High
+Macrolides,liver_toxicity,Female_Specific,Severe,18-30,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,High,High
+Macrolides,nausea,General,Mild,31-45,Rare,Antibiotic,Higher,No,Consult physician for alternatives,High,High
+Macrolides,abdominal_pain,General,Mild,31-45,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,Unknown,High
+Macrolides,diarrhea,General,Mild,31-45,Rare,Antibiotic,Higher,No,Consult physician for alternatives,Unknown,Low
+Macrolides,cardiac_arrhythmia_risk,Female_Specific,Mild,31-45,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,High
+Macrolides,liver_toxicity,Female_Specific,Mild,31-45,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,High,Medium
+Macrolides,nausea,General,Moderate,31-45,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,Low,Low
+Macrolides,abdominal_pain,General,Moderate,31-45,Rare,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,Low
+Macrolides,diarrhea,General,Moderate,31-45,Common,Antibiotic,Higher,No,Consult physician for alternatives,Unknown,Low
+Macrolides,cardiac_arrhythmia_risk,Female_Specific,Moderate,31-45,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Macrolides,liver_toxicity,Female_Specific,Moderate,31-45,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Macrolides,nausea,General,Severe,31-45,Common,Antibiotic,Higher,No,Consult physician for alternatives,High,Unknown
+Macrolides,abdominal_pain,General,Severe,31-45,Rare,Antibiotic,Higher,No,Consult physician for alternatives,High,Unknown
+Macrolides,diarrhea,General,Severe,31-45,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,Unknown,Low
+Macrolides,cardiac_arrhythmia_risk,Female_Specific,Severe,31-45,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,High
+Macrolides,liver_toxicity,Female_Specific,Severe,31-45,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,High,Medium
+Macrolides,nausea,General,Mild,46-60,Rare,Antibiotic,Higher,No,Consult physician for alternatives,Unknown,High
+Macrolides,abdominal_pain,General,Mild,46-60,Common,Antibiotic,Higher,No,Consult physician for alternatives,Low,Unknown
+Macrolides,diarrhea,General,Mild,46-60,Common,Antibiotic,Higher,No,Consult physician for alternatives,Low,Low
+Macrolides,cardiac_arrhythmia_risk,Female_Specific,Mild,46-60,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,High,Medium
+Macrolides,liver_toxicity,Female_Specific,Mild,46-60,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,High
+Macrolides,nausea,General,Moderate,46-60,Rare,Antibiotic,Higher,No,Consult physician for alternatives,Low,High
+Macrolides,abdominal_pain,General,Moderate,46-60,Rare,Antibiotic,Higher,No,Consult physician for alternatives,Low,Low
+Macrolides,diarrhea,General,Moderate,46-60,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,Unknown,High
+Macrolides,cardiac_arrhythmia_risk,Female_Specific,Moderate,46-60,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,High,High
+Macrolides,liver_toxicity,Female_Specific,Moderate,46-60,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,High
+Macrolides,nausea,General,Severe,46-60,Frequent,Antibiotic,Higher,No,Consult physician for alternatives,Low,Unknown
+Macrolides,abdominal_pain,General,Severe,46-60,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,Low,Unknown
+Macrolides,diarrhea,General,Severe,46-60,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,High,Low
+Macrolides,cardiac_arrhythmia_risk,Female_Specific,Severe,46-60,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,High,High
+Macrolides,liver_toxicity,Female_Specific,Severe,46-60,Frequent,Antibiotic,Higher,Yes,Consult physician for alternatives,High,Medium
+Macrolides,nausea,General,Mild,60+,Rare,Antibiotic,Higher,Yes,Consult physician for alternatives,High,Low
+Macrolides,abdominal_pain,General,Mild,60+,Common,Antibiotic,Higher,No,Consult physician for alternatives,Unknown,Unknown
+Macrolides,diarrhea,General,Mild,60+,Common,Antibiotic,Higher,No,Consult physician for alternatives,Unknown,Medium
+Macrolides,cardiac_arrhythmia_risk,Female_Specific,Mild,60+,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,High,Medium
+Macrolides,liver_toxicity,Female_Specific,Mild,60+,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,High
+Macrolides,nausea,General,Moderate,60+,Rare,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,High
+Macrolides,abdominal_pain,General,Moderate,60+,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,High,High
+Macrolides,diarrhea,General,Moderate,60+,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,Low,Low
+Macrolides,cardiac_arrhythmia_risk,Female_Specific,Moderate,60+,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Macrolides,liver_toxicity,Female_Specific,Moderate,60+,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,High,High
+Macrolides,nausea,General,Severe,60+,Rare,Antibiotic,Higher,Yes,Consult physician for alternatives,High,Medium
+Macrolides,abdominal_pain,General,Severe,60+,Rare,Antibiotic,Higher,No,Consult physician for alternatives,High,Medium
+Macrolides,diarrhea,General,Severe,60+,Common,Antibiotic,Higher,No,Consult physician for alternatives,Low,High
+Macrolides,cardiac_arrhythmia_risk,Female_Specific,Severe,60+,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,High,Medium
+Macrolides,liver_toxicity,Female_Specific,Severe,60+,Common,Antibiotic,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Birth_Control_Pills,nausea,General,Mild,18-30,Frequent,Hormonal,Specific,Yes,IUD or barrier methods,Low,Medium
+Birth_Control_Pills,breast_tenderness,General,Mild,18-30,Rare,Hormonal,Specific,Yes,IUD or barrier methods,High,Unknown
+Birth_Control_Pills,mood_changes,General,Mild,18-30,Common,Hormonal,Specific,Yes,IUD or barrier methods,Unknown,Medium
+Birth_Control_Pills,blood_clot_risk,Female_Specific,Mild,18-30,Frequent,Hormonal,Higher,Yes,IUD or barrier methods,High,Medium
+Birth_Control_Pills,stroke_risk,Female_Specific,Mild,18-30,Common,Hormonal,Higher,Yes,IUD or barrier methods,High,High
+Birth_Control_Pills,migraine_worsening,Female_Specific,Mild,18-30,Common,Hormonal,Higher,Yes,IUD or barrier methods,High,Medium
+Birth_Control_Pills,nausea,General,Moderate,18-30,Common,Hormonal,Specific,No,IUD or barrier methods,High,Unknown
+Birth_Control_Pills,breast_tenderness,General,Moderate,18-30,Rare,Hormonal,Specific,Yes,IUD or barrier methods,Low,Low
+Birth_Control_Pills,mood_changes,General,Moderate,18-30,Frequent,Hormonal,Specific,No,IUD or barrier methods,High,Unknown
+Birth_Control_Pills,blood_clot_risk,Female_Specific,Moderate,18-30,Frequent,Hormonal,Higher,Yes,IUD or barrier methods,Medium,High
+Birth_Control_Pills,stroke_risk,Female_Specific,Moderate,18-30,Common,Hormonal,Higher,Yes,IUD or barrier methods,High,Medium
+Birth_Control_Pills,migraine_worsening,Female_Specific,Moderate,18-30,Common,Hormonal,Higher,Yes,IUD or barrier methods,High,High
+Birth_Control_Pills,nausea,General,Severe,18-30,Rare,Hormonal,Specific,No,IUD or barrier methods,Medium,Medium
+Birth_Control_Pills,breast_tenderness,General,Severe,18-30,Frequent,Hormonal,Specific,No,IUD or barrier methods,Unknown,High
+Birth_Control_Pills,mood_changes,General,Severe,18-30,Common,Hormonal,Specific,Yes,IUD or barrier methods,Unknown,Low
+Birth_Control_Pills,blood_clot_risk,Female_Specific,Severe,18-30,Frequent,Hormonal,Higher,Yes,IUD or barrier methods,High,Medium
+Birth_Control_Pills,stroke_risk,Female_Specific,Severe,18-30,Common,Hormonal,Higher,Yes,IUD or barrier methods,Medium,High
+Birth_Control_Pills,migraine_worsening,Female_Specific,Severe,18-30,Frequent,Hormonal,Higher,Yes,IUD or barrier methods,Medium,High
+Birth_Control_Pills,nausea,General,Mild,31-45,Frequent,Hormonal,Specific,No,IUD or barrier methods,High,Low
+Birth_Control_Pills,breast_tenderness,General,Mild,31-45,Common,Hormonal,Specific,No,IUD or barrier methods,Medium,Medium
+Birth_Control_Pills,mood_changes,General,Mild,31-45,Frequent,Hormonal,Specific,Yes,IUD or barrier methods,Medium,Low
+Birth_Control_Pills,blood_clot_risk,Female_Specific,Mild,31-45,Frequent,Hormonal,Higher,Yes,IUD or barrier methods,High,Medium
+Birth_Control_Pills,stroke_risk,Female_Specific,Mild,31-45,Frequent,Hormonal,Higher,Yes,IUD or barrier methods,High,High
+Birth_Control_Pills,migraine_worsening,Female_Specific,Mild,31-45,Common,Hormonal,Higher,Yes,IUD or barrier methods,Medium,Medium
+Birth_Control_Pills,nausea,General,Moderate,31-45,Rare,Hormonal,Specific,No,IUD or barrier methods,Low,High
+Birth_Control_Pills,breast_tenderness,General,Moderate,31-45,Frequent,Hormonal,Specific,Yes,IUD or barrier methods,Unknown,Low
+Birth_Control_Pills,mood_changes,General,Moderate,31-45,Rare,Hormonal,Specific,No,IUD or barrier methods,Unknown,Low
+Birth_Control_Pills,blood_clot_risk,Female_Specific,Moderate,31-45,Frequent,Hormonal,Higher,Yes,IUD or barrier methods,High,Medium
+Birth_Control_Pills,stroke_risk,Female_Specific,Moderate,31-45,Frequent,Hormonal,Higher,Yes,IUD or barrier methods,High,Medium
+Birth_Control_Pills,migraine_worsening,Female_Specific,Moderate,31-45,Frequent,Hormonal,Higher,Yes,IUD or barrier methods,High,High
+Birth_Control_Pills,nausea,General,Severe,31-45,Common,Hormonal,Specific,Yes,IUD or barrier methods,Low,High
+Birth_Control_Pills,breast_tenderness,General,Severe,31-45,Frequent,Hormonal,Specific,No,IUD or barrier methods,Medium,High
+Birth_Control_Pills,mood_changes,General,Severe,31-45,Frequent,Hormonal,Specific,No,IUD or barrier methods,Unknown,Unknown
+Birth_Control_Pills,blood_clot_risk,Female_Specific,Severe,31-45,Frequent,Hormonal,Higher,Yes,IUD or barrier methods,Medium,High
+Birth_Control_Pills,stroke_risk,Female_Specific,Severe,31-45,Common,Hormonal,Higher,Yes,IUD or barrier methods,High,High
+Birth_Control_Pills,migraine_worsening,Female_Specific,Severe,31-45,Common,Hormonal,Higher,Yes,IUD or barrier methods,Medium,Medium
+Birth_Control_Pills,nausea,General,Mild,46-60,Rare,Hormonal,Specific,No,IUD or barrier methods,High,Low
+Birth_Control_Pills,breast_tenderness,General,Mild,46-60,Frequent,Hormonal,Specific,No,IUD or barrier methods,High,High
+Birth_Control_Pills,mood_changes,General,Mild,46-60,Frequent,Hormonal,Specific,No,IUD or barrier methods,Medium,High
+Birth_Control_Pills,blood_clot_risk,Female_Specific,Mild,46-60,Frequent,Hormonal,Higher,Yes,IUD or barrier methods,Medium,High
+Birth_Control_Pills,stroke_risk,Female_Specific,Mild,46-60,Common,Hormonal,Higher,Yes,IUD or barrier methods,High,Medium
+Birth_Control_Pills,migraine_worsening,Female_Specific,Mild,46-60,Frequent,Hormonal,Higher,Yes,IUD or barrier methods,High,Medium
+Birth_Control_Pills,nausea,General,Moderate,46-60,Rare,Hormonal,Specific,No,IUD or barrier methods,Low,Unknown
+Birth_Control_Pills,breast_tenderness,General,Moderate,46-60,Frequent,Hormonal,Specific,Yes,IUD or barrier methods,High,Low
+Birth_Control_Pills,mood_changes,General,Moderate,46-60,Frequent,Hormonal,Specific,Yes,IUD or barrier methods,High,Unknown
+Birth_Control_Pills,blood_clot_risk,Female_Specific,Moderate,46-60,Common,Hormonal,Higher,Yes,IUD or barrier methods,Medium,Medium
+Birth_Control_Pills,stroke_risk,Female_Specific,Moderate,46-60,Frequent,Hormonal,Higher,Yes,IUD or barrier methods,Medium,High
+Birth_Control_Pills,migraine_worsening,Female_Specific,Moderate,46-60,Frequent,Hormonal,Higher,Yes,IUD or barrier methods,Medium,Medium
+Birth_Control_Pills,nausea,General,Severe,46-60,Frequent,Hormonal,Specific,No,IUD or barrier methods,Unknown,Low
+Birth_Control_Pills,breast_tenderness,General,Severe,46-60,Common,Hormonal,Specific,Yes,IUD or barrier methods,Medium,High
+Birth_Control_Pills,mood_changes,General,Severe,46-60,Common,Hormonal,Specific,Yes,IUD or barrier methods,High,Unknown
+Birth_Control_Pills,blood_clot_risk,Female_Specific,Severe,46-60,Frequent,Hormonal,Higher,Yes,IUD or barrier methods,Medium,High
+Birth_Control_Pills,stroke_risk,Female_Specific,Severe,46-60,Frequent,Hormonal,Higher,Yes,IUD or barrier methods,High,Medium
+Birth_Control_Pills,migraine_worsening,Female_Specific,Severe,46-60,Common,Hormonal,Higher,Yes,IUD or barrier methods,Medium,Medium
+Birth_Control_Pills,nausea,General,Mild,60+,Common,Hormonal,Specific,No,IUD or barrier methods,Unknown,Low
+Birth_Control_Pills,breast_tenderness,General,Mild,60+,Rare,Hormonal,Specific,No,IUD or barrier methods,High,High
+Birth_Control_Pills,mood_changes,General,Mild,60+,Common,Hormonal,Specific,Yes,IUD or barrier methods,Medium,Unknown
+Birth_Control_Pills,blood_clot_risk,Female_Specific,Mild,60+,Common,Hormonal,Higher,Yes,IUD or barrier methods,Medium,High
+Birth_Control_Pills,stroke_risk,Female_Specific,Mild,60+,Common,Hormonal,Higher,Yes,IUD or barrier methods,High,High
+Birth_Control_Pills,migraine_worsening,Female_Specific,Mild,60+,Frequent,Hormonal,Higher,Yes,IUD or barrier methods,High,Medium
+Birth_Control_Pills,nausea,General,Moderate,60+,Rare,Hormonal,Specific,Yes,IUD or barrier methods,Medium,Medium
+Birth_Control_Pills,breast_tenderness,General,Moderate,60+,Common,Hormonal,Specific,No,IUD or barrier methods,Low,Unknown
+Birth_Control_Pills,mood_changes,General,Moderate,60+,Frequent,Hormonal,Specific,No,IUD or barrier methods,Medium,Low
+Birth_Control_Pills,blood_clot_risk,Female_Specific,Moderate,60+,Frequent,Hormonal,Higher,Yes,IUD or barrier methods,High,High
+Birth_Control_Pills,stroke_risk,Female_Specific,Moderate,60+,Frequent,Hormonal,Higher,Yes,IUD or barrier methods,High,Medium
+Birth_Control_Pills,migraine_worsening,Female_Specific,Moderate,60+,Frequent,Hormonal,Higher,Yes,IUD or barrier methods,Medium,High
+Birth_Control_Pills,nausea,General,Severe,60+,Rare,Hormonal,Specific,Yes,IUD or barrier methods,High,Medium
+Birth_Control_Pills,breast_tenderness,General,Severe,60+,Rare,Hormonal,Specific,Yes,IUD or barrier methods,Unknown,Medium
+Birth_Control_Pills,mood_changes,General,Severe,60+,Rare,Hormonal,Specific,Yes,IUD or barrier methods,Medium,Medium
+Birth_Control_Pills,blood_clot_risk,Female_Specific,Severe,60+,Frequent,Hormonal,Higher,Yes,IUD or barrier methods,High,High
+Birth_Control_Pills,stroke_risk,Female_Specific,Severe,60+,Frequent,Hormonal,Higher,Yes,IUD or barrier methods,High,High
+Birth_Control_Pills,migraine_worsening,Female_Specific,Severe,60+,Frequent,Hormonal,Higher,Yes,IUD or barrier methods,Medium,High
+Hormone_Replacement_Therapy,breast_tenderness,General,Mild,18-30,Rare,Hormonal,Specific,Yes,Bioidentical hormones,Low,High
+Hormone_Replacement_Therapy,bloating,General,Mild,18-30,Common,Hormonal,Specific,Yes,Bioidentical hormones,Low,Low
+Hormone_Replacement_Therapy,mood_swings,General,Mild,18-30,Rare,Hormonal,Specific,Yes,Bioidentical hormones,Medium,Unknown
+Hormone_Replacement_Therapy,breast_cancer_risk,Female_Specific,Mild,18-30,Frequent,Hormonal,Higher,Yes,Bioidentical hormones,High,High
+Hormone_Replacement_Therapy,stroke_risk,Female_Specific,Mild,18-30,Frequent,Hormonal,Higher,Yes,Bioidentical hormones,Medium,Medium
+Hormone_Replacement_Therapy,blood_clot_risk,Female_Specific,Mild,18-30,Common,Hormonal,Higher,Yes,Bioidentical hormones,High,Medium
+Hormone_Replacement_Therapy,breast_tenderness,General,Moderate,18-30,Frequent,Hormonal,Specific,No,Bioidentical hormones,High,High
+Hormone_Replacement_Therapy,bloating,General,Moderate,18-30,Rare,Hormonal,Specific,No,Bioidentical hormones,Low,Low
+Hormone_Replacement_Therapy,mood_swings,General,Moderate,18-30,Frequent,Hormonal,Specific,Yes,Bioidentical hormones,Unknown,Unknown
+Hormone_Replacement_Therapy,breast_cancer_risk,Female_Specific,Moderate,18-30,Frequent,Hormonal,Higher,Yes,Bioidentical hormones,Medium,Medium
+Hormone_Replacement_Therapy,stroke_risk,Female_Specific,Moderate,18-30,Common,Hormonal,Higher,Yes,Bioidentical hormones,High,High
+Hormone_Replacement_Therapy,blood_clot_risk,Female_Specific,Moderate,18-30,Common,Hormonal,Higher,Yes,Bioidentical hormones,Medium,Medium
+Hormone_Replacement_Therapy,breast_tenderness,General,Severe,18-30,Frequent,Hormonal,Specific,Yes,Bioidentical hormones,Unknown,High
+Hormone_Replacement_Therapy,bloating,General,Severe,18-30,Rare,Hormonal,Specific,No,Bioidentical hormones,Low,Low
+Hormone_Replacement_Therapy,mood_swings,General,Severe,18-30,Rare,Hormonal,Specific,No,Bioidentical hormones,Low,Medium
+Hormone_Replacement_Therapy,breast_cancer_risk,Female_Specific,Severe,18-30,Common,Hormonal,Higher,Yes,Bioidentical hormones,Medium,High
+Hormone_Replacement_Therapy,stroke_risk,Female_Specific,Severe,18-30,Common,Hormonal,Higher,Yes,Bioidentical hormones,Medium,Medium
+Hormone_Replacement_Therapy,blood_clot_risk,Female_Specific,Severe,18-30,Common,Hormonal,Higher,Yes,Bioidentical hormones,High,High
+Hormone_Replacement_Therapy,breast_tenderness,General,Mild,31-45,Rare,Hormonal,Specific,Yes,Bioidentical hormones,High,High
+Hormone_Replacement_Therapy,bloating,General,Mild,31-45,Common,Hormonal,Specific,Yes,Bioidentical hormones,High,Unknown
+Hormone_Replacement_Therapy,mood_swings,General,Mild,31-45,Frequent,Hormonal,Specific,No,Bioidentical hormones,High,High
+Hormone_Replacement_Therapy,breast_cancer_risk,Female_Specific,Mild,31-45,Common,Hormonal,Higher,Yes,Bioidentical hormones,High,High
+Hormone_Replacement_Therapy,stroke_risk,Female_Specific,Mild,31-45,Common,Hormonal,Higher,Yes,Bioidentical hormones,Medium,High
+Hormone_Replacement_Therapy,blood_clot_risk,Female_Specific,Mild,31-45,Frequent,Hormonal,Higher,Yes,Bioidentical hormones,Medium,High
+Hormone_Replacement_Therapy,breast_tenderness,General,Moderate,31-45,Rare,Hormonal,Specific,Yes,Bioidentical hormones,Unknown,Unknown
+Hormone_Replacement_Therapy,bloating,General,Moderate,31-45,Common,Hormonal,Specific,No,Bioidentical hormones,High,Unknown
+Hormone_Replacement_Therapy,mood_swings,General,Moderate,31-45,Frequent,Hormonal,Specific,Yes,Bioidentical hormones,Low,High
+Hormone_Replacement_Therapy,breast_cancer_risk,Female_Specific,Moderate,31-45,Common,Hormonal,Higher,Yes,Bioidentical hormones,High,High
+Hormone_Replacement_Therapy,stroke_risk,Female_Specific,Moderate,31-45,Frequent,Hormonal,Higher,Yes,Bioidentical hormones,High,High
+Hormone_Replacement_Therapy,blood_clot_risk,Female_Specific,Moderate,31-45,Common,Hormonal,Higher,Yes,Bioidentical hormones,Medium,High
+Hormone_Replacement_Therapy,breast_tenderness,General,Severe,31-45,Common,Hormonal,Specific,No,Bioidentical hormones,Low,Low
+Hormone_Replacement_Therapy,bloating,General,Severe,31-45,Rare,Hormonal,Specific,No,Bioidentical hormones,High,High
+Hormone_Replacement_Therapy,mood_swings,General,Severe,31-45,Rare,Hormonal,Specific,No,Bioidentical hormones,Low,High
+Hormone_Replacement_Therapy,breast_cancer_risk,Female_Specific,Severe,31-45,Common,Hormonal,Higher,Yes,Bioidentical hormones,Medium,Medium
+Hormone_Replacement_Therapy,stroke_risk,Female_Specific,Severe,31-45,Common,Hormonal,Higher,Yes,Bioidentical hormones,Medium,Medium
+Hormone_Replacement_Therapy,blood_clot_risk,Female_Specific,Severe,31-45,Frequent,Hormonal,Higher,Yes,Bioidentical hormones,Medium,High
+Hormone_Replacement_Therapy,breast_tenderness,General,Mild,46-60,Frequent,Hormonal,Specific,No,Bioidentical hormones,Unknown,Medium
+Hormone_Replacement_Therapy,bloating,General,Mild,46-60,Frequent,Hormonal,Specific,Yes,Bioidentical hormones,Unknown,Medium
+Hormone_Replacement_Therapy,mood_swings,General,Mild,46-60,Rare,Hormonal,Specific,No,Bioidentical hormones,High,Unknown
+Hormone_Replacement_Therapy,breast_cancer_risk,Female_Specific,Mild,46-60,Frequent,Hormonal,Higher,Yes,Bioidentical hormones,Medium,Medium
+Hormone_Replacement_Therapy,stroke_risk,Female_Specific,Mild,46-60,Frequent,Hormonal,Higher,Yes,Bioidentical hormones,High,High
+Hormone_Replacement_Therapy,blood_clot_risk,Female_Specific,Mild,46-60,Frequent,Hormonal,Higher,Yes,Bioidentical hormones,High,High
+Hormone_Replacement_Therapy,breast_tenderness,General,Moderate,46-60,Rare,Hormonal,Specific,Yes,Bioidentical hormones,Low,Medium
+Hormone_Replacement_Therapy,bloating,General,Moderate,46-60,Rare,Hormonal,Specific,Yes,Bioidentical hormones,Low,Unknown
+Hormone_Replacement_Therapy,mood_swings,General,Moderate,46-60,Rare,Hormonal,Specific,No,Bioidentical hormones,High,High
+Hormone_Replacement_Therapy,breast_cancer_risk,Female_Specific,Moderate,46-60,Common,Hormonal,Higher,Yes,Bioidentical hormones,Medium,Medium
+Hormone_Replacement_Therapy,stroke_risk,Female_Specific,Moderate,46-60,Frequent,Hormonal,Higher,Yes,Bioidentical hormones,High,Medium
+Hormone_Replacement_Therapy,blood_clot_risk,Female_Specific,Moderate,46-60,Frequent,Hormonal,Higher,Yes,Bioidentical hormones,High,High
+Hormone_Replacement_Therapy,breast_tenderness,General,Severe,46-60,Common,Hormonal,Specific,Yes,Bioidentical hormones,Low,Unknown
+Hormone_Replacement_Therapy,bloating,General,Severe,46-60,Common,Hormonal,Specific,No,Bioidentical hormones,Medium,Medium
+Hormone_Replacement_Therapy,mood_swings,General,Severe,46-60,Rare,Hormonal,Specific,No,Bioidentical hormones,Low,Medium
+Hormone_Replacement_Therapy,breast_cancer_risk,Female_Specific,Severe,46-60,Common,Hormonal,Higher,Yes,Bioidentical hormones,Medium,High
+Hormone_Replacement_Therapy,stroke_risk,Female_Specific,Severe,46-60,Common,Hormonal,Higher,Yes,Bioidentical hormones,Medium,High
+Hormone_Replacement_Therapy,blood_clot_risk,Female_Specific,Severe,46-60,Common,Hormonal,Higher,Yes,Bioidentical hormones,Medium,Medium
+Hormone_Replacement_Therapy,breast_tenderness,General,Mild,60+,Rare,Hormonal,Specific,Yes,Bioidentical hormones,Unknown,Unknown
+Hormone_Replacement_Therapy,bloating,General,Mild,60+,Frequent,Hormonal,Specific,Yes,Bioidentical hormones,Low,Unknown
+Hormone_Replacement_Therapy,mood_swings,General,Mild,60+,Common,Hormonal,Specific,Yes,Bioidentical hormones,Unknown,Unknown
+Hormone_Replacement_Therapy,breast_cancer_risk,Female_Specific,Mild,60+,Common,Hormonal,Higher,Yes,Bioidentical hormones,Medium,High
+Hormone_Replacement_Therapy,stroke_risk,Female_Specific,Mild,60+,Common,Hormonal,Higher,Yes,Bioidentical hormones,Medium,Medium
+Hormone_Replacement_Therapy,blood_clot_risk,Female_Specific,Mild,60+,Frequent,Hormonal,Higher,Yes,Bioidentical hormones,High,Medium
+Hormone_Replacement_Therapy,breast_tenderness,General,Moderate,60+,Frequent,Hormonal,Specific,Yes,Bioidentical hormones,Medium,Low
+Hormone_Replacement_Therapy,bloating,General,Moderate,60+,Frequent,Hormonal,Specific,No,Bioidentical hormones,Medium,Unknown
+Hormone_Replacement_Therapy,mood_swings,General,Moderate,60+,Rare,Hormonal,Specific,No,Bioidentical hormones,Medium,High
+Hormone_Replacement_Therapy,breast_cancer_risk,Female_Specific,Moderate,60+,Common,Hormonal,Higher,Yes,Bioidentical hormones,High,Medium
+Hormone_Replacement_Therapy,stroke_risk,Female_Specific,Moderate,60+,Frequent,Hormonal,Higher,Yes,Bioidentical hormones,Medium,High
+Hormone_Replacement_Therapy,blood_clot_risk,Female_Specific,Moderate,60+,Frequent,Hormonal,Higher,Yes,Bioidentical hormones,High,High
+Hormone_Replacement_Therapy,breast_tenderness,General,Severe,60+,Rare,Hormonal,Specific,Yes,Bioidentical hormones,High,Medium
+Hormone_Replacement_Therapy,bloating,General,Severe,60+,Frequent,Hormonal,Specific,Yes,Bioidentical hormones,Low,Low
+Hormone_Replacement_Therapy,mood_swings,General,Severe,60+,Frequent,Hormonal,Specific,Yes,Bioidentical hormones,High,Medium
+Hormone_Replacement_Therapy,breast_cancer_risk,Female_Specific,Severe,60+,Frequent,Hormonal,Higher,Yes,Bioidentical hormones,Medium,Medium
+Hormone_Replacement_Therapy,stroke_risk,Female_Specific,Severe,60+,Common,Hormonal,Higher,Yes,Bioidentical hormones,Medium,High
+Hormone_Replacement_Therapy,blood_clot_risk,Female_Specific,Severe,60+,Frequent,Hormonal,Higher,Yes,Bioidentical hormones,High,Medium
+Levothyroxine,heart_palpitations,General,Mild,18-30,Rare,Endocrine,Higher,No,Consult physician for alternatives,Medium,Medium
+Levothyroxine,insomnia,General,Mild,18-30,Frequent,Endocrine,Higher,Yes,Consult physician for alternatives,Unknown,High
+Levothyroxine,weight_loss,General,Mild,18-30,Frequent,Endocrine,Higher,No,Consult physician for alternatives,Unknown,High
+Levothyroxine,bone_density_loss,Female_Specific,Mild,18-30,Frequent,Endocrine,Higher,Yes,Consult physician for alternatives,High,Medium
+Levothyroxine,menstrual_irregularities,Female_Specific,Mild,18-30,Frequent,Endocrine,Higher,Yes,Consult physician for alternatives,High,High
+Levothyroxine,heart_palpitations,General,Moderate,18-30,Rare,Endocrine,Higher,No,Consult physician for alternatives,Medium,High
+Levothyroxine,insomnia,General,Moderate,18-30,Frequent,Endocrine,Higher,No,Consult physician for alternatives,Unknown,Unknown
+Levothyroxine,weight_loss,General,Moderate,18-30,Common,Endocrine,Higher,Yes,Consult physician for alternatives,High,High
+Levothyroxine,bone_density_loss,Female_Specific,Moderate,18-30,Frequent,Endocrine,Higher,Yes,Consult physician for alternatives,High,Medium
+Levothyroxine,menstrual_irregularities,Female_Specific,Moderate,18-30,Common,Endocrine,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Levothyroxine,heart_palpitations,General,Severe,18-30,Rare,Endocrine,Higher,Yes,Consult physician for alternatives,Medium,Unknown
+Levothyroxine,insomnia,General,Severe,18-30,Frequent,Endocrine,Higher,Yes,Consult physician for alternatives,Low,Unknown
+Levothyroxine,weight_loss,General,Severe,18-30,Frequent,Endocrine,Higher,No,Consult physician for alternatives,Low,Medium
+Levothyroxine,bone_density_loss,Female_Specific,Severe,18-30,Frequent,Endocrine,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Levothyroxine,menstrual_irregularities,Female_Specific,Severe,18-30,Common,Endocrine,Higher,Yes,Consult physician for alternatives,High,High
+Levothyroxine,heart_palpitations,General,Mild,31-45,Rare,Endocrine,Higher,Yes,Consult physician for alternatives,Low,High
+Levothyroxine,insomnia,General,Mild,31-45,Rare,Endocrine,Higher,No,Consult physician for alternatives,Medium,High
+Levothyroxine,weight_loss,General,Mild,31-45,Rare,Endocrine,Higher,Yes,Consult physician for alternatives,Unknown,High
+Levothyroxine,bone_density_loss,Female_Specific,Mild,31-45,Frequent,Endocrine,Higher,Yes,Consult physician for alternatives,Medium,High
+Levothyroxine,menstrual_irregularities,Female_Specific,Mild,31-45,Frequent,Endocrine,Higher,Yes,Consult physician for alternatives,High,Medium
+Levothyroxine,heart_palpitations,General,Moderate,31-45,Rare,Endocrine,Higher,Yes,Consult physician for alternatives,Medium,Unknown
+Levothyroxine,insomnia,General,Moderate,31-45,Common,Endocrine,Higher,Yes,Consult physician for alternatives,High,Unknown
+Levothyroxine,weight_loss,General,Moderate,31-45,Common,Endocrine,Higher,Yes,Consult physician for alternatives,Unknown,High
+Levothyroxine,bone_density_loss,Female_Specific,Moderate,31-45,Frequent,Endocrine,Higher,Yes,Consult physician for alternatives,Medium,High
+Levothyroxine,menstrual_irregularities,Female_Specific,Moderate,31-45,Common,Endocrine,Higher,Yes,Consult physician for alternatives,Medium,High
+Levothyroxine,heart_palpitations,General,Severe,31-45,Rare,Endocrine,Higher,No,Consult physician for alternatives,Unknown,High
+Levothyroxine,insomnia,General,Severe,31-45,Rare,Endocrine,Higher,Yes,Consult physician for alternatives,Unknown,Unknown
+Levothyroxine,weight_loss,General,Severe,31-45,Rare,Endocrine,Higher,No,Consult physician for alternatives,Medium,Low
+Levothyroxine,bone_density_loss,Female_Specific,Severe,31-45,Frequent,Endocrine,Higher,Yes,Consult physician for alternatives,High,High
+Levothyroxine,menstrual_irregularities,Female_Specific,Severe,31-45,Frequent,Endocrine,Higher,Yes,Consult physician for alternatives,Medium,High
+Levothyroxine,heart_palpitations,General,Mild,46-60,Frequent,Endocrine,Higher,Yes,Consult physician for alternatives,High,High
+Levothyroxine,insomnia,General,Mild,46-60,Common,Endocrine,Higher,No,Consult physician for alternatives,Low,High
+Levothyroxine,weight_loss,General,Mild,46-60,Rare,Endocrine,Higher,No,Consult physician for alternatives,Unknown,Medium
+Levothyroxine,bone_density_loss,Female_Specific,Mild,46-60,Common,Endocrine,Higher,Yes,Consult physician for alternatives,High,High
+Levothyroxine,menstrual_irregularities,Female_Specific,Mild,46-60,Frequent,Endocrine,Higher,Yes,Consult physician for alternatives,High,Medium
+Levothyroxine,heart_palpitations,General,Moderate,46-60,Common,Endocrine,Higher,No,Consult physician for alternatives,Unknown,Medium
+Levothyroxine,insomnia,General,Moderate,46-60,Common,Endocrine,Higher,No,Consult physician for alternatives,High,Low
+Levothyroxine,weight_loss,General,Moderate,46-60,Frequent,Endocrine,Higher,No,Consult physician for alternatives,Unknown,High
+Levothyroxine,bone_density_loss,Female_Specific,Moderate,46-60,Frequent,Endocrine,Higher,Yes,Consult physician for alternatives,Medium,High
+Levothyroxine,menstrual_irregularities,Female_Specific,Moderate,46-60,Common,Endocrine,Higher,Yes,Consult physician for alternatives,High,High
+Levothyroxine,heart_palpitations,General,Severe,46-60,Common,Endocrine,Higher,Yes,Consult physician for alternatives,Low,High
+Levothyroxine,insomnia,General,Severe,46-60,Common,Endocrine,Higher,No,Consult physician for alternatives,High,Unknown
+Levothyroxine,weight_loss,General,Severe,46-60,Common,Endocrine,Higher,No,Consult physician for alternatives,High,Low
+Levothyroxine,bone_density_loss,Female_Specific,Severe,46-60,Common,Endocrine,Higher,Yes,Consult physician for alternatives,High,Medium
+Levothyroxine,menstrual_irregularities,Female_Specific,Severe,46-60,Common,Endocrine,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Levothyroxine,heart_palpitations,General,Mild,60+,Common,Endocrine,Higher,No,Consult physician for alternatives,High,Low
+Levothyroxine,insomnia,General,Mild,60+,Frequent,Endocrine,Higher,Yes,Consult physician for alternatives,Unknown,Medium
+Levothyroxine,weight_loss,General,Mild,60+,Rare,Endocrine,Higher,No,Consult physician for alternatives,Unknown,Unknown
+Levothyroxine,bone_density_loss,Female_Specific,Mild,60+,Frequent,Endocrine,Higher,Yes,Consult physician for alternatives,High,Medium
+Levothyroxine,menstrual_irregularities,Female_Specific,Mild,60+,Frequent,Endocrine,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Levothyroxine,heart_palpitations,General,Moderate,60+,Frequent,Endocrine,Higher,No,Consult physician for alternatives,Medium,Medium
+Levothyroxine,insomnia,General,Moderate,60+,Frequent,Endocrine,Higher,No,Consult physician for alternatives,Medium,Unknown
+Levothyroxine,weight_loss,General,Moderate,60+,Frequent,Endocrine,Higher,Yes,Consult physician for alternatives,Low,High
+Levothyroxine,bone_density_loss,Female_Specific,Moderate,60+,Common,Endocrine,Higher,Yes,Consult physician for alternatives,High,High
+Levothyroxine,menstrual_irregularities,Female_Specific,Moderate,60+,Frequent,Endocrine,Higher,Yes,Consult physician for alternatives,High,High
+Levothyroxine,heart_palpitations,General,Severe,60+,Frequent,Endocrine,Higher,No,Consult physician for alternatives,Medium,Low
+Levothyroxine,insomnia,General,Severe,60+,Frequent,Endocrine,Higher,No,Consult physician for alternatives,Unknown,High
+Levothyroxine,weight_loss,General,Severe,60+,Rare,Endocrine,Higher,Yes,Consult physician for alternatives,High,Medium
+Levothyroxine,bone_density_loss,Female_Specific,Severe,60+,Frequent,Endocrine,Higher,Yes,Consult physician for alternatives,High,Medium
+Levothyroxine,menstrual_irregularities,Female_Specific,Severe,60+,Common,Endocrine,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Metformin,nausea,General,Mild,18-30,Rare,Diabetes,Similar,No,Consult physician for alternatives,Medium,Low
+Metformin,diarrhea,General,Mild,18-30,Frequent,Diabetes,Similar,No,Consult physician for alternatives,Medium,Medium
+Metformin,stomach_upset,General,Mild,18-30,Rare,Diabetes,Similar,Yes,Consult physician for alternatives,Unknown,High
+Metformin,B12_deficiency_risk,Female_Specific,Mild,18-30,Common,Diabetes,Higher,Yes,Consult physician for alternatives,High,High
+Metformin,PCOS_benefits,Female_Specific,Mild,18-30,Common,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Metformin,nausea,General,Moderate,18-30,Common,Diabetes,Similar,Yes,Consult physician for alternatives,Medium,Unknown
+Metformin,diarrhea,General,Moderate,18-30,Common,Diabetes,Similar,Yes,Consult physician for alternatives,Medium,Unknown
+Metformin,stomach_upset,General,Moderate,18-30,Common,Diabetes,Similar,Yes,Consult physician for alternatives,Low,Medium
+Metformin,B12_deficiency_risk,Female_Specific,Moderate,18-30,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,High
+Metformin,PCOS_benefits,Female_Specific,Moderate,18-30,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,High,Medium
+Metformin,nausea,General,Severe,18-30,Common,Diabetes,Similar,Yes,Consult physician for alternatives,High,Low
+Metformin,diarrhea,General,Severe,18-30,Rare,Diabetes,Similar,Yes,Consult physician for alternatives,High,High
+Metformin,stomach_upset,General,Severe,18-30,Rare,Diabetes,Similar,Yes,Consult physician for alternatives,High,Unknown
+Metformin,B12_deficiency_risk,Female_Specific,Severe,18-30,Common,Diabetes,Higher,Yes,Consult physician for alternatives,High,Medium
+Metformin,PCOS_benefits,Female_Specific,Severe,18-30,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Metformin,nausea,General,Mild,31-45,Rare,Diabetes,Similar,No,Consult physician for alternatives,Medium,Low
+Metformin,diarrhea,General,Mild,31-45,Common,Diabetes,Similar,No,Consult physician for alternatives,Unknown,Medium
+Metformin,stomach_upset,General,Mild,31-45,Rare,Diabetes,Similar,No,Consult physician for alternatives,Medium,Low
+Metformin,B12_deficiency_risk,Female_Specific,Mild,31-45,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,High
+Metformin,PCOS_benefits,Female_Specific,Mild,31-45,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Metformin,nausea,General,Moderate,31-45,Frequent,Diabetes,Similar,No,Consult physician for alternatives,Unknown,Unknown
+Metformin,diarrhea,General,Moderate,31-45,Rare,Diabetes,Similar,Yes,Consult physician for alternatives,High,Unknown
+Metformin,stomach_upset,General,Moderate,31-45,Frequent,Diabetes,Similar,Yes,Consult physician for alternatives,Unknown,High
+Metformin,B12_deficiency_risk,Female_Specific,Moderate,31-45,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,High,Medium
+Metformin,PCOS_benefits,Female_Specific,Moderate,31-45,Common,Diabetes,Higher,Yes,Consult physician for alternatives,High,Medium
+Metformin,nausea,General,Severe,31-45,Common,Diabetes,Similar,Yes,Consult physician for alternatives,Low,Unknown
+Metformin,diarrhea,General,Severe,31-45,Rare,Diabetes,Similar,No,Consult physician for alternatives,Medium,Medium
+Metformin,stomach_upset,General,Severe,31-45,Frequent,Diabetes,Similar,No,Consult physician for alternatives,Medium,High
+Metformin,B12_deficiency_risk,Female_Specific,Severe,31-45,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,High,High
+Metformin,PCOS_benefits,Female_Specific,Severe,31-45,Common,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,High
+Metformin,nausea,General,Mild,46-60,Rare,Diabetes,Similar,Yes,Consult physician for alternatives,Unknown,Medium
+Metformin,diarrhea,General,Mild,46-60,Common,Diabetes,Similar,Yes,Consult physician for alternatives,Medium,High
+Metformin,stomach_upset,General,Mild,46-60,Rare,Diabetes,Similar,No,Consult physician for alternatives,Low,Low
+Metformin,B12_deficiency_risk,Female_Specific,Mild,46-60,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,High,High
+Metformin,PCOS_benefits,Female_Specific,Mild,46-60,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Metformin,nausea,General,Moderate,46-60,Rare,Diabetes,Similar,Yes,Consult physician for alternatives,High,Medium
+Metformin,diarrhea,General,Moderate,46-60,Frequent,Diabetes,Similar,No,Consult physician for alternatives,Low,Low
+Metformin,stomach_upset,General,Moderate,46-60,Frequent,Diabetes,Similar,No,Consult physician for alternatives,Medium,Low
+Metformin,B12_deficiency_risk,Female_Specific,Moderate,46-60,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,High
+Metformin,PCOS_benefits,Female_Specific,Moderate,46-60,Common,Diabetes,Higher,Yes,Consult physician for alternatives,High,Medium
+Metformin,nausea,General,Severe,46-60,Common,Diabetes,Similar,Yes,Consult physician for alternatives,High,Medium
+Metformin,diarrhea,General,Severe,46-60,Frequent,Diabetes,Similar,Yes,Consult physician for alternatives,Unknown,High
+Metformin,stomach_upset,General,Severe,46-60,Rare,Diabetes,Similar,No,Consult physician for alternatives,Low,Unknown
+Metformin,B12_deficiency_risk,Female_Specific,Severe,46-60,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,High
+Metformin,PCOS_benefits,Female_Specific,Severe,46-60,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,High,Medium
+Metformin,nausea,General,Mild,60+,Frequent,Diabetes,Similar,No,Consult physician for alternatives,Unknown,Medium
+Metformin,diarrhea,General,Mild,60+,Common,Diabetes,Similar,No,Consult physician for alternatives,Medium,High
+Metformin,stomach_upset,General,Mild,60+,Rare,Diabetes,Similar,No,Consult physician for alternatives,High,Unknown
+Metformin,B12_deficiency_risk,Female_Specific,Mild,60+,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,High,Medium
+Metformin,PCOS_benefits,Female_Specific,Mild,60+,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Metformin,nausea,General,Moderate,60+,Common,Diabetes,Similar,No,Consult physician for alternatives,Low,Unknown
+Metformin,diarrhea,General,Moderate,60+,Rare,Diabetes,Similar,Yes,Consult physician for alternatives,Low,Unknown
+Metformin,stomach_upset,General,Moderate,60+,Common,Diabetes,Similar,No,Consult physician for alternatives,High,Medium
+Metformin,B12_deficiency_risk,Female_Specific,Moderate,60+,Common,Diabetes,Higher,Yes,Consult physician for alternatives,High,High
+Metformin,PCOS_benefits,Female_Specific,Moderate,60+,Common,Diabetes,Higher,Yes,Consult physician for alternatives,High,Medium
+Metformin,nausea,General,Severe,60+,Common,Diabetes,Similar,Yes,Consult physician for alternatives,Medium,High
+Metformin,diarrhea,General,Severe,60+,Common,Diabetes,Similar,No,Consult physician for alternatives,Unknown,High
+Metformin,stomach_upset,General,Severe,60+,Rare,Diabetes,Similar,Yes,Consult physician for alternatives,High,High
+Metformin,B12_deficiency_risk,Female_Specific,Severe,60+,Common,Diabetes,Higher,Yes,Consult physician for alternatives,High,Medium
+Metformin,PCOS_benefits,Female_Specific,Severe,60+,Common,Diabetes,Higher,Yes,Consult physician for alternatives,High,Medium
+Insulin,hypoglycemia,General,Mild,18-30,Frequent,Diabetes,Higher,No,Consult physician for alternatives,Unknown,Unknown
+Insulin,weight_gain,General,Mild,18-30,Frequent,Diabetes,Higher,No,Consult physician for alternatives,Medium,Low
+Insulin,injection_site_reactions,General,Mild,18-30,Rare,Diabetes,Higher,Yes,Consult physician for alternatives,High,High
+Insulin,menstrual_cycle_effects,Female_Specific,Mild,18-30,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,High,Medium
+Insulin,pregnancy_considerations,Female_Specific,Mild,18-30,Common,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Insulin,hypoglycemia,General,Moderate,18-30,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Insulin,weight_gain,General,Moderate,18-30,Rare,Diabetes,Higher,Yes,Consult physician for alternatives,Low,Unknown
+Insulin,injection_site_reactions,General,Moderate,18-30,Rare,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,Low
+Insulin,menstrual_cycle_effects,Female_Specific,Moderate,18-30,Common,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,High
+Insulin,pregnancy_considerations,Female_Specific,Moderate,18-30,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,High,Medium
+Insulin,hypoglycemia,General,Severe,18-30,Rare,Diabetes,Higher,Yes,Consult physician for alternatives,Unknown,Unknown
+Insulin,weight_gain,General,Severe,18-30,Rare,Diabetes,Higher,No,Consult physician for alternatives,Medium,Low
+Insulin,injection_site_reactions,General,Severe,18-30,Common,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,High
+Insulin,menstrual_cycle_effects,Female_Specific,Severe,18-30,Common,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,High
+Insulin,pregnancy_considerations,Female_Specific,Severe,18-30,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,High
+Insulin,hypoglycemia,General,Mild,31-45,Frequent,Diabetes,Higher,No,Consult physician for alternatives,Medium,Medium
+Insulin,weight_gain,General,Mild,31-45,Rare,Diabetes,Higher,No,Consult physician for alternatives,High,Medium
+Insulin,injection_site_reactions,General,Mild,31-45,Frequent,Diabetes,Higher,No,Consult physician for alternatives,Unknown,Unknown
+Insulin,menstrual_cycle_effects,Female_Specific,Mild,31-45,Common,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Insulin,pregnancy_considerations,Female_Specific,Mild,31-45,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,High,High
+Insulin,hypoglycemia,General,Moderate,31-45,Common,Diabetes,Higher,Yes,Consult physician for alternatives,Unknown,High
+Insulin,weight_gain,General,Moderate,31-45,Rare,Diabetes,Higher,No,Consult physician for alternatives,Low,Unknown
+Insulin,injection_site_reactions,General,Moderate,31-45,Rare,Diabetes,Higher,Yes,Consult physician for alternatives,High,Medium
+Insulin,menstrual_cycle_effects,Female_Specific,Moderate,31-45,Common,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Insulin,pregnancy_considerations,Female_Specific,Moderate,31-45,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Insulin,hypoglycemia,General,Severe,31-45,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,Low
+Insulin,weight_gain,General,Severe,31-45,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,High
+Insulin,injection_site_reactions,General,Severe,31-45,Common,Diabetes,Higher,No,Consult physician for alternatives,Low,Low
+Insulin,menstrual_cycle_effects,Female_Specific,Severe,31-45,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,High,Medium
+Insulin,pregnancy_considerations,Female_Specific,Severe,31-45,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,High,Medium
+Insulin,hypoglycemia,General,Mild,46-60,Rare,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,Unknown
+Insulin,weight_gain,General,Mild,46-60,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,High,Medium
+Insulin,injection_site_reactions,General,Mild,46-60,Common,Diabetes,Higher,No,Consult physician for alternatives,Low,High
+Insulin,menstrual_cycle_effects,Female_Specific,Mild,46-60,Common,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Insulin,pregnancy_considerations,Female_Specific,Mild,46-60,Common,Diabetes,Higher,Yes,Consult physician for alternatives,High,Medium
+Insulin,hypoglycemia,General,Moderate,46-60,Rare,Diabetes,Higher,No,Consult physician for alternatives,Unknown,Low
+Insulin,weight_gain,General,Moderate,46-60,Common,Diabetes,Higher,Yes,Consult physician for alternatives,Unknown,Low
+Insulin,injection_site_reactions,General,Moderate,46-60,Common,Diabetes,Higher,No,Consult physician for alternatives,Low,High
+Insulin,menstrual_cycle_effects,Female_Specific,Moderate,46-60,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,High
+Insulin,pregnancy_considerations,Female_Specific,Moderate,46-60,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,High,Medium
+Insulin,hypoglycemia,General,Severe,46-60,Common,Diabetes,Higher,No,Consult physician for alternatives,Low,High
+Insulin,weight_gain,General,Severe,46-60,Rare,Diabetes,Higher,Yes,Consult physician for alternatives,High,High
+Insulin,injection_site_reactions,General,Severe,46-60,Common,Diabetes,Higher,No,Consult physician for alternatives,High,Low
+Insulin,menstrual_cycle_effects,Female_Specific,Severe,46-60,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,High
+Insulin,pregnancy_considerations,Female_Specific,Severe,46-60,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,High,Medium
+Insulin,hypoglycemia,General,Mild,60+,Rare,Diabetes,Higher,No,Consult physician for alternatives,Unknown,Medium
+Insulin,weight_gain,General,Mild,60+,Rare,Diabetes,Higher,No,Consult physician for alternatives,Low,Medium
+Insulin,injection_site_reactions,General,Mild,60+,Rare,Diabetes,Higher,Yes,Consult physician for alternatives,High,Low
+Insulin,menstrual_cycle_effects,Female_Specific,Mild,60+,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,High
+Insulin,pregnancy_considerations,Female_Specific,Mild,60+,Common,Diabetes,Higher,Yes,Consult physician for alternatives,High,High
+Insulin,hypoglycemia,General,Moderate,60+,Frequent,Diabetes,Higher,No,Consult physician for alternatives,Low,Medium
+Insulin,weight_gain,General,Moderate,60+,Rare,Diabetes,Higher,Yes,Consult physician for alternatives,Unknown,High
+Insulin,injection_site_reactions,General,Moderate,60+,Rare,Diabetes,Higher,Yes,Consult physician for alternatives,Low,Low
+Insulin,menstrual_cycle_effects,Female_Specific,Moderate,60+,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,High
+Insulin,pregnancy_considerations,Female_Specific,Moderate,60+,Common,Diabetes,Higher,Yes,Consult physician for alternatives,High,High
+Insulin,hypoglycemia,General,Severe,60+,Rare,Diabetes,Higher,No,Consult physician for alternatives,Medium,Low
+Insulin,weight_gain,General,Severe,60+,Frequent,Diabetes,Higher,No,Consult physician for alternatives,Medium,Medium
+Insulin,injection_site_reactions,General,Severe,60+,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,Unknown,Low
+Insulin,menstrual_cycle_effects,Female_Specific,Severe,60+,Common,Diabetes,Higher,Yes,Consult physician for alternatives,High,High
+Insulin,pregnancy_considerations,Female_Specific,Severe,60+,Frequent,Diabetes,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Warfarin,bleeding_risk,General,Mild,18-30,Rare,Anticoagulant,Higher,Yes,Consult physician for alternatives,Medium,Low
+Warfarin,bruising,General,Mild,18-30,Rare,Anticoagulant,Higher,Yes,Consult physician for alternatives,High,Low
+Warfarin,hair_loss,General,Mild,18-30,Rare,Anticoagulant,Higher,No,Consult physician for alternatives,Medium,Medium
+Warfarin,menstrual_bleeding_increase,Female_Specific,Mild,18-30,Frequent,Anticoagulant,Higher,Yes,Consult physician for alternatives,High,Medium
+Warfarin,pregnancy_contraindicated,Female_Specific,Mild,18-30,Frequent,Anticoagulant,Higher,Yes,Consult physician for alternatives,High,Medium
+Warfarin,bleeding_risk,General,Moderate,18-30,Frequent,Anticoagulant,Higher,Yes,Consult physician for alternatives,Low,High
+Warfarin,bruising,General,Moderate,18-30,Common,Anticoagulant,Higher,Yes,Consult physician for alternatives,Low,Unknown
+Warfarin,hair_loss,General,Moderate,18-30,Rare,Anticoagulant,Higher,Yes,Consult physician for alternatives,Low,High
+Warfarin,menstrual_bleeding_increase,Female_Specific,Moderate,18-30,Frequent,Anticoagulant,Higher,Yes,Consult physician for alternatives,High,High
+Warfarin,pregnancy_contraindicated,Female_Specific,Moderate,18-30,Common,Anticoagulant,Higher,Yes,Consult physician for alternatives,High,High
+Warfarin,bleeding_risk,General,Severe,18-30,Frequent,Anticoagulant,Higher,Yes,Consult physician for alternatives,Unknown,Unknown
+Warfarin,bruising,General,Severe,18-30,Frequent,Anticoagulant,Higher,No,Consult physician for alternatives,Low,Low
+Warfarin,hair_loss,General,Severe,18-30,Frequent,Anticoagulant,Higher,Yes,Consult physician for alternatives,Unknown,Medium
+Warfarin,menstrual_bleeding_increase,Female_Specific,Severe,18-30,Common,Anticoagulant,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Warfarin,pregnancy_contraindicated,Female_Specific,Severe,18-30,Frequent,Anticoagulant,Higher,Yes,Consult physician for alternatives,High,High
+Warfarin,bleeding_risk,General,Mild,31-45,Frequent,Anticoagulant,Higher,No,Consult physician for alternatives,Low,Medium
+Warfarin,bruising,General,Mild,31-45,Frequent,Anticoagulant,Higher,Yes,Consult physician for alternatives,High,High
+Warfarin,hair_loss,General,Mild,31-45,Rare,Anticoagulant,Higher,No,Consult physician for alternatives,Low,Unknown
+Warfarin,menstrual_bleeding_increase,Female_Specific,Mild,31-45,Frequent,Anticoagulant,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Warfarin,pregnancy_contraindicated,Female_Specific,Mild,31-45,Frequent,Anticoagulant,Higher,Yes,Consult physician for alternatives,Medium,High
+Warfarin,bleeding_risk,General,Moderate,31-45,Frequent,Anticoagulant,Higher,No,Consult physician for alternatives,Medium,High
+Warfarin,bruising,General,Moderate,31-45,Common,Anticoagulant,Higher,No,Consult physician for alternatives,High,High
+Warfarin,hair_loss,General,Moderate,31-45,Rare,Anticoagulant,Higher,Yes,Consult physician for alternatives,Medium,Low
+Warfarin,menstrual_bleeding_increase,Female_Specific,Moderate,31-45,Common,Anticoagulant,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Warfarin,pregnancy_contraindicated,Female_Specific,Moderate,31-45,Frequent,Anticoagulant,Higher,Yes,Consult physician for alternatives,Medium,High
+Warfarin,bleeding_risk,General,Severe,31-45,Frequent,Anticoagulant,Higher,Yes,Consult physician for alternatives,High,Unknown
+Warfarin,bruising,General,Severe,31-45,Rare,Anticoagulant,Higher,No,Consult physician for alternatives,Medium,Unknown
+Warfarin,hair_loss,General,Severe,31-45,Common,Anticoagulant,Higher,No,Consult physician for alternatives,Medium,High
+Warfarin,menstrual_bleeding_increase,Female_Specific,Severe,31-45,Common,Anticoagulant,Higher,Yes,Consult physician for alternatives,Medium,High
+Warfarin,pregnancy_contraindicated,Female_Specific,Severe,31-45,Frequent,Anticoagulant,Higher,Yes,Consult physician for alternatives,High,High
+Warfarin,bleeding_risk,General,Mild,46-60,Common,Anticoagulant,Higher,No,Consult physician for alternatives,Medium,Unknown
+Warfarin,bruising,General,Mild,46-60,Frequent,Anticoagulant,Higher,No,Consult physician for alternatives,Unknown,Low
+Warfarin,hair_loss,General,Mild,46-60,Rare,Anticoagulant,Higher,No,Consult physician for alternatives,High,Unknown
+Warfarin,menstrual_bleeding_increase,Female_Specific,Mild,46-60,Frequent,Anticoagulant,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Warfarin,pregnancy_contraindicated,Female_Specific,Mild,46-60,Common,Anticoagulant,Higher,Yes,Consult physician for alternatives,Medium,High
+Warfarin,bleeding_risk,General,Moderate,46-60,Frequent,Anticoagulant,Higher,No,Consult physician for alternatives,Medium,High
+Warfarin,bruising,General,Moderate,46-60,Frequent,Anticoagulant,Higher,Yes,Consult physician for alternatives,Medium,High
+Warfarin,hair_loss,General,Moderate,46-60,Common,Anticoagulant,Higher,Yes,Consult physician for alternatives,High,Unknown
+Warfarin,menstrual_bleeding_increase,Female_Specific,Moderate,46-60,Frequent,Anticoagulant,Higher,Yes,Consult physician for alternatives,Medium,High
+Warfarin,pregnancy_contraindicated,Female_Specific,Moderate,46-60,Frequent,Anticoagulant,Higher,Yes,Consult physician for alternatives,High,Medium
+Warfarin,bleeding_risk,General,Severe,46-60,Frequent,Anticoagulant,Higher,No,Consult physician for alternatives,High,Unknown
+Warfarin,bruising,General,Severe,46-60,Rare,Anticoagulant,Higher,No,Consult physician for alternatives,Low,Low
+Warfarin,hair_loss,General,Severe,46-60,Common,Anticoagulant,Higher,Yes,Consult physician for alternatives,Medium,Unknown
+Warfarin,menstrual_bleeding_increase,Female_Specific,Severe,46-60,Frequent,Anticoagulant,Higher,Yes,Consult physician for alternatives,High,Medium
+Warfarin,pregnancy_contraindicated,Female_Specific,Severe,46-60,Common,Anticoagulant,Higher,Yes,Consult physician for alternatives,High,Medium
+Warfarin,bleeding_risk,General,Mild,60+,Rare,Anticoagulant,Higher,No,Consult physician for alternatives,Medium,Low
+Warfarin,bruising,General,Mild,60+,Rare,Anticoagulant,Higher,No,Consult physician for alternatives,Low,Medium
+Warfarin,hair_loss,General,Mild,60+,Rare,Anticoagulant,Higher,No,Consult physician for alternatives,Medium,High
+Warfarin,menstrual_bleeding_increase,Female_Specific,Mild,60+,Frequent,Anticoagulant,Higher,Yes,Consult physician for alternatives,Medium,High
+Warfarin,pregnancy_contraindicated,Female_Specific,Mild,60+,Common,Anticoagulant,Higher,Yes,Consult physician for alternatives,High,Medium
+Warfarin,bleeding_risk,General,Moderate,60+,Frequent,Anticoagulant,Higher,No,Consult physician for alternatives,Medium,Unknown
+Warfarin,bruising,General,Moderate,60+,Common,Anticoagulant,Higher,Yes,Consult physician for alternatives,High,Unknown
+Warfarin,hair_loss,General,Moderate,60+,Common,Anticoagulant,Higher,No,Consult physician for alternatives,Medium,Low
+Warfarin,menstrual_bleeding_increase,Female_Specific,Moderate,60+,Frequent,Anticoagulant,Higher,Yes,Consult physician for alternatives,High,Medium
+Warfarin,pregnancy_contraindicated,Female_Specific,Moderate,60+,Common,Anticoagulant,Higher,Yes,Consult physician for alternatives,High,High
+Warfarin,bleeding_risk,General,Severe,60+,Rare,Anticoagulant,Higher,No,Consult physician for alternatives,Low,High
+Warfarin,bruising,General,Severe,60+,Rare,Anticoagulant,Higher,No,Consult physician for alternatives,High,High
+Warfarin,hair_loss,General,Severe,60+,Frequent,Anticoagulant,Higher,No,Consult physician for alternatives,Unknown,Medium
+Warfarin,menstrual_bleeding_increase,Female_Specific,Severe,60+,Frequent,Anticoagulant,Higher,Yes,Consult physician for alternatives,High,Medium
+Warfarin,pregnancy_contraindicated,Female_Specific,Severe,60+,Common,Anticoagulant,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Phenytoin,drowsiness,General,Mild,18-30,Frequent,Anticonvulsant,Higher,Yes,Consult physician for alternatives,Low,Unknown
+Phenytoin,dizziness,General,Mild,18-30,Rare,Anticonvulsant,Higher,No,Consult physician for alternatives,Unknown,High
+Phenytoin,nausea,General,Mild,18-30,Frequent,Anticonvulsant,Higher,Yes,Consult physician for alternatives,Unknown,Medium
+Phenytoin,gum_hyperplasia,Female_Specific,Mild,18-30,Frequent,Anticonvulsant,Higher,Yes,Consult physician for alternatives,Medium,High
+Phenytoin,hirsutism,Female_Specific,Mild,18-30,Common,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,Medium
+Phenytoin,birth_defects_risk,Female_Specific,Mild,18-30,Frequent,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,High
+Phenytoin,drowsiness,General,Moderate,18-30,Rare,Anticonvulsant,Higher,No,Consult physician for alternatives,Low,Medium
+Phenytoin,dizziness,General,Moderate,18-30,Common,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,Medium
+Phenytoin,nausea,General,Moderate,18-30,Rare,Anticonvulsant,Higher,No,Consult physician for alternatives,Unknown,Medium
+Phenytoin,gum_hyperplasia,Female_Specific,Moderate,18-30,Common,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,Medium
+Phenytoin,hirsutism,Female_Specific,Moderate,18-30,Frequent,Anticonvulsant,Higher,Yes,Consult physician for alternatives,Medium,High
+Phenytoin,birth_defects_risk,Female_Specific,Moderate,18-30,Common,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,Medium
+Phenytoin,drowsiness,General,Severe,18-30,Common,Anticonvulsant,Higher,No,Consult physician for alternatives,Medium,Medium
+Phenytoin,dizziness,General,Severe,18-30,Common,Anticonvulsant,Higher,Yes,Consult physician for alternatives,Low,High
+Phenytoin,nausea,General,Severe,18-30,Frequent,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,Low
+Phenytoin,gum_hyperplasia,Female_Specific,Severe,18-30,Common,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,Medium
+Phenytoin,hirsutism,Female_Specific,Severe,18-30,Frequent,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,Medium
+Phenytoin,birth_defects_risk,Female_Specific,Severe,18-30,Frequent,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,High
+Phenytoin,drowsiness,General,Mild,31-45,Rare,Anticonvulsant,Higher,Yes,Consult physician for alternatives,Medium,High
+Phenytoin,dizziness,General,Mild,31-45,Common,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,Low
+Phenytoin,nausea,General,Mild,31-45,Common,Anticonvulsant,Higher,No,Consult physician for alternatives,High,High
+Phenytoin,gum_hyperplasia,Female_Specific,Mild,31-45,Frequent,Anticonvulsant,Higher,Yes,Consult physician for alternatives,Medium,High
+Phenytoin,hirsutism,Female_Specific,Mild,31-45,Frequent,Anticonvulsant,Higher,Yes,Consult physician for alternatives,Medium,High
+Phenytoin,birth_defects_risk,Female_Specific,Mild,31-45,Frequent,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,Medium
+Phenytoin,drowsiness,General,Moderate,31-45,Frequent,Anticonvulsant,Higher,Yes,Consult physician for alternatives,Low,Low
+Phenytoin,dizziness,General,Moderate,31-45,Common,Anticonvulsant,Higher,No,Consult physician for alternatives,Unknown,High
+Phenytoin,nausea,General,Moderate,31-45,Common,Anticonvulsant,Higher,No,Consult physician for alternatives,Unknown,Unknown
+Phenytoin,gum_hyperplasia,Female_Specific,Moderate,31-45,Frequent,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,High
+Phenytoin,hirsutism,Female_Specific,Moderate,31-45,Common,Anticonvulsant,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Phenytoin,birth_defects_risk,Female_Specific,Moderate,31-45,Frequent,Anticonvulsant,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Phenytoin,drowsiness,General,Severe,31-45,Common,Anticonvulsant,Higher,No,Consult physician for alternatives,High,Medium
+Phenytoin,dizziness,General,Severe,31-45,Frequent,Anticonvulsant,Higher,No,Consult physician for alternatives,High,Unknown
+Phenytoin,nausea,General,Severe,31-45,Frequent,Anticonvulsant,Higher,No,Consult physician for alternatives,Unknown,Low
+Phenytoin,gum_hyperplasia,Female_Specific,Severe,31-45,Frequent,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,Medium
+Phenytoin,hirsutism,Female_Specific,Severe,31-45,Frequent,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,High
+Phenytoin,birth_defects_risk,Female_Specific,Severe,31-45,Frequent,Anticonvulsant,Higher,Yes,Consult physician for alternatives,Medium,High
+Phenytoin,drowsiness,General,Mild,46-60,Frequent,Anticonvulsant,Higher,No,Consult physician for alternatives,Low,Medium
+Phenytoin,dizziness,General,Mild,46-60,Frequent,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,Low
+Phenytoin,nausea,General,Mild,46-60,Common,Anticonvulsant,Higher,Yes,Consult physician for alternatives,Unknown,Low
+Phenytoin,gum_hyperplasia,Female_Specific,Mild,46-60,Common,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,Medium
+Phenytoin,hirsutism,Female_Specific,Mild,46-60,Common,Anticonvulsant,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Phenytoin,birth_defects_risk,Female_Specific,Mild,46-60,Common,Anticonvulsant,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Phenytoin,drowsiness,General,Moderate,46-60,Rare,Anticonvulsant,Higher,Yes,Consult physician for alternatives,Unknown,Low
+Phenytoin,dizziness,General,Moderate,46-60,Frequent,Anticonvulsant,Higher,No,Consult physician for alternatives,High,Low
+Phenytoin,nausea,General,Moderate,46-60,Frequent,Anticonvulsant,Higher,No,Consult physician for alternatives,Low,Low
+Phenytoin,gum_hyperplasia,Female_Specific,Moderate,46-60,Common,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,High
+Phenytoin,hirsutism,Female_Specific,Moderate,46-60,Common,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,Medium
+Phenytoin,birth_defects_risk,Female_Specific,Moderate,46-60,Frequent,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,Medium
+Phenytoin,drowsiness,General,Severe,46-60,Common,Anticonvulsant,Higher,No,Consult physician for alternatives,Low,Low
+Phenytoin,dizziness,General,Severe,46-60,Frequent,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,Unknown
+Phenytoin,nausea,General,Severe,46-60,Rare,Anticonvulsant,Higher,No,Consult physician for alternatives,Low,Low
+Phenytoin,gum_hyperplasia,Female_Specific,Severe,46-60,Frequent,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,High
+Phenytoin,hirsutism,Female_Specific,Severe,46-60,Frequent,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,High
+Phenytoin,birth_defects_risk,Female_Specific,Severe,46-60,Common,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,Medium
+Phenytoin,drowsiness,General,Mild,60+,Common,Anticonvulsant,Higher,No,Consult physician for alternatives,Unknown,Unknown
+Phenytoin,dizziness,General,Mild,60+,Common,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,Low
+Phenytoin,nausea,General,Mild,60+,Common,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,Low
+Phenytoin,gum_hyperplasia,Female_Specific,Mild,60+,Common,Anticonvulsant,Higher,Yes,Consult physician for alternatives,Medium,High
+Phenytoin,hirsutism,Female_Specific,Mild,60+,Frequent,Anticonvulsant,Higher,Yes,Consult physician for alternatives,Medium,High
+Phenytoin,birth_defects_risk,Female_Specific,Mild,60+,Frequent,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,High
+Phenytoin,drowsiness,General,Moderate,60+,Frequent,Anticonvulsant,Higher,Yes,Consult physician for alternatives,Low,High
+Phenytoin,dizziness,General,Moderate,60+,Rare,Anticonvulsant,Higher,No,Consult physician for alternatives,Medium,High
+Phenytoin,nausea,General,Moderate,60+,Common,Anticonvulsant,Higher,Yes,Consult physician for alternatives,Low,Medium
+Phenytoin,gum_hyperplasia,Female_Specific,Moderate,60+,Common,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,High
+Phenytoin,hirsutism,Female_Specific,Moderate,60+,Common,Anticonvulsant,Higher,Yes,Consult physician for alternatives,High,High
+Phenytoin,birth_defects_risk,Female_Specific,Moderate,60+,Frequent,Anticonvulsant,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Phenytoin,drowsiness,General,Severe,60+,Frequent,Anticonvulsant,Higher,No,Consult physician for alternatives,Unknown,High
+Phenytoin,dizziness,General,Severe,60+,Frequent,Anticonvulsant,Higher,No,Consult physician for alternatives,High,Medium
+Phenytoin,nausea,General,Severe,60+,Common,Anticonvulsant,Higher,Yes,Consult physician for alternatives,Unknown,Medium
+Phenytoin,gum_hyperplasia,Female_Specific,Severe,60+,Frequent,Anticonvulsant,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Phenytoin,hirsutism,Female_Specific,Severe,60+,Common,Anticonvulsant,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Phenytoin,birth_defects_risk,Female_Specific,Severe,60+,Common,Anticonvulsant,Higher,Yes,Consult physician for alternatives,Medium,Medium
+Corticosteroids,weight_gain,General,Mild,18-30,Common,Immunosuppressant,Higher,No,Biologics or lower doses,Unknown,Low
+Corticosteroids,mood_changes,General,Mild,18-30,Frequent,Immunosuppressant,Higher,No,Biologics or lower doses,Unknown,Unknown
+Corticosteroids,increased_appetite,General,Mild,18-30,Common,Immunosuppressant,Higher,Yes,Biologics or lower doses,High,High
+Corticosteroids,osteoporosis_risk,Female_Specific,Mild,18-30,Common,Immunosuppressant,Higher,Yes,Biologics or lower doses,Medium,High
+Corticosteroids,menstrual_irregularities,Female_Specific,Mild,18-30,Frequent,Immunosuppressant,Higher,Yes,Biologics or lower doses,High,Medium
+Corticosteroids,cushingoid_features,Female_Specific,Mild,18-30,Common,Immunosuppressant,Higher,Yes,Biologics or lower doses,High,High
+Corticosteroids,weight_gain,General,Moderate,18-30,Rare,Immunosuppressant,Higher,No,Biologics or lower doses,High,Unknown
+Corticosteroids,mood_changes,General,Moderate,18-30,Frequent,Immunosuppressant,Higher,No,Biologics or lower doses,Low,Medium
+Corticosteroids,increased_appetite,General,Moderate,18-30,Frequent,Immunosuppressant,Higher,No,Biologics or lower doses,Low,High
+Corticosteroids,osteoporosis_risk,Female_Specific,Moderate,18-30,Common,Immunosuppressant,Higher,Yes,Biologics or lower doses,Medium,Medium
+Corticosteroids,menstrual_irregularities,Female_Specific,Moderate,18-30,Common,Immunosuppressant,Higher,Yes,Biologics or lower doses,High,Medium
+Corticosteroids,cushingoid_features,Female_Specific,Moderate,18-30,Common,Immunosuppressant,Higher,Yes,Biologics or lower doses,High,High
+Corticosteroids,weight_gain,General,Severe,18-30,Common,Immunosuppressant,Higher,No,Biologics or lower doses,High,High
+Corticosteroids,mood_changes,General,Severe,18-30,Common,Immunosuppressant,Higher,No,Biologics or lower doses,High,High
+Corticosteroids,increased_appetite,General,Severe,18-30,Frequent,Immunosuppressant,Higher,No,Biologics or lower doses,High,Low
+Corticosteroids,osteoporosis_risk,Female_Specific,Severe,18-30,Common,Immunosuppressant,Higher,Yes,Biologics or lower doses,High,Medium
+Corticosteroids,menstrual_irregularities,Female_Specific,Severe,18-30,Frequent,Immunosuppressant,Higher,Yes,Biologics or lower doses,High,Medium
+Corticosteroids,cushingoid_features,Female_Specific,Severe,18-30,Common,Immunosuppressant,Higher,Yes,Biologics or lower doses,High,Medium
+Corticosteroids,weight_gain,General,Mild,31-45,Common,Immunosuppressant,Higher,Yes,Biologics or lower doses,High,Low
+Corticosteroids,mood_changes,General,Mild,31-45,Rare,Immunosuppressant,Higher,No,Biologics or lower doses,High,High
+Corticosteroids,increased_appetite,General,Mild,31-45,Rare,Immunosuppressant,Higher,Yes,Biologics or lower doses,High,High
+Corticosteroids,osteoporosis_risk,Female_Specific,Mild,31-45,Frequent,Immunosuppressant,Higher,Yes,Biologics or lower doses,Medium,Medium
+Corticosteroids,menstrual_irregularities,Female_Specific,Mild,31-45,Frequent,Immunosuppressant,Higher,Yes,Biologics or lower doses,Medium,High
+Corticosteroids,cushingoid_features,Female_Specific,Mild,31-45,Common,Immunosuppressant,Higher,Yes,Biologics or lower doses,High,Medium
+Corticosteroids,weight_gain,General,Moderate,31-45,Frequent,Immunosuppressant,Higher,No,Biologics or lower doses,Low,Unknown
+Corticosteroids,mood_changes,General,Moderate,31-45,Common,Immunosuppressant,Higher,No,Biologics or lower doses,Medium,High
+Corticosteroids,increased_appetite,General,Moderate,31-45,Common,Immunosuppressant,Higher,No,Biologics or lower doses,High,Low
+Corticosteroids,osteoporosis_risk,Female_Specific,Moderate,31-45,Common,Immunosuppressant,Higher,Yes,Biologics or lower doses,High,High
+Corticosteroids,menstrual_irregularities,Female_Specific,Moderate,31-45,Frequent,Immunosuppressant,Higher,Yes,Biologics or lower doses,Medium,Medium
+Corticosteroids,cushingoid_features,Female_Specific,Moderate,31-45,Common,Immunosuppressant,Higher,Yes,Biologics or lower doses,High,Medium
+Corticosteroids,weight_gain,General,Severe,31-45,Rare,Immunosuppressant,Higher,No,Biologics or lower doses,Medium,Low
+Corticosteroids,mood_changes,General,Severe,31-45,Rare,Immunosuppressant,Higher,No,Biologics or lower doses,Unknown,Unknown
+Corticosteroids,increased_appetite,General,Severe,31-45,Common,Immunosuppressant,Higher,No,Biologics or lower doses,Unknown,Unknown
+Corticosteroids,osteoporosis_risk,Female_Specific,Severe,31-45,Common,Immunosuppressant,Higher,Yes,Biologics or lower doses,Medium,Medium
+Corticosteroids,menstrual_irregularities,Female_Specific,Severe,31-45,Frequent,Immunosuppressant,Higher,Yes,Biologics or lower doses,Medium,Medium
+Corticosteroids,cushingoid_features,Female_Specific,Severe,31-45,Common,Immunosuppressant,Higher,Yes,Biologics or lower doses,Medium,Medium
+Corticosteroids,weight_gain,General,Mild,46-60,Rare,Immunosuppressant,Higher,No,Biologics or lower doses,High,Low
+Corticosteroids,mood_changes,General,Mild,46-60,Frequent,Immunosuppressant,Higher,No,Biologics or lower doses,Low,Low
+Corticosteroids,increased_appetite,General,Mild,46-60,Frequent,Immunosuppressant,Higher,Yes,Biologics or lower doses,High,High
+Corticosteroids,osteoporosis_risk,Female_Specific,Mild,46-60,Common,Immunosuppressant,Higher,Yes,Biologics or lower doses,High,Medium
+Corticosteroids,menstrual_irregularities,Female_Specific,Mild,46-60,Frequent,Immunosuppressant,Higher,Yes,Biologics or lower doses,Medium,High
+Corticosteroids,cushingoid_features,Female_Specific,Mild,46-60,Frequent,Immunosuppressant,Higher,Yes,Biologics or lower doses,High,High
+Corticosteroids,weight_gain,General,Moderate,46-60,Frequent,Immunosuppressant,Higher,No,Biologics or lower doses,Low,Medium
+Corticosteroids,mood_changes,General,Moderate,46-60,Common,Immunosuppressant,Higher,Yes,Biologics or lower doses,Medium,Medium
+Corticosteroids,increased_appetite,General,Moderate,46-60,Rare,Immunosuppressant,Higher,Yes,Biologics or lower doses,Unknown,Low
+Corticosteroids,osteoporosis_risk,Female_Specific,Moderate,46-60,Frequent,Immunosuppressant,Higher,Yes,Biologics or lower doses,Medium,High
+Corticosteroids,menstrual_irregularities,Female_Specific,Moderate,46-60,Frequent,Immunosuppressant,Higher,Yes,Biologics or lower doses,Medium,High
+Corticosteroids,cushingoid_features,Female_Specific,Moderate,46-60,Frequent,Immunosuppressant,Higher,Yes,Biologics or lower doses,Medium,Medium
+Corticosteroids,weight_gain,General,Severe,46-60,Common,Immunosuppressant,Higher,Yes,Biologics or lower doses,Unknown,Medium
+Corticosteroids,mood_changes,General,Severe,46-60,Frequent,Immunosuppressant,Higher,Yes,Biologics or lower doses,Unknown,Medium
+Corticosteroids,increased_appetite,General,Severe,46-60,Frequent,Immunosuppressant,Higher,No,Biologics or lower doses,High,Low
+Corticosteroids,osteoporosis_risk,Female_Specific,Severe,46-60,Frequent,Immunosuppressant,Higher,Yes,Biologics or lower doses,Medium,Medium
+Corticosteroids,menstrual_irregularities,Female_Specific,Severe,46-60,Common,Immunosuppressant,Higher,Yes,Biologics or lower doses,Medium,High
+Corticosteroids,cushingoid_features,Female_Specific,Severe,46-60,Common,Immunosuppressant,Higher,Yes,Biologics or lower doses,High,High
+Corticosteroids,weight_gain,General,Mild,60+,Rare,Immunosuppressant,Higher,No,Biologics or lower doses,High,High
+Corticosteroids,mood_changes,General,Mild,60+,Rare,Immunosuppressant,Higher,No,Biologics or lower doses,Unknown,High
+Corticosteroids,increased_appetite,General,Mild,60+,Rare,Immunosuppressant,Higher,Yes,Biologics or lower doses,High,Unknown
+Corticosteroids,osteoporosis_risk,Female_Specific,Mild,60+,Frequent,Immunosuppressant,Higher,Yes,Biologics or lower doses,High,Medium
+Corticosteroids,menstrual_irregularities,Female_Specific,Mild,60+,Common,Immunosuppressant,Higher,Yes,Biologics or lower doses,High,Medium
+Corticosteroids,cushingoid_features,Female_Specific,Mild,60+,Common,Immunosuppressant,Higher,Yes,Biologics or lower doses,High,Medium
+Corticosteroids,weight_gain,General,Moderate,60+,Rare,Immunosuppressant,Higher,Yes,Biologics or lower doses,Unknown,Unknown
+Corticosteroids,mood_changes,General,Moderate,60+,Rare,Immunosuppressant,Higher,No,Biologics or lower doses,Medium,Low
+Corticosteroids,increased_appetite,General,Moderate,60+,Common,Immunosuppressant,Higher,No,Biologics or lower doses,Unknown,Unknown
+Corticosteroids,osteoporosis_risk,Female_Specific,Moderate,60+,Frequent,Immunosuppressant,Higher,Yes,Biologics or lower doses,High,Medium
+Corticosteroids,menstrual_irregularities,Female_Specific,Moderate,60+,Frequent,Immunosuppressant,Higher,Yes,Biologics or lower doses,Medium,Medium
+Corticosteroids,cushingoid_features,Female_Specific,Moderate,60+,Common,Immunosuppressant,Higher,Yes,Biologics or lower doses,High,High
+Corticosteroids,weight_gain,General,Severe,60+,Frequent,Immunosuppressant,Higher,Yes,Biologics or lower doses,High,Medium
+Corticosteroids,mood_changes,General,Severe,60+,Common,Immunosuppressant,Higher,No,Biologics or lower doses,High,Medium
+Corticosteroids,increased_appetite,General,Severe,60+,Frequent,Immunosuppressant,Higher,No,Biologics or lower doses,Medium,Unknown
+Corticosteroids,osteoporosis_risk,Female_Specific,Severe,60+,Common,Immunosuppressant,Higher,Yes,Biologics or lower doses,High,High
+Corticosteroids,menstrual_irregularities,Female_Specific,Severe,60+,Common,Immunosuppressant,Higher,Yes,Biologics or lower doses,High,Medium
+Corticosteroids,cushingoid_features,Female_Specific,Severe,60+,Common,Immunosuppressant,Higher,Yes,Biologics or lower doses,Medium,Medium
