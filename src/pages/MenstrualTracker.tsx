@@ -51,6 +51,7 @@ interface PeriodPrediction {
   fertileWindow: { start: string; end: string };
 }
 
+
 const MenstrualTracker = () => {
   const navigate = useNavigate();
   const [cycleData, setCycleData] = useState<CycleData[]>([]);

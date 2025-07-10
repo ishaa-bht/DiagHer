@@ -23,7 +23,7 @@ import MultiSelectDropdown from '../components/MultiSelectDropdown';
 
 // ============ CONFIGURATION ============
 // Replace this with your ngrok URL when available
-const API_BASE_URL = 'https://d94807f3625b.ngrok-free.app/api/v1';
+const API_BASE_URL = 'https://081131d17200.ngrok-free.app/api/v1';
 // For ngrok, it will look like: 'https://your-ngrok-url.ngrok.io/api/v1'
 
 // =======================================

@@ -7,6 +7,8 @@ import DashboardPage from './pages/DashboardPage';
 import PatientRecordsPage from './pages/PatientRecordsPage';
 import PatientProfilePage from './pages/PatientProfilePage';
 import ClinicalDecisionPage from './pages/ClinicalDecisionPage';
+import AIInsights from './pages/AIInsights';
+
 
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { isAuthenticated } = useAuth();
@@ -29,6 +31,7 @@ function App() {
                 </ProtectedRoute>
               } 
             />
+            
 
             <Route 
               path="/clinical-decision" 
@@ -54,6 +57,15 @@ function App() {
                 </ProtectedRoute>
               } 
             />
+            <Route 
+              path="/patients/:patientId/insights" 
+              element={
+                <ProtectedRoute>
+                  <AIInsights />
+                </ProtectedRoute>
+            } 
+/>
+
           </Routes>
         </div>
       </Router>
