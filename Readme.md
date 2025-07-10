@@ -209,7 +209,7 @@ Clinical Outcomes → System Learning → Improved Accuracy
 
 
 ### Disclaimer
-DiagHer is a decision support tool designed to assist healthcare providers. It does not replace clinical 
+DiagHer is a decision support tool designed to assist healthcare providers. It does not replace clinical medical practioners.
 
 ---
 
