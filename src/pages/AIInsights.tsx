@@ -1,373 +1,370 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Brain, TrendingUp, AlertCircle, CheckCircle, Eye, Calendar } from 'lucide-react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area, BarChart, Bar } from 'recharts';
+import { useNavigate } from 'react-router-dom';
+import { 
+  Heart, 
+  ArrowLeft, 
+  Search, 
+  Filter,
+  User,
+  Calendar,
+  Activity,
+  Eye,
+  Edit,
+  MoreVertical
+} from 'lucide-react';
 
-interface SymptomEvolution {
-  date: string;
-  severity: number;
-  frequency: number;
-  duration: number;
-}
-
-interface AIInsight {
+interface PatientRecord {
   id: string;
-  type: 'trend' | 'pattern' | 'recommendation' | 'alert';
-  title: string;
-  description: string;
+  name: string;
+  age: number;
+  gender: string;
+  lastVisit: string;
+  condition: string;
+  status: 'completed' | 'pending' | 'follow-up';
   confidence: number;
-  date: string;
-  priority: 'high' | 'medium' | 'low';
 }
 
-interface PatientProgress {
-  metric: string;
-  current: number;
-  previous: number;
-  change: number;
-  trend: 'improving' | 'stable' | 'concerning';
-}
+const PatientRecordsPage = () => {
+  const navigate = useNavigate();
+  const [searchTerm, setSearchTerm] = useState('');
+  const [statusFilter, setStatusFilter] = useState('all');
+  const [selectedRecord, setSelectedRecord] = useState<PatientRecord | null>(null);
 
-const AIInsights = ({ patientId }: { patientId: string }) => {
-  const [insights, setInsights] = useState<AIInsight[]>([]);
-  const [symptomData, setSymptomData] = useState<SymptomEvolution[]>([]);
-  const [progress, setProgress] = useState<PatientProgress[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [selectedTimeframe, setSelectedTimeframe] = useState('3months');
-
-  const generateMockData = () => {
-    // Mock symptom evolution data
-    const mockSymptomData: SymptomEvolution[] = [];
-    const dates = [];
-    const today = new Date();
-    
-    for (let i = 90; i >= 0; i -= 7) {
-      const date = new Date(today);
-      date.setDate(date.getDate() - i);
-      dates.push(date.toISOString().split('T')[0]);
+  // Mock patient records data
+  const patientRecords: PatientRecord[] = [
+    {
+      id: '1',
+      name: 'Sarah Mitchell',
+      age: 32,
+      gender: 'Female',
+      lastVisit: '2025-01-06',
+      condition: 'Endometriosis',
+      status: 'completed',
+      confidence: 87.5
+    },
+    {
+      id: '2',
+      name: 'Maria Lopez',
+      age: 28,
+      gender: 'Female',
+      lastVisit: '2025-01-05',
+      condition: 'PCOS',
+      status: 'follow-up',
+      confidence: 92.3
+    },
+    {
+      id: '3',
+      name: 'Jennifer Kim',
+      age: 35,
+      gender: 'Female',
+      lastVisit: '2025-01-04',
+      condition: 'Fibromyalgia',
+      status: 'pending',
+      confidence: 78.9
+    },
+    {
+      id: '4',
+      name: 'Amanda Johnson',
+      age: 29,
+      gender: 'Female',
+      lastVisit: '2025-01-03',
+      condition: 'Migraine',
+      status: 'completed',
+      confidence: 85.2
+    },
+    {
+      id: '5',
+      name: 'Lisa Chen',
+      age: 31,
+      gender: 'Female',
+      lastVisit: '2025-01-02',
+      condition: 'Thyroid Disorder',
+      status: 'follow-up',
+      confidence: 91.7
     }
-    
-    dates.forEach((date, index) => {
-      mockSymptomData.push({
-        date,
-        severity: Math.max(1, 8 - (index * 0.5) + Math.random() * 2),
-        frequency: Math.max(1, 7 - (index * 0.3) + Math.random() * 1.5),
-        duration: Math.max(1, 6 - (index * 0.2) + Math.random() * 1)
-      });
-    });
-    
-    // Mock AI insights
-    const mockInsights: AIInsight[] = [
-      {
-        id: '1',
-        type: 'trend',
-        title: 'Symptom Severity Decreasing',
-        description: 'Analysis shows a 35% reduction in symptom severity over the past 3 months, indicating positive response to treatment.',
-        confidence: 92,
-        date: '2025-01-07',
-        priority: 'high'
-      },
-      {
-        id: '2',
-        type: 'pattern',
-        title: 'Cyclical Pattern Detected',
-        description: 'Symptoms show a recurring 28-day pattern, likely correlated with menstrual cycle. Consider hormonal evaluation.',
-        confidence: 87,
-        date: '2025-01-06',
-        priority: 'medium'
-      },
-      {
-        id: '3',
-        type: 'recommendation',
-        title: 'Lifestyle Modification Suggestion',
-        description: 'Based on symptom patterns, implementing stress management techniques may provide additional relief.',
-        confidence: 78,
-        date: '2025-01-05',
-        priority: 'medium'
-      },
-      {
-        id: '4',
-        type: 'alert',
-        title: 'Medication Adherence Alert',
-        description: 'Irregular symptom patterns suggest possible medication non-adherence. Follow-up recommended.',
-        confidence: 85,
-        date: '2025-01-04',
-        priority: 'high'
-      }
-    ];
-    
-    // Mock progress data
-    const mockProgress: PatientProgress[] = [
-      {
-        metric: 'Symptom Severity',
-        current: 4.2,
-        previous: 6.8,
-        change: -38,
-        trend: 'improving'
-      },
-      {
-        metric: 'Quality of Life',
-        current: 7.3,
-        previous: 5.1,
-        change: 43,
-        trend: 'improving'
-      },
-      {
-        metric: 'Sleep Quality',
-        current: 6.8,
-        previous: 6.5,
-        change: 5,
-        trend: 'stable'
-      },
-      {
-        metric: 'Pain Episodes',
-        current: 3.2,
-        previous: 2.8,
-        change: 14,
-        trend: 'concerning'
-      }
-    ];
-    
-    return { mockSymptomData, mockInsights, mockProgress };
-  };
+  ];
 
-  const fetchAIInsights = async () => {
-    setLoading(true);
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      const { mockSymptomData, mockInsights, mockProgress } = generateMockData();
-      setSymptomData(mockSymptomData);
-      setInsights(mockInsights);
-      setProgress(mockProgress);
-    } catch (error) {
-      console.error('Failed to fetch AI insights:', error);
-    } finally {
-      setLoading(false);
+  const filteredRecords = patientRecords.filter(record => {
+    const matchesSearch = record.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         record.condition.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesStatus = statusFilter === 'all' || record.status === statusFilter;
+    return matchesSearch && matchesStatus;
+  });
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'completed': return 'bg-green-100 text-green-800';
+      case 'pending': return 'bg-yellow-100 text-yellow-800';
+      case 'follow-up': return 'bg-blue-100 text-blue-800';
+      default: return 'bg-gray-100 text-gray-800';
     }
   };
 
-  useEffect(() => {
-    fetchAIInsights();
-  }, [patientId, selectedTimeframe]);
-
-  const getInsightIcon = (type: string) => {
-    switch (type) {
-      case 'trend': return <TrendingUp className="h-5 w-5" />;
-      case 'pattern': return <Brain className="h-5 w-5" />;
-      case 'recommendation': return <CheckCircle className="h-5 w-5" />;
-      case 'alert': return <AlertCircle className="h-5 w-5" />;
-      default: return <Eye className="h-5 w-5" />;
-    }
-  };
-
-  const getInsightColor = (type: string, priority: string) => {
-    if (priority === 'high') return 'bg-red-50 border-red-200 text-red-800';
-    if (priority === 'medium') return 'bg-yellow-50 border-yellow-200 text-yellow-800';
-    return 'bg-blue-50 border-blue-200 text-blue-800';
-  };
-
-  const getProgressColor = (trend: string) => {
-    switch (trend) {
-      case 'improving': return 'text-green-600';
-      case 'stable': return 'text-blue-600';
-      case 'concerning': return 'text-red-600';
-      default: return 'text-gray-600';
-    }
-  };
-
-  const getProgressIcon = (trend: string) => {
-    switch (trend) {
-      case 'improving': return '↗️';
-      case 'stable': return '→';
-      case 'concerning': return '↘️';
+  const getStatusIcon = (status: string) => {
+    switch (status) {
+      case 'completed': return '✓';
+      case 'pending': return '⏳';
+      case 'follow-up': return '🔄';
       default: return '•';
     }
   };
 
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center py-12">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-rose-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Analyzing patient data...</p>
-        </div>
-      </div>
-    );
-  }
-
   return (
-    <div className="space-y-6">
+    <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="flex justify-between items-center">
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900">AI Insights</h2>
-          <p className="text-gray-600">Advanced analytics and symptom evolution tracking</p>
+      <header className="bg-white shadow-sm border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <div className="flex items-center space-x-4">
+              <button
+                onClick={() => navigate('/dashboard')}
+                className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                <ArrowLeft className="h-5 w-5" />
+                <span>Back to Dashboard</span>
+              </button>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Heart className="h-6 w-6 text-rose-600" />
+              <span className="text-lg font-semibold text-gray-900">Patient Records</span>
+            </div>
+          </div>
         </div>
-        <select
-          value={selectedTimeframe}
-          onChange={(e) => setSelectedTimeframe(e.target.value)}
-          className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+      </header>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Page Header */}
+        <motion.div
+          className="mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
         >
-          <option value="1month">Last Month</option>
-          <option value="3months">Last 3 Months</option>
-          <option value="6months">Last 6 Months</option>
-          <option value="1year">Last Year</option>
-        </select>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Patient Records</h1>
+          <p className="text-gray-600">Manage and review patient diagnoses and medical history</p>
+        </motion.div>
+
+        {/* Search and Filter */}
+        <motion.div
+          className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex-1 relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search patients or conditions..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+              />
+            </div>
+            <div className="relative">
+              <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+              <select
+                value={statusFilter}
+                onChange={(e) => setStatusFilter(e.target.value)}
+                className="pl-10 pr-8 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent appearance-none bg-white"
+              >
+                <option value="all">All Status</option>
+                <option value="completed">Completed</option>
+                <option value="pending">Pending</option>
+                <option value="follow-up">Follow-up</option>
+              </select>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Records Table */}
+        <motion.div
+          className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              <thead className="bg-gray-50 border-b border-gray-200">
+                <tr>
+                  <th className="px-6 py-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                    Patient
+                  </th>
+                  <th className="px-6 py-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                    Condition
+                  </th>
+                  <th className="px-6 py-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                    Confidence
+                  </th>
+                  <th className="px-6 py-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                    Status
+                  </th>
+                  <th className="px-6 py-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                    Last Visit
+                  </th>
+                  <th className="px-6 py-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                    Actions
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="bg-white divide-y divide-gray-200">
+                {filteredRecords.map((record, index) => (
+                  <motion.tr
+                    key={record.id}
+                    className="hover:bg-gray-50 transition-colors"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.05 }}
+                  >
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="flex items-center">
+                        <div className="bg-rose-100 p-2 rounded-full mr-3">
+                          <User className="h-5 w-5 text-rose-600" />
+                        </div>
+                        <div>
+                          <div className="text-sm font-medium text-gray-900">{record.name}</div>
+                          <div className="text-sm text-gray-500">{record.age} years, {record.gender}</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="text-sm font-medium text-gray-900">{record.condition}</div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="text-sm font-bold text-rose-600">{record.confidence}%</div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getStatusColor(record.status)}`}>
+                        <span className="mr-1">{getStatusIcon(record.status)}</span>
+                        {record.status.charAt(0).toUpperCase() + record.status.slice(1)}
+                      </span>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="flex items-center text-sm text-gray-500">
+                        <Calendar className="h-4 w-4 mr-1" />
+                        {new Date(record.lastVisit).toLocaleDateString()}
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                      <div className="flex items-center space-x-2">
+                        <button
+                          onClick={() => setSelectedRecord(record)}
+                          className="text-rose-600 hover:text-rose-900 transition-colors"
+                          title="View Details"
+                        >
+                          <Eye className="h-4 w-4" />
+                        </button>
+                        <button 
+                          className="text-gray-600 hover:text-gray-900 transition-colors"
+                          title="Edit Record"
+                        >
+                          <Edit className="h-4 w-4" />
+                        </button>
+                        <button 
+                          onClick={() => navigate(`/patients/${record.id}`)}
+                          className="text-blue-600 hover:text-blue-900 transition-colors"
+                          title="View Profile"
+                        >
+                          <User className="h-4 w-4" />
+                        </button>
+                        <button 
+                          className="text-gray-600 hover:text-gray-900 transition-colors"
+                          title="More Options"
+                        >
+                          <MoreVertical className="h-4 w-4" />
+                        </button>
+                      </div>
+                    </td>
+                  </motion.tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </motion.div>
+
+        {/* Empty State */}
+        {filteredRecords.length === 0 && (
+          <motion.div
+            className="text-center py-12"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+          >
+            <Activity className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+            <h3 className="text-lg font-medium text-gray-900 mb-2">No records found</h3>
+            <p className="text-gray-600">Try adjusting your search or filter criteria.</p>
+          </motion.div>
+        )}
       </div>
 
-      {/* Progress Metrics */}
-      <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        {progress.map((metric, index) => (
+      {/* Record Detail Modal */}
+      {selectedRecord && (
+        <motion.div
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
           <motion.div
-            key={metric.metric}
-            className="bg-white rounded-xl shadow-sm border border-gray-100 p-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-          >
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium text-gray-600">{metric.metric}</span>
-              <span className={`text-sm ${getProgressColor(metric.trend)}`}>
-                {getProgressIcon(metric.trend)}
-              </span>
-            </div>
-            <div className="flex items-baseline space-x-2">
-              <span className="text-2xl font-bold text-gray-900">{metric.current}</span>
-              <span className={`text-sm font-medium ${metric.change >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                {metric.change >= 0 ? '+' : ''}{metric.change}%
-              </span>
-            </div>
-            <p className="text-xs text-gray-500 mt-1">vs. previous period</p>
-          </motion.div>
-        ))}
-      </motion.div>
-
-      {/* Symptom Evolution Chart */}
-      <motion.div
-        className="bg-white rounded-xl shadow-sm border border-gray-100 p-6"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-      >
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Symptom Evolution Over Time</h3>
-        <ResponsiveContainer width="100%" height={400}>
-          <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
+            className="bg-white rounded-xl shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+            initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            exit={{ scale: 0.9, opacity: 0 }}
           >
-            <AreaChart data={symptomData}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="date" tickFormatter={(date) => new Date(date).toLocaleDateString()} />
-              <YAxis domain={[0, 10]} />
-              <Tooltip 
-                labelFormatter={(date) => new Date(date).toLocaleDateString()}
-                formatter={(value, name) => [`${value}/10`, name]}
-              />
-              <Area
-                type="monotone"
-                dataKey="severity"
-                stackId="1"
-                stroke="#dc2626"
-                fill="#dc2626"
-                fillOpacity={0.6}
-                name="Severity"
-              />
-              <Area
-                type="monotone"
-                dataKey="frequency"
-                stackId="2"
-                stroke="#f59e0b"
-                fill="#f59e0b"
-                fillOpacity={0.6}
-                name="Frequency"
-              />
-              <Area
-                type="monotone"
-                dataKey="duration"
-                stackId="3"
-                stroke="#3b82f6"
-                fill="#3b82f6"
-                fillOpacity={0.6}
-                name="Duration"
-              />
-            </AreaChart>
-          </motion.div>
-        </ResponsiveContainer>
-      </motion.div>
-
-      {/* AI Insights */}
-      <motion.div
-        className="bg-white rounded-xl shadow-sm border border-gray-100 p-6"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-      >
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">AI-Generated Insights</h3>
-        <div className="space-y-4">
-          {insights.map((insight, index) => (
-            <motion.div
-              key={insight.id}
-              className={`rounded-lg p-4 border ${getInsightColor(insight.type, insight.priority)}`}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
-              <div className="flex items-start justify-between mb-2">
-                <div className="flex items-center space-x-2">
-                  {getInsightIcon(insight.type)}
-                  <span className="font-semibold">{insight.title}</span>
+            <div className="p-6 border-b border-gray-200">
+              <div className="flex justify-between items-center">
+                <h3 className="text-xl font-bold text-gray-900">Patient Record Details</h3>
+                <button
+                  onClick={() => setSelectedRecord(null)}
+                  className="text-gray-400 hover:text-gray-600 transition-colors"
+                >
+                  ✕
+                </button>
+              </div>
+            </div>
+            <div className="p-6 space-y-6">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-500 mb-1">Patient Name</label>
+                  <p className="text-lg font-semibold text-gray-900">{selectedRecord.name}</p>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <span className="text-sm font-medium">{insight.confidence}%</span>
-                  <span className="text-xs text-gray-500">{new Date(insight.date).toLocaleDateString()}</span>
+                <div>
+                  <label className="block text-sm font-medium text-gray-500 mb-1">Age & Gender</label>
+                  <p className="text-lg font-semibold text-gray-900">{selectedRecord.age} years, {selectedRecord.gender}</p>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-500 mb-1">Condition</label>
+                  <p className="text-lg font-semibold text-gray-900">{selectedRecord.condition}</p>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-500 mb-1">Confidence</label>
+                  <p className="text-lg font-bold text-rose-600">{selectedRecord.confidence}%</p>
                 </div>
               </div>
-              <p className="text-sm">{insight.description}</p>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
-
-      {/* Correlation Analysis */}
-      <motion.div
-        className="bg-white rounded-xl shadow-sm border border-gray-100 p-6"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.5 }}
-      >
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Symptom Correlation Analysis</h3>
-        <ResponsiveContainer width="100%" height={300}>
-          <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <BarChart data={[
-              { symptom: 'Pelvic Pain', correlation: 0.85 },
-              { symptom: 'Fatigue', correlation: 0.72 },
-              { symptom: 'Heavy Periods', correlation: 0.68 },
-              { symptom: 'Mood Changes', correlation: 0.54 },
-              { symptom: 'Bloating', correlation: 0.49 }
-            ]}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="symptom" />
-              <YAxis domain={[0, 1]} />
-              <Tooltip formatter={(value: number) => [`${(value * 100).toFixed(1)}%`, 'Correlation']} />
-              <Bar dataKey="correlation" fill="#ec4899" radius={[4, 4, 0, 0]} />
-            </BarChart>
+              <div>
+                <label className="block text-sm font-medium text-gray-500 mb-1">Status</label>
+                <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(selectedRecord.status)}`}>
+                  <span className="mr-1">{getStatusIcon(selectedRecord.status)}</span>
+                  {selectedRecord.status.charAt(0).toUpperCase() + selectedRecord.status.slice(1)}
+                </span>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-500 mb-1">Last Visit</label>
+                <p className="text-gray-900">{new Date(selectedRecord.lastVisit).toLocaleDateString('en-US', { 
+                  year: 'numeric', 
+                  month: 'long', 
+                  day: 'numeric' 
+                })}</p>
+              </div>
+            </div>
           </motion.div>
-        </ResponsiveContainer>
-      </motion.div>
+        </motion.div>
+      )}
     </div>
   );
 };
 
-export default AIInsights;
+export default PatientRecordsPage;

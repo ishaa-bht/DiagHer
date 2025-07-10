@@ -1,41 +1,86 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { 
   Heart, 
   ArrowLeft, 
-  Search, 
-  Filter,
-  User,
-  Calendar,
+  User, 
+  Calendar, 
   Activity,
-  Eye,
-  Edit,
-  MoreVertical,
-  Upload,
   FileText,
+  Brain,
+  Phone,
+  Mail,
+  MapPin,
+  AlertCircle,
+  CheckCircle,
+  Clock,
+  Plus,
+  Upload,
   Camera,
   Link,
-  Brain,
-  Plus,
-  X
+  X,
+  TrendingUp,
+  Droplets,
+  Sun,
+  Moon,
+  Target,
+  Zap,
+  BarChart3,
+  LineChart,
+  PieChart
 } from 'lucide-react';
-import DrugChecker from './DrugChecker';
-import MenstrualTracker from './MenstrualTracker';
-import AIInsights from './AIInsights';
+import {
+  LineChart as RechartsLineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  AreaChart,
+  Area,
+  BarChart,
+  Bar,
+  PieChart as RechartsPieChart,
+  Pie,
+  Cell,
+  RadarChart,
+  PolarGrid,
+  PolarAngleAxis,
+  PolarRadiusAxis,
+  Radar,
+  ComposedChart
+} from 'recharts';
 
-interface PatientRecord {
+interface PatientProfile {
   id: string;
   name: string;
   age: number;
   gender: string;
-  lastVisit: string;
+  email: string;
+  phone: string;
+  address: string;
+  emergencyContact: string;
+  bloodType: string;
+  allergies: string[];
+  currentMedications: string[];
+  riskFactors: {
+    pregnancy: boolean;
+    menstruation: boolean;
+    menopause: boolean;
+    familyHistory: string[];
+  };
+}
+
+interface ConsultationHistory {
+  id: string;
+  date: string;
   condition: string;
-  status: 'completed' | 'pending' | 'follow-up';
   confidence: number;
-  labReports: FileUpload[];
-  scans: FileUpload[];
-  ehrLinks: string[];
+  status: 'confirmed' | 'rejected' | 'pending';
+  prescription: string[];
+  notes: string;
 }
 
 interface FileUpload {
@@ -47,111 +92,272 @@ interface FileUpload {
   url: string;
 }
 
-const PatientRecordsPage = () => {
+interface MenstrualCycleData {
+  cycleLength: number;
+  lastPeriod: string;
+  periodLength: number;
+  symptoms: string[];
+  nextPeriod: string;
+  ovulation: string;
+  fertileWindow: { start: string; end: string };
+  cycleHistory: Array<{
+    date: string;
+    day: number;
+    phase: 'menstrual' | 'follicular' | 'ovulation' | 'luteal';
+    flow: 'light' | 'medium' | 'heavy' | 'none';
+    mood: number;
+    pain: number;
+    energy: number;
+    symptoms: string[];
+  }>;
+}
+
+interface AIInsightData {
+  id: string;
+  type: 'trend' | 'pattern' | 'recommendation' | 'alert' | 'prediction';
+  title: string;
+  description: string;
+  confidence: number;
+  date: string;
+  priority: 'high' | 'medium' | 'low';
+  actionable: boolean;
+}
+
+interface SymptomTrend {
+  symptom: string;
+  frequency: number;
+  trend: 'up' | 'down' | 'stable';
+  color: string;
+}
+
+interface RiskAssessment {
+  condition: string;
+  risk: number;
+  factors: string[];
+  recommendations: string[];
+}
+
+const PatientProfilePage = () => {
   const navigate = useNavigate();
-  const [searchTerm, setSearchTerm] = useState('');
-  const [statusFilter, setStatusFilter] = useState('all');
-  const [selectedRecord, setSelectedRecord] = useState<PatientRecord | null>(null);
+  const { patientId } = useParams();
   const [activeTab, setActiveTab] = useState('overview');
+  const [showAIInsights, setShowAIInsights] = useState(false);
   const [showUploadModal, setShowUploadModal] = useState(false);
   const [uploadType, setUploadType] = useState<'lab' | 'scan' | 'ehr'>('lab');
-  const [showAIInsights, setShowAIInsights] = useState(false);
   const [dragActive, setDragActive] = useState(false);
 
-  // Mock patient records data with file uploads
-  const patientRecords: PatientRecord[] = [
+  // Mock patient data
+  const patient: PatientProfile = {
+    id: patientId || '1',
+    name: 'Sarah Mitchell',
+    age: 32,
+    gender: 'Female',
+    email: 'sarah.mitchell@email.com',
+    phone: '+1 (555) 123-4567',
+    address: '123 Main St, San Francisco, CA 94102',
+    emergencyContact: 'John Mitchell - +1 (555) 987-6543',
+    bloodType: 'A+',
+    allergies: ['Penicillin', 'Shellfish'],
+    currentMedications: ['Ibuprofen 400mg', 'Vitamin D3'],
+    riskFactors: {
+      pregnancy: false,
+      menstruation: true,
+      menopause: false,
+      familyHistory: ['Breast Cancer', 'Diabetes Type 2']
+    }
+  };
+
+  const consultationHistory: ConsultationHistory[] = [
     {
       id: '1',
-      name: 'Sarah Mitchell',
-      age: 32,
-      gender: 'Female',
-      lastVisit: '2025-01-06',
+      date: '2025-01-06',
       condition: 'Endometriosis',
-      status: 'completed',
       confidence: 87.5,
-      labReports: [
-        {
-          id: '1',
-          name: 'Blood Test - Complete Panel',
-          type: 'pdf',
-          size: 2456789,
-          uploadDate: '2025-01-05',
-          url: '#'
-        },
-        {
-          id: '2',
-          name: 'Hormone Levels',
-          type: 'pdf',
-          size: 1234567,
-          uploadDate: '2025-01-04',
-          url: '#'
-        }
-      ],
-      scans: [
-        {
-          id: '1',
-          name: 'Pelvic Ultrasound',
-          type: 'jpg',
-          size: 5678901,
-          uploadDate: '2025-01-03',
-          url: '#'
-        }
-      ],
-      ehrLinks: [
-        'https://ehr.hospital.com/patient/12345',
-        'https://records.clinic.com/sarah-mitchell'
-      ]
+      status: 'confirmed',
+      prescription: ['Naproxen 500mg', 'Hormonal therapy'],
+      notes: 'Patient responded well to treatment. Follow-up in 3 months.'
     },
     {
       id: '2',
-      name: 'Maria Lopez',
-      age: 28,
-      gender: 'Female',
-      lastVisit: '2025-01-05',
+      date: '2024-12-15',
       condition: 'PCOS',
-      status: 'follow-up',
-      confidence: 92.3,
-      labReports: [],
-      scans: [],
-      ehrLinks: []
+      confidence: 72.3,
+      status: 'rejected',
+      prescription: [],
+      notes: 'Further testing ruled out PCOS. Symptoms attributed to stress.'
     },
     {
       id: '3',
-      name: 'Jennifer Kim',
-      age: 35,
-      gender: 'Female',
-      lastVisit: '2025-01-04',
-      condition: 'Fibromyalgia',
-      status: 'pending',
-      confidence: 78.9,
-      labReports: [],
-      scans: [],
-      ehrLinks: []
+      date: '2024-11-20',
+      condition: 'Migraine',
+      confidence: 91.2,
+      status: 'confirmed',
+      prescription: ['Sumatriptan 50mg', 'Preventive therapy'],
+      notes: 'Migraine pattern identified. Preventive treatment initiated.'
     }
   ];
 
-  const filteredRecords = patientRecords.filter(record => {
-    const matchesSearch = record.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         record.condition.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesStatus = statusFilter === 'all' || record.status === statusFilter;
-    return matchesSearch && matchesStatus;
-  });
+  const patientFiles: {
+    labReports: FileUpload[];
+    scans: FileUpload[];
+    ehrLinks: string[];
+  } = {
+    labReports: [
+      {
+        id: '1',
+        name: 'Blood Test - Complete Panel',
+        type: 'pdf',
+        size: 2456789,
+        uploadDate: '2025-01-05',
+        url: '#'
+      },
+      {
+        id: '2',
+        name: 'Hormone Levels',
+        type: 'pdf',
+        size: 1234567,
+        uploadDate: '2025-01-04',
+        url: '#'
+      }
+    ],
+    scans: [
+      {
+        id: '1',
+        name: 'Pelvic Ultrasound',
+        type: 'jpg',
+        size: 5678901,
+        uploadDate: '2025-01-03',
+        url: '#'
+      }
+    ],
+    ehrLinks: [
+      'https://ehr.hospital.com/patient/12345',
+      'https://records.clinic.com/sarah-mitchell'
+    ]
+  };
 
+  const menstrualData: MenstrualCycleData = {
+    cycleLength: 28,
+    lastPeriod: '2024-12-20',
+    periodLength: 5,
+    symptoms: ['Cramping', 'Bloating', 'Mood changes'],
+    nextPeriod: '2025-01-17',
+    ovulation: '2025-01-03',
+    fertileWindow: { start: '2025-01-01', end: '2025-01-05' },
+    cycleHistory: generateMockCycleHistory()
+  };
+
+  // Generate mock cycle history data
+  function generateMockCycleHistory() {
+    const history = [];
+    const today = new Date();
+    
+    for (let i = 90; i >= 0; i -= 3) {
+      const date = new Date(today);
+      date.setDate(date.getDate() - i);
+      
+      const dayOfCycle = (90 - i) % 28 + 1;
+      let phase: 'menstrual' | 'follicular' | 'ovulation' | 'luteal' = 'follicular';
+      let flow: 'light' | 'medium' | 'heavy' | 'none' = 'none';
+      
+      if (dayOfCycle >= 1 && dayOfCycle <= 5) {
+        phase = 'menstrual';
+        flow = dayOfCycle === 1 ? 'heavy' : dayOfCycle === 2 ? 'heavy' : dayOfCycle === 3 ? 'medium' : 'light';
+      } else if (dayOfCycle >= 6 && dayOfCycle <= 13) {
+        phase = 'follicular';
+      } else if (dayOfCycle >= 14 && dayOfCycle <= 16) {
+        phase = 'ovulation';
+      } else {
+        phase = 'luteal';
+      }
+      
+      history.push({
+        date: date.toISOString().split('T')[0],
+        day: dayOfCycle,
+        phase,
+        flow,
+        mood: Math.max(1, phase === 'ovulation' ? 8 + Math.random() * 2 : 5 + Math.random() * 4),
+        pain: flow !== 'none' ? Math.floor(Math.random() * 8) + 1 : Math.floor(Math.random() * 3) + 1,
+        energy: phase === 'ovulation' ? Math.floor(Math.random() * 3) + 8 : Math.floor(Math.random() * 10) + 1,
+        symptoms: phase === 'menstrual' ? ['cramping', 'fatigue'] : 
+                 phase === 'ovulation' ? ['increased_energy', 'breast_tenderness'] : []
+      });
+    }
+    
+    return history;
+  }
+
+  const aiInsightsData: AIInsightData[] = [
+    {
+      id: '1',
+      type: 'trend',
+      title: 'Symptom Severity Decreasing',
+      description: '35% reduction in symptom severity over 3 months. Treatment effectiveness confirmed.',
+      confidence: 92,
+      date: '2025-01-07',
+      priority: 'high',
+      actionable: false
+    },
+    {
+      id: '2',
+      type: 'pattern',
+      title: 'Cyclical Pattern Detected',
+      description: 'Symptoms recur every 28 days with 87% consistency. Strong hormonal correlation identified.',
+      confidence: 87,
+      date: '2025-01-06',
+      priority: 'medium',
+      actionable: true
+    },
+    {
+      id: '3',
+      type: 'prediction',
+      title: 'Flare-up Risk Elevated',
+      description: 'AI models predict 73% chance of symptom flare-up in next 7-10 days based on historical patterns.',
+      confidence: 73,
+      date: '2025-01-07',
+      priority: 'high',
+      actionable: true
+    }
+  ];
+
+  const symptomTrends: SymptomTrend[] = [
+    { symptom: 'Cramping', frequency: 65, trend: 'down', color: 'bg-red-500' },
+    { symptom: 'Fatigue', frequency: 45, trend: 'stable', color: 'bg-orange-500' },
+    { symptom: 'Mood Changes', frequency: 38, trend: 'up', color: 'bg-yellow-500' },
+    { symptom: 'Bloating', frequency: 52, trend: 'down', color: 'bg-purple-500' },
+    { symptom: 'Headaches', frequency: 28, trend: 'stable', color: 'bg-pink-500' },
+    { symptom: 'Breast Tenderness', frequency: 41, trend: 'up', color: 'bg-indigo-500' }
+  ];
+
+  const riskAssessments: RiskAssessment[] = [
+    {
+      condition: 'Endometriosis Progression',
+      risk: 23,
+      factors: ['Family history', 'Current symptoms', 'Age factor'],
+      recommendations: ['Regular monitoring', 'Hormonal therapy optimization', 'Lifestyle modifications']
+    },
+    {
+      condition: 'Chronic Pain Syndrome',
+      risk: 15,
+      factors: ['Pain duration', 'Treatment response'],
+      recommendations: ['Pain management program', 'Physical therapy', 'Stress reduction']
+    }
+  ];
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'completed': return 'bg-green-100 text-green-800';
+      case 'confirmed': return 'bg-green-100 text-green-800';
+      case 'rejected': return 'bg-red-100 text-red-800';
       case 'pending': return 'bg-yellow-100 text-yellow-800';
-      case 'follow-up': return 'bg-blue-100 text-blue-800';
       default: return 'bg-gray-100 text-gray-800';
     }
   };
 
   const getStatusIcon = (status: string) => {
     switch (status) {
-      case 'completed': return '✓';
-      case 'pending': return '⏳';
-      case 'follow-up': return '🔄';
-      default: return '•';
+      case 'confirmed': return <CheckCircle className="h-4 w-4" />;
+      case 'rejected': return <AlertCircle className="h-4 w-4" />;
+      case 'pending': return <Clock className="h-4 w-4" />;
+      default: return <Activity className="h-4 w-4" />;
     }
   };
 
@@ -195,7 +401,6 @@ const PatientRecordsPage = () => {
   };
 
   const handleFileUpload = (file: File) => {
-    // Mock file upload
     const newFile: FileUpload = {
       id: Date.now().toString(),
       name: file.name,
@@ -208,6 +413,20 @@ const PatientRecordsPage = () => {
     console.log('File uploaded:', newFile);
     setShowUploadModal(false);
   };
+
+  const calculateDaysBetween = (date1: string, date2: string) => {
+    const d1 = new Date(date1);
+    const d2 = new Date(date2);
+    const diffTime = Math.abs(d2.getTime() - d1.getTime());
+    return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  };
+
+  const tabs = [
+    { id: 'overview', label: 'Overview', icon: <User className="h-4 w-4" /> },
+    { id: 'history', label: 'Consultation History', icon: <FileText className="h-4 w-4" /> },
+    { id: 'files', label: 'Files & Reports', icon: <Upload className="h-4 w-4" /> },
+    { id: 'menstrual', label: 'Menstrual Cycle', icon: <Calendar className="h-4 w-4" /> }
+  ];
 
   const UploadModal = () => (
     <motion.div
@@ -227,7 +446,7 @@ const PatientRecordsPage = () => {
             <h3 className="text-lg font-semibold text-gray-900">Upload Files</h3>
             <button
               onClick={() => setShowUploadModal(false)}
-              className="text-gray-400 hover:text-gray-600"
+              className="text-gray-400 hover:text-gray-600 transition-colors"
             >
               <X className="h-6 w-6" />
             </button>
@@ -235,12 +454,12 @@ const PatientRecordsPage = () => {
         </div>
         
         <div className="p-6 space-y-4">
-          <div className="flex space-x-4">
+          <div className="flex space-x-2">
             {(['lab', 'scan', 'ehr'] as const).map((type) => (
               <button
                 key={type}
                 onClick={() => setUploadType(type)}
-                className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                className={`px-3 py-2 rounded-lg font-medium transition-colors text-sm ${
                   uploadType === type
                     ? 'bg-rose-600 text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -283,12 +502,92 @@ const PatientRecordsPage = () => {
               />
               <label
                 htmlFor="file-upload"
-                className="bg-rose-600 text-white px-4 py-2 rounded-lg cursor-pointer hover:bg-rose-700 transition-colors"
+                className="bg-rose-600 text-white px-4 py-2 rounded-lg cursor-pointer hover:bg-rose-700 transition-colors inline-block"
               >
                 Choose File
               </label>
             </div>
           )}
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+
+  const AIInsightsModal = () => (
+    <motion.div
+      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <motion.div
+        className="bg-white rounded-xl shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.9, opacity: 0 }}
+      >
+        <div className="p-6 border-b border-gray-200">
+          <div className="flex justify-between items-center">
+            <h3 className="text-xl font-bold text-gray-900">AI Insights - {patient.name}</h3>
+            <button
+              onClick={() => setShowAIInsights(false)}
+              className="text-gray-400 hover:text-gray-600 transition-colors"
+            >
+              <X className="h-6 w-6" />
+            </button>
+          </div>
+        </div>
+        <div className="p-6 space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg">
+              <h4 className="text-lg font-semibold text-gray-900 mb-4">Diagnostic Patterns</h4>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-600">Endometriosis Risk:</span>
+                  <span className="font-bold text-purple-600">High (87%)</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-600">Hormonal Imbalance:</span>
+                  <span className="font-bold text-pink-600">Moderate (65%)</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-600">Chronic Pain Pattern:</span>
+                  <span className="font-bold text-red-600">Present (78%)</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-lg">
+              <h4 className="text-lg font-semibold text-gray-900 mb-4">Treatment Recommendations</h4>
+              <div className="space-y-3">
+                <div className="flex items-start space-x-2">
+                  <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+                  <span className="text-gray-700">Continue current hormonal therapy</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+                  <span className="text-gray-700">Monitor pain levels weekly</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+                  <span className="text-gray-700">Consider dietary modifications</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+            <h4 className="text-lg font-semibold text-gray-900 mb-4">AI Recommendations</h4>
+            <p className="text-gray-700 mb-4">
+              Based on the patient's medical history and current symptoms, the AI suggests focusing on:
+            </p>
+            <ul className="space-y-2 text-gray-700">
+              <li>• Regular monitoring of endometriosis progression</li>
+              <li>• Evaluation of current pain management strategies</li>
+              <li>• Assessment of hormonal therapy effectiveness</li>
+              <li>• Consideration of lifestyle interventions</li>
+            </ul>
+          </div>
         </div>
       </motion.div>
     </motion.div>
@@ -302,369 +601,441 @@ const PatientRecordsPage = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-4">
               <button
-                onClick={() => navigate('/dashboard')}
+                onClick={() => navigate('/patients')}
                 className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors"
               >
                 <ArrowLeft className="h-5 w-5" />
-                <span>Back to Dashboard</span>
+                <span>Back to Records</span>
               </button>
             </div>
             <div className="flex items-center space-x-2">
               <Heart className="h-6 w-6 text-rose-600" />
-              <span className="text-lg font-semibold text-gray-900">Patient Records</span>
+              <span className="text-lg font-semibold text-gray-900">Patient Profile</span>
             </div>
           </div>
         </div>
       </header>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {!selectedRecord ? (
-          <>
-            {/* Page Header */}
-            <motion.div
-              className="mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">Patient Records</h1>
-              <p className="text-gray-600">Manage and review patient diagnoses and medical history</p>
-            </motion.div>
-
-            {/* Search and Filter */}
-            <motion.div
-              className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              <div className="flex flex-col md:flex-row gap-4">
-                <div className="flex-1 relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
-                  <input
-                    type="text"
-                    placeholder="Search patients or conditions..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent"
-                  />
-                </div>
-                <div className="relative">
-                  <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
-                  <select
-                    value={statusFilter}
-                    onChange={(e) => setStatusFilter(e.target.value)}
-                    className="pl-10 pr-8 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent appearance-none bg-white"
-                  >
-                    <option value="all">All Status</option>
-                    <option value="completed">Completed</option>
-                    <option value="pending">Pending</option>
-                    <option value="follow-up">Follow-up</option>
-                  </select>
-                </div>
+        {/* Patient Header */}
+        <motion.div
+          className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+            <div className="flex items-center space-x-4 mb-4 lg:mb-0">
+              <div className="bg-rose-100 p-4 rounded-full">
+                <User className="h-8 w-8 text-rose-600" />
               </div>
-            </motion.div>
-
-            {/* Records Table */}
-            <motion.div
-              className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <div className="overflow-x-auto">
-                <table className="w-full">
-                  <thead className="bg-gray-50 border-b border-gray-200">
-                    <tr>
-                      <th className="px-6 py-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
-                        Patient
-                      </th>
-                      <th className="px-6 py-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
-                        Condition
-                      </th>
-                      <th className="px-6 py-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
-                        Confidence
-                      </th>
-                      <th className="px-6 py-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
-                        Status
-                      </th>
-                      <th className="px-6 py-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
-                        Last Visit
-                      </th>
-                      <th className="px-6 py-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
-                        Actions
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody className="bg-white divide-y divide-gray-200">
-                    {filteredRecords.map((record, index) => (
-                      <motion.tr
-                        key={record.id}
-                        className="hover:bg-gray-50 transition-colors"
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.4, delay: index * 0.05 }}
-                      >
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="flex items-center">
-                            <div className="bg-rose-100 p-2 rounded-full mr-3">
-                              <User className="h-5 w-5 text-rose-600" />
-                            </div>
-                            <div>
-                              <div className="text-sm font-medium text-gray-900">{record.name}</div>
-                              <div className="text-sm text-gray-500">{record.age} years, {record.gender}</div>
-                            </div>
-                          </div>
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm font-medium text-gray-900">{record.condition}</div>
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm font-bold text-rose-600">{record.confidence}%</div>
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getStatusColor(record.status)}`}>
-                            <span className="mr-1">{getStatusIcon(record.status)}</span>
-                            {record.status.charAt(0).toUpperCase() + record.status.slice(1)}
-                          </span>
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="flex items-center text-sm text-gray-500">
-                            <Calendar className="h-4 w-4 mr-1" />
-                            {new Date(record.lastVisit).toLocaleDateString()}
-                          </div>
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                          <div className="flex items-center space-x-2">
-                            <button
-                              onClick={() => setSelectedRecord(record)}
-                              className="text-rose-600 hover:text-rose-900 transition-colors"
-                            >
-                              <Eye className="h-4 w-4" />
-                            </button>
-                            <button className="text-gray-600 hover:text-gray-900 transition-colors">
-                              <Edit className="h-4 w-4" />
-                            </button>
-                            <button className="text-gray-600 hover:text-gray-900 transition-colors">
-                              <MoreVertical className="h-4 w-4" />
-                            </button>
-                          </div>
-                        </td>
-                      </motion.tr>
-                    ))}
-                  </tbody>
-                </table>
+              <div>
+                <h1 className="text-2xl font-bold text-gray-900">{patient.name}</h1>
+                <p className="text-gray-600">{patient.age} years old • {patient.gender}</p>
               </div>
-            </motion.div>
-
-            {/* Empty State */}
-            {filteredRecords.length === 0 && (
-              <motion.div
-                className="text-center py-12"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <button
+                onClick={() => setShowAIInsights(true)}
+                className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors flex items-center justify-center space-x-2"
               >
-                <Activity className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-lg font-medium text-gray-900 mb-2">No records found</h3>
-                <p className="text-gray-600">Try adjusting your search or filter criteria.</p>
-              </motion.div>
-            )}
-          </>
-        ) : (
-          /* Patient Detail View */
-          <motion.div
-            className="space-y-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            {/* Patient Header */}
-            <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-              <div className="flex justify-between items-start mb-6">
-                <div className="flex items-center space-x-4">
-                  <div className="bg-rose-100 p-3 rounded-full">
-                    <User className="h-8 w-8 text-rose-600" />
+                <Brain className="h-5 w-5" />
+                <span>View AI Insights</span>
+              </button>
+              <button
+                onClick={() => navigate('/diagnosis')}
+                className="bg-rose-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-rose-700 transition-colors flex items-center justify-center space-x-2"
+              >
+                <Plus className="h-5 w-5" />
+                <span>New Consultation</span>
+              </button>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Tabs */}
+        <motion.div
+          className="bg-white rounded-xl shadow-sm border border-gray-100 mb-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          <div className="border-b border-gray-200">
+            <nav className="flex space-x-8 px-6 overflow-x-auto">
+              {tabs.map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`py-4 px-1 border-b-2 font-medium text-sm flex items-center space-x-2 transition-colors whitespace-nowrap ${
+                    activeTab === tab.id
+                      ? 'border-rose-500 text-rose-600'
+                      : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                  }`}
+                >
+                  {tab.icon}
+                  <span>{tab.label}</span>
+                </button>
+              ))}
+            </nav>
+          </div>
+
+          <div className="p-6">
+            {/* Overview Tab */}
+            {activeTab === 'overview' && (
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4 }}
+                className="space-y-8"
+              >
+                {/* Personal Information */}
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Personal Information</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-4">
+                      <div className="flex items-center space-x-3">
+                        <Mail className="h-5 w-5 text-gray-400" />
+                        <div>
+                          <p className="text-sm text-gray-600">Email</p>
+                          <p className="font-medium">{patient.email}</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <Phone className="h-5 w-5 text-gray-400" />
+                        <div>
+                          <p className="text-sm text-gray-600">Phone</p>
+                          <p className="font-medium">{patient.phone}</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <MapPin className="h-5 w-5 text-gray-400" />
+                        <div>
+                          <p className="text-sm text-gray-600">Address</p>
+                          <p className="font-medium">{patient.address}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="space-y-4">
+                      <div>
+                        <p className="text-sm text-gray-600">Blood Type</p>
+                        <p className="font-medium">{patient.bloodType}</p>
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-600">Emergency Contact</p>
+                        <p className="font-medium">{patient.emergencyContact}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Medical Information */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Allergies</h3>
+                    <div className="space-y-2">
+                      {patient.allergies.map((allergy, index) => (
+                        <span key={index} className="inline-block bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm mr-2">
+                          {allergy}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                   <div>
-                    <h1 className="text-2xl font-bold text-gray-900">{selectedRecord.name}</h1>
-                    <p className="text-gray-600">{selectedRecord.age} years, {selectedRecord.gender}</p>
-                    <p className="text-sm text-gray-500">Last visit: {new Date(selectedRecord.lastVisit).toLocaleDateString()}</p>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Current Medications</h3>
+                    <div className="space-y-2">
+                      {patient.currentMedications.map((medication, index) => (
+                        <div key={index} className="bg-blue-50 p-3 rounded-lg">
+                          <p className="font-medium text-blue-900">{medication}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
-                <div className="flex space-x-2">
-                  <button
-                    onClick={() => setShowAIInsights(true)}
-                    className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors flex items-center space-x-2"
-                  >
-                    <Brain className="h-4 w-4" />
-                    <span>View AI Insights</span>
-                  </button>
-                  <button
-                    onClick={() => setSelectedRecord(null)}
-                    className="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
-                  >
-                    Back to List
-                  </button>
-                </div>
-              </div>
 
-              {/* Tabs */}
-              <div className="border-b border-gray-200">
-                <nav className="flex space-x-8">
-                  {[
-                    { id: 'overview', label: 'Overview', icon: Activity },
-                    { id: 'files', label: 'Files & Reports', icon: FileText },
-                    { id: 'menstrual', label: 'Menstrual Cycle', icon: Calendar },
-                    { id: 'drugs', label: 'Drug Checker', icon: Activity }
-                  ].map((tab) => (
-                    <button
-                      key={tab.id}
-                      onClick={() => setActiveTab(tab.id)}
-                      className={`flex items-center space-x-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
-                        activeTab === tab.id
-                          ? 'border-rose-500 text-rose-600'
-                          : 'border-transparent text-gray-500 hover:text-gray-700'
-                      }`}
-                    >
-                      <tab.icon className="h-4 w-4" />
-                      <span>{tab.label}</span>
-                    </button>
-                  ))}
-                </nav>
-              </div>
-            </div>
-
-            {/* Tab Content */}
-            <div>
-              {activeTab === 'overview' && (
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                  <div className="lg:col-span-2 space-y-6">
-                    <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-                      <h3 className="text-lg font-semibold text-gray-900 mb-4">Diagnosis Summary</h3>
-                      <div className="space-y-4">
-                        <div className="flex justify-between items-center">
-                          <span className="text-gray-600">Primary Condition:</span>
-                          <span className="font-semibold text-gray-900">{selectedRecord.condition}</span>
+                {/* Risk Factors */}
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Risk Factors</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="font-medium text-gray-900 mb-3">Current Status</h4>
+                      <div className="space-y-2">
+                        <div className="flex items-center space-x-2">
+                          <div className={`w-3 h-3 rounded-full ${patient.riskFactors.pregnancy ? 'bg-green-500' : 'bg-gray-300'}`} />
+                          <span className="text-sm">Pregnancy</span>
                         </div>
-                        <div className="flex justify-between items-center">
-                          <span className="text-gray-600">Confidence Level:</span>
-                          <span className="font-bold text-rose-600">{selectedRecord.confidence}%</span>
+                        <div className="flex items-center space-x-2">
+                          <div className={`w-3 h-3 rounded-full ${patient.riskFactors.menstruation ? 'bg-green-500' : 'bg-gray-300'}`} />
+                          <span className="text-sm">Menstruation</span>
                         </div>
-                        <div className="flex justify-between items-center">
-                          <span className="text-gray-600">Status:</span>
-                          <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getStatusColor(selectedRecord.status)}`}>
-                            {selectedRecord.status.charAt(0).toUpperCase() + selectedRecord.status.slice(1)}
+                        <div className="flex items-center space-x-2">
+                          <div className={`w-3 h-3 rounded-full ${patient.riskFactors.menopause ? 'bg-green-500' : 'bg-gray-300'}`} />
+                          <span className="text-sm">Menopause</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-gray-900 mb-3">Family History</h4>
+                      <div className="space-y-2">
+                        {patient.riskFactors.familyHistory.map((condition, index) => (
+                          <span key={index} className="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm mr-2">
+                            {condition}
                           </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="space-y-6">
-                    <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-                      <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h3>
-                      <div className="space-y-3">
-                        <button className="w-full bg-rose-600 text-white py-2 px-4 rounded-lg hover:bg-rose-700 transition-colors">
-                          Schedule Follow-up
-                        </button>
-                        <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
-                          Generate Report
-                        </button>
-                        <button className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors">
-                          Send to Specialist
-                        </button>
+                        ))}
                       </div>
                     </div>
                   </div>
                 </div>
-              )}
+              </motion.div>
+            )}
 
-              {activeTab === 'files' && (
-                <div className="space-y-6">
-                  <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-                    <div className="flex justify-between items-center mb-6">
-                      <h3 className="text-lg font-semibold text-gray-900">Files & Reports</h3>
-                      <button
-                        onClick={() => setShowUploadModal(true)}
-                        className="bg-rose-600 text-white px-4 py-2 rounded-lg hover:bg-rose-700 transition-colors flex items-center space-x-2"
-                      >
-                        <Plus className="h-4 w-4" />
-                        <span>Upload File</span>
-                      </button>
+            {/* Consultation History Tab */}
+            {activeTab === 'history' && (
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4 }}
+                className="space-y-6"
+              >
+                {consultationHistory.map((consultation, index) => (
+                  <div key={consultation.id} className="bg-gray-50 rounded-lg p-6">
+                    <div className="flex items-start justify-between mb-4">
+                      <div>
+                        <h4 className="text-lg font-semibold text-gray-900">{consultation.condition}</h4>
+                        <p className="text-sm text-gray-600 flex items-center mt-1">
+                          <Calendar className="h-4 w-4 mr-1" />
+                          {new Date(consultation.date).toLocaleDateString('en-US', { 
+                            year: 'numeric', 
+                            month: 'long', 
+                            day: 'numeric' 
+                          })}
+                        </p>
+                      </div>
+                      <div className="text-right">
+                        <p className="text-2xl font-bold text-rose-600 mb-1">{consultation.confidence}%</p>
+                        <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getStatusColor(consultation.status)}`}>
+                          {getStatusIcon(consultation.status)}
+                          <span className="ml-1">{consultation.status.charAt(0).toUpperCase() + consultation.status.slice(1)}</span>
+                        </span>
+                      </div>
                     </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                      {/* Lab Reports */}
-                      <div>
-                        <h4 className="font-medium text-gray-900 mb-3">Lab Reports</h4>
-                        <div className="space-y-2">
-                          {selectedRecord.labReports.map((file) => (
-                            <div key={file.id} className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                              {getFileIcon(file.type)}
-                              <div className="flex-1 min-w-0">
-                                <p className="text-sm font-medium text-gray-900 truncate">{file.name}</p>
-                                <p className="text-xs text-gray-500">{formatFileSize(file.size)} • {file.uploadDate}</p>
-                              </div>
-                            </div>
+                    
+                    {consultation.prescription.length > 0 && (
+                      <div className="mb-4">
+                        <h5 className="font-medium text-gray-900 mb-2">Prescription</h5>
+                        <div className="space-y-1">
+                          {consultation.prescription.map((med, medIndex) => (
+                            <span key={medIndex} className="inline-block bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm mr-2">
+                              {med}
+                            </span>
                           ))}
-                          {selectedRecord.labReports.length === 0 && (
-                            <p className="text-sm text-gray-500">No lab reports uploaded</p>
-                          )}
                         </div>
                       </div>
+                    )}
+                    
+                    <div>
+                      <h5 className="font-medium text-gray-900 mb-2">Notes</h5>
+                      <p className="text-gray-700">{consultation.notes}</p>
+                    </div>
+                  </div>
+                ))}
+              </motion.div>
+            )}
 
-                      {/* Scans */}
-                      <div>
-                        <h4 className="font-medium text-gray-900 mb-3">Medical Scans</h4>
-                        <div className="space-y-2">
-                          {selectedRecord.scans.map((file) => (
-                            <div key={file.id} className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                              {getFileIcon(file.type)}
-                              <div className="flex-1 min-w-0">
-                                <p className="text-sm font-medium text-gray-900 truncate">{file.name}</p>
-                                <p className="text-xs text-gray-500">{formatFileSize(file.size)} • {file.uploadDate}</p>
-                              </div>
-                            </div>
-                          ))}
-                          {selectedRecord.scans.length === 0 && (
-                            <p className="text-sm text-gray-500">No scans uploaded</p>
-                          )}
-                        </div>
-                      </div>
+            {/* Files & Reports Tab */}
+            {activeTab === 'files' && (
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4 }}
+                className="space-y-6"
+              >
+                <div className="flex justify-between items-center">
+                  <h3 className="text-lg font-semibold text-gray-900">Files & Reports</h3>
+                  <button
+                    onClick={() => setShowUploadModal(true)}
+                    className="bg-rose-600 text-white px-4 py-2 rounded-lg hover:bg-rose-700 transition-colors flex items-center space-x-2"
+                  >
+                    <Plus className="h-4 w-4" />
+                    <span>Upload File</span>
+                  </button>
+                </div>
 
-                      {/* EHR Links */}
-                      <div>
-                        <h4 className="font-medium text-gray-900 mb-3">EHR Links</h4>
-                        <div className="space-y-2">
-                          {selectedRecord.ehrLinks.map((link, index) => (
-                            <div key={index} className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                              <Link className="h-5 w-5 text-blue-500" />
-                              <div className="flex-1 min-w-0">
-                                <p className="text-sm font-medium text-gray-900 truncate">{link}</p>
-                                <p className="text-xs text-gray-500">External EHR System</p>
-                              </div>
-                            </div>
-                          ))}
-                          {selectedRecord.ehrLinks.length === 0 && (
-                            <p className="text-sm text-gray-500">No EHR links added</p>
-                          )}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {/* Lab Reports */}
+                  <div className="bg-gray-50 rounded-lg p-4">
+                    <h4 className="font-medium text-gray-900 mb-3">Lab Reports</h4>
+                    <div className="space-y-2">
+                      {patientFiles.labReports.map((file) => (
+                        <div key={file.id} className="flex items-center space-x-3 p-3 bg-white rounded-lg shadow-sm">
+                          {getFileIcon(file.type)}
+                          <div className="flex-1 min-w-0">
+                            <p className="text-sm font-medium text-gray-900 truncate">{file.name}</p>
+                            <p className="text-xs text-gray-500">{formatFileSize(file.size)} • {file.uploadDate}</p>
+                          </div>
                         </div>
-                      </div>
+                      ))}
+                      {patientFiles.labReports.length === 0 && (
+                        <p className="text-sm text-gray-500">No lab reports uploaded</p>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Scans */}
+                  <div className="bg-gray-50 rounded-lg p-4">
+                    <h4 className="font-medium text-gray-900 mb-3">Medical Scans</h4>
+                    <div className="space-y-2">
+                      {patientFiles.scans.map((file) => (
+                        <div key={file.id} className="flex items-center space-x-3 p-3 bg-white rounded-lg shadow-sm">
+                          {getFileIcon(file.type)}
+                          <div className="flex-1 min-w-0">
+                            <p className="text-sm font-medium text-gray-900 truncate">{file.name}</p>
+                            <p className="text-xs text-gray-500">{formatFileSize(file.size)} • {file.uploadDate}</p>
+                          </div>
+                        </div>
+                      ))}
+                      {patientFiles.scans.length === 0 && (
+                        <p className="text-sm text-gray-500">No scans uploaded</p>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* EHR Links */}
+                  <div className="bg-gray-50 rounded-lg p-4">
+                    <h4 className="font-medium text-gray-900 mb-3">EHR Links</h4>
+                    <div className="space-y-2">
+                      {patientFiles.ehrLinks.map((link, index) => (
+                        <div key={index} className="flex items-center space-x-3 p-3 bg-white rounded-lg shadow-sm">
+                          <Link className="h-5 w-5 text-blue-500" />
+                          <div className="flex-1 min-w-0">
+                            <p className="text-sm font-medium text-gray-900 truncate">{link}</p>
+                            <p className="text-xs text-gray-500">External EHR System</p>
+                          </div>
+                        </div>
+                      ))}
+                      {patientFiles.ehrLinks.length === 0 && (
+                        <p className="text-sm text-gray-500">No EHR links added</p>
+                      )}
                     </div>
                   </div>
                 </div>
-              )}
+              </motion.div>
+            )}
 
-              {activeTab === 'menstrual' && (
-                <MenstrualTracker />
-              )}
+            {/* Menstrual Cycle Tab */}
+            {activeTab === 'menstrual' && (
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4 }}
+                className="space-y-6"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {/* Cycle Overview */}
+                  <div className="bg-gradient-to-r from-pink-50 to-rose-50 p-6 rounded-lg">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Cycle Overview</h3>
+                    <div className="space-y-3">
+                      <div className="flex justify-between items-center">
+                        <span className="text-gray-600">Cycle Length:</span>
+                        <span className="font-bold text-rose-600">{menstrualData.cycleLength} days</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-gray-600">Period Length:</span>
+                        <span className="font-bold text-pink-600">{menstrualData.periodLength} days</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-gray-600">Last Period:</span>
+                        <span className="font-medium text-gray-900">{new Date(menstrualData.lastPeriod).toLocaleDateString()}</span>
+                      </div>
+                    </div>
+                  </div>
 
-              {activeTab === 'drugs' && (
-                <DrugChecker />
-              )}
-            </div>
-          </motion.div>
-        )}
+                  {/* Predictions */}
+                  <div className="bg-gradient-to-r from-purple-50 to-indigo-50 p-6 rounded-lg">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Predictions</h3>
+                    <div className="space-y-3">
+                      <div className="flex justify-between items-center">
+                        <span className="text-gray-600">Next Period:</span>
+                        <span className="font-bold text-purple-600">{new Date(menstrualData.nextPeriod).toLocaleDateString()}</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-gray-600">Days Until:</span>
+                        <span className="font-bold text-indigo-600">{calculateDaysBetween(new Date().toISOString().split('T')[0], menstrualData.nextPeriod)} days</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-gray-600">Ovulation:</span>
+                        <span className="font-medium text-gray-900">{new Date(menstrualData.ovulation).toLocaleDateString()}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Symptoms */}
+                  <div className="bg-gradient-to-r from-orange-50 to-amber-50 p-6 rounded-lg">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Symptoms</h3>
+                    <div className="space-y-2">
+                      {menstrualData.symptoms.map((symptom, index) => (
+                        <div key={index} className="flex items-center space-x-2">
+                          <div className="w-2 h-2 bg-orange-500 rounded-full" />
+                          <span className="text-gray-700">{symptom}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Cycle Calendar */}
+                <div className="bg-white border-2 border-gray-200 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Cycle Calendar</h3>
+                  <div className="grid grid-cols-7 gap-2 text-center">
+                    {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((day) => (
+                      <div key={day} className="font-medium text-gray-600 p-2">{day}</div>
+                    ))}
+                    {Array.from({ length: 35 }, (_, i) => {
+                      const date = new Date();
+                      date.setDate(date.getDate() - 15 + i);
+                      const isToday = date.toDateString() === new Date().toDateString();
+                      const isLastPeriod = date.toDateString() === new Date(menstrualData.lastPeriod).toDateString();
+                      const isNextPeriod = date.toDateString() === new Date(menstrualData.nextPeriod).toDateString();
+                      const isOvulation = date.toDateString() === new Date(menstrualData.ovulation).toDateString();
+                      
+                      return (
+                        <div
+                          key={i}
+                          className={`p-2 text-sm rounded-lg transition-colors ${
+                            isToday ? 'bg-gray-900 text-white' :
+                            isLastPeriod ? 'bg-rose-500 text-white' :
+                            isNextPeriod ? 'bg-pink-500 text-white' :
+                            isOvulation ? 'bg-purple-500 text-white' :
+                            'hover:bg-gray-100'
+                          }`}
+                        >
+                          {date.getDate()}
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <div className="mt-4 flex flex-wrap gap-4 text-sm">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-4 h-4 bg-gray-900 rounded"></div>
+                      <span>Today</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-4 h-4 bg-rose-500 rounded"></div>
+                      <span>Last Period</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-4 h-4 bg-pink-500 rounded"></div>
+                      <span>Next Period</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-4 h-4 bg-purple-500 rounded"></div>
+                      <span>Ovulation</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </div>
+        </motion.div>
       </div>
 
       {/* Upload Modal */}
@@ -674,39 +1045,10 @@ const PatientRecordsPage = () => {
 
       {/* AI Insights Modal */}
       <AnimatePresence>
-        {showAIInsights && (
-          <motion.div
-            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <motion.div
-              className="bg-white rounded-xl shadow-xl max-w-6xl w-full max-h-[90vh] overflow-y-auto"
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-            >
-              <div className="p-6 border-b border-gray-200">
-                <div className="flex justify-between items-center">
-                  <h3 className="text-xl font-bold text-gray-900">AI Insights - {selectedRecord?.name}</h3>
-                  <button
-                    onClick={() => setShowAIInsights(false)}
-                    className="text-gray-400 hover:text-gray-600 transition-colors"
-                  >
-                    <X className="h-6 w-6" />
-                  </button>
-                </div>
-              </div>
-              <div className="p-6">
-                <AIInsights patientId={selectedRecord?.id || ''} />
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
+        {showAIInsights && <AIInsightsModal />}
       </AnimatePresence>
     </div>
   );
 };
 
-export default PatientRecordsPage;
+export default PatientProfilePage;

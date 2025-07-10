@@ -15,12 +15,15 @@ import {
   Search,
   Baby,
   UserCheck,
-  Loader2
+  Loader2,
+  Users,
+  AlertCircle
 } from 'lucide-react';
+import MultiSelectDropdown from '../components/MultiSelectDropdown';
 
 // ============ CONFIGURATION ============
 // Replace this with your ngrok URL when available
-const API_BASE_URL = 'http://127.0.0.1:5000/api/v1';
+const API_BASE_URL = 'https://d94807f3625b.ngrok-free.app/api/v1';
 // For ngrok, it will look like: 'https://your-ngrok-url.ngrok.io/api/v1'
 
 // =======================================
@@ -31,6 +34,8 @@ interface PatientInfo {
   gender: string;
   weight: number;
   height: number;
+  familyHistory: string[];
+  allergies: string[];
 }
 
 interface Vitals {
@@ -87,7 +92,9 @@ const ClinicalDecisionPage = () => {
     age: 0,
     gender: '',
     weight: 0,
-    height: 0
+    height: 0,
+    familyHistory: [],
+    allergies: []
   });
 
   const [vitals, setVitals] = useState<Vitals>({
@@ -98,6 +105,7 @@ const ClinicalDecisionPage = () => {
   });
 
   const [symptoms, setSymptoms] = useState<Record<string, number>>({});
+  const [selectedSymptoms, setSelectedSymptoms] = useState<string[]>([]);
   const [diagnosisResults, setDiagnosisResults] = useState<DiagnosisResult[]>([]);
   const [selectedDiagnosis, setSelectedDiagnosis] = useState<DiagnosisResult | null>(null);
   const [recommendation, setRecommendation] = useState('');
@@ -109,6 +117,11 @@ const ClinicalDecisionPage = () => {
     breastfeeding: false
   });
   const [drugCheckResults, setDrugCheckResults] = useState<DrugCheckResult[]>([]);
+
+  // Helper function to format symptom names - moved before first usage
+  const formatSymptomName = (symptom: string) => {
+    return symptom.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+  };
 
  const symptomsList = [
   'pelvic_pain', 'heavy_periods', 'painful_periods', 'fatigue', 'nausea', 'irregular_periods',
@@ -131,11 +144,113 @@ const ClinicalDecisionPage = () => {
   'low_libido', 'memory_problems', 'cold_sweats', 'mood_changes', 'chronic_fatigue'
 ];
 
+  // Convert symptom list to options for dropdown
+  const symptomOptions = symptomsList.map(symptom => ({
+    value: symptom,
+    label: formatSymptomName(symptom)
+  }));
+
+  // Common family history conditions
+  const familyHistoryOptions = [
+    { value: 'diabetes', label: 'Diabetes' },
+    { value: 'hypertension', label: 'Hypertension' },
+    { value: 'heart_disease', label: 'Heart Disease' },
+    { value: 'cancer', label: 'Cancer' },
+    { value: 'stroke', label: 'Stroke' },
+    { value: 'mental_health', label: 'Mental Health Disorders' },
+    { value: 'autoimmune', label: 'Autoimmune Diseases' },
+    { value: 'thyroid', label: 'Thyroid Disorders' },
+    { value: 'kidney_disease', label: 'Kidney Disease' },
+    { value: 'liver_disease', label: 'Liver Disease' },
+    { value: 'osteoporosis', label: 'Osteoporosis' },
+    { value: 'alzheimers', label: "Alzheimer's Disease" },
+    { value: 'parkinsons', label: "Parkinson's Disease" },
+    { value: 'asthma', label: 'Asthma' },
+    { value: 'copd', label: 'COPD' },
+    { value: 'blood_clots', label: 'Blood Clots' },
+    { value: 'high_cholesterol', label: 'High Cholesterol' },
+    { value: 'obesity', label: 'Obesity' },
+    { value: 'substance_abuse', label: 'Substance Abuse' },
+    { value: 'epilepsy', label: 'Epilepsy' }
+  ];
+
+  // Common allergies
+  const allergyOptions = [
+    { value: 'penicillin', label: 'Penicillin' },
+    { value: 'sulfa', label: 'Sulfa Drugs' },
+    { value: 'aspirin', label: 'Aspirin' },
+    { value: 'ibuprofen', label: 'Ibuprofen' },
+    { value: 'codeine', label: 'Codeine' },
+    { value: 'morphine', label: 'Morphine' },
+    { value: 'latex', label: 'Latex' },
+    { value: 'shellfish', label: 'Shellfish' },
+    { value: 'nuts', label: 'Tree Nuts' },
+    { value: 'peanuts', label: 'Peanuts' },
+    { value: 'eggs', label: 'Eggs' },
+    { value: 'milk', label: 'Milk/Dairy' },
+    { value: 'soy', label: 'Soy' },
+    { value: 'wheat', label: 'Wheat/Gluten' },
+    { value: 'fish', label: 'Fish' },
+    { value: 'sesame', label: 'Sesame' },
+    { value: 'contrast_dye', label: 'Contrast Dye' },
+    { value: 'iodine', label: 'Iodine' },
+    { value: 'bee_stings', label: 'Bee Stings' },
+    { value: 'pollen', label: 'Pollen' },
+    { value: 'dust_mites', label: 'Dust Mites' },
+    { value: 'pet_dander', label: 'Pet Dander' },
+    { value: 'mold', label: 'Mold' },
+    { value: 'nickel', label: 'Nickel' },
+    { value: 'fragrances', label: 'Fragrances' }
+  ];
+
+  // Demo data for autofill
+  const demoPatientData = {
+    name: 'Sarah Johnson',
+    age: 34,
+    gender: 'Female',
+    weight: 145,
+    height: 65,
+    familyHistory: ['diabetes', 'hypertension', 'heart_disease'],
+    allergies: ['penicillin', 'shellfish', 'latex'],
+    symptoms: ['fatigue', 'headache', 'joint_pain', 'mood_swings', 'sleep_problems']
+  };
+
+  const handleAutofillDemo = () => {
+    setPatientInfo({
+      name: demoPatientData.name,
+      age: demoPatientData.age,
+      gender: demoPatientData.gender,
+      weight: demoPatientData.weight,
+      height: demoPatientData.height,
+      familyHistory: demoPatientData.familyHistory,
+      allergies: demoPatientData.allergies
+    });
+    setSelectedSymptoms(demoPatientData.symptoms);
+    
+    // Update symptoms object for API compatibility
+    const symptomsObj: Record<string, number> = {};
+    demoPatientData.symptoms.forEach(symptom => {
+      symptomsObj[symptom] = 1;
+    });
+    setSymptoms(symptomsObj);
+  };
+
   const handleSymptomChange = (symptom: string, checked: boolean) => {
     setSymptoms(prev => ({
       ...prev,
       [symptom]: checked ? 1 : 0
     }));
+  };
+
+  const handleSymptomsChange = (selectedValues: string[]) => {
+    setSelectedSymptoms(selectedValues);
+    
+    // Update symptoms object for API compatibility
+    const symptomsObj: Record<string, number> = {};
+    selectedValues.forEach(symptom => {
+      symptomsObj[symptom] = 1;
+    });
+    setSymptoms(symptomsObj);
   };
 
   const handleDiagnosisSubmit = async () => {
@@ -262,10 +377,6 @@ const ClinicalDecisionPage = () => {
     }
   };
 
-  const formatSymptomName = (symptom: string) => {
-    return symptom.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-  };
-
   const getSeverityColor = (severity: string) => {
     const lowerSeverity = severity.toLowerCase();
     switch (lowerSeverity) {
@@ -359,8 +470,14 @@ const ClinicalDecisionPage = () => {
               <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
                 <User className="h-5 w-5 mr-2 text-rose-600" />
                 Patient Information
+                <button
+                  onClick={handleAutofillDemo}
+                  className="ml-auto text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full hover:bg-blue-200 transition-colors"
+                >
+                  Demo Autofill
+                </button>
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                 <input
                   type="text"
                   placeholder="Patient Name"
@@ -385,6 +502,53 @@ const ClinicalDecisionPage = () => {
                   <option value="Male">Male</option>
                   <option value="Other">Other</option>
                 </select>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <input
+                  type="number"
+                  placeholder="Weight (lbs)"
+                  value={patientInfo.weight || ''}
+                  onChange={(e) => setPatientInfo(prev => ({ ...prev, weight: parseInt(e.target.value) || 0 }))}
+                  className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+                />
+                <input
+                  type="number"
+                  placeholder="Height (inches)"
+                  value={patientInfo.height || ''}
+                  onChange={(e) => setPatientInfo(prev => ({ ...prev, height: parseInt(e.target.value) || 0 }))}
+                  className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+                />
+              </div>
+
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2 flex items-center">
+                    <Users className="h-4 w-4 mr-1 text-rose-600" />
+                    Family History
+                  </label>
+                  <MultiSelectDropdown
+                    options={familyHistoryOptions}
+                    selectedValues={patientInfo.familyHistory}
+                    onChange={(values) => setPatientInfo(prev => ({ ...prev, familyHistory: values }))}
+                    placeholder="Select family medical history..."
+                    searchPlaceholder="Search conditions..."
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2 flex items-center">
+                    <AlertCircle className="h-4 w-4 mr-1 text-rose-600" />
+                    Known Allergies
+                  </label>
+                  <MultiSelectDropdown
+                    options={allergyOptions}
+                    selectedValues={patientInfo.allergies}
+                    onChange={(values) => setPatientInfo(prev => ({ ...prev, allergies: values }))}
+                    placeholder="Select known allergies..."
+                    searchPlaceholder="Search allergies..."
+                  />
+                </div>
               </div>
             </div>
 
@@ -429,28 +593,43 @@ const ClinicalDecisionPage = () => {
 
             {/* Symptoms */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Symptoms Checklist</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {symptomsList.map((symptom) => (
-                  <label key={symptom} className="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors">
-                    <input
-                      type="checkbox"
-                      checked={symptoms[symptom] === 1}
-                      onChange={(e) => handleSymptomChange(symptom, e.target.checked)}
-                      className="h-4 w-4 text-rose-600 focus:ring-rose-500 border-gray-300 rounded"
-                    />
-                    <span className="text-sm font-medium text-gray-700">
-                      {formatSymptomName(symptom)}
-                    </span>
-                  </label>
-                ))}
+              <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                <Activity className="h-5 w-5 mr-2 text-rose-600" />
+                Current Symptoms
+              </h3>
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Select all symptoms the patient is experiencing
+                </label>
+                <MultiSelectDropdown
+                  options={symptomOptions}
+                  selectedValues={selectedSymptoms}
+                  onChange={handleSymptomsChange}
+                  placeholder="Search and select symptoms..."
+                  searchPlaceholder="Type to search symptoms..."
+                  maxDisplayItems={5}
+                />
+                {selectedSymptoms.length > 0 && (
+                  <div className="mt-3 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                    <p className="text-sm text-blue-800 font-medium mb-2">
+                      Selected Symptoms ({selectedSymptoms.length}):
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {selectedSymptoms.map(symptom => (
+                        <span key={symptom} className="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">
+                          {formatSymptomName(symptom)}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
 
             <div className="flex justify-end">
               <button
                 onClick={handleDiagnosisSubmit}
-                disabled={loading || !patientInfo.name || !patientInfo.age || !patientInfo.gender}
+                disabled={loading || !patientInfo.name || !patientInfo.age || !patientInfo.gender || selectedSymptoms.length === 0}
                 className="bg-rose-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-rose-700 focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
               >
                 {loading ? (
