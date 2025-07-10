@@ -1,25 +1,29 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-import { 
-  Heart, 
-  ArrowLeft, 
-  User, 
+import{ useState } from 'react';
+import {
+  Heart,
+  ArrowLeft,
+  User,
   Activity,
   Brain,
   Pill,
   AlertTriangle,
   CheckCircle,
-  TrendingUp,
   Save,
-  Send,
   Eye,
   Shield,
   Clock,
   Search,
   Baby,
-  UserCheck
+  UserCheck,
+  Loader2
 } from 'lucide-react';
+
+// ============ CONFIGURATION ============
+// Replace this with your ngrok URL when available
+const API_BASE_URL = 'http://127.0.0.1:5000/api/v1';
+// For ngrok, it will look like: 'https://your-ngrok-url.ngrok.io/api/v1'
+
+// =======================================
 
 interface PatientInfo {
   name: string;
@@ -40,21 +44,31 @@ interface DiagnosisResult {
   condition: string;
   confidence: number;
   confidence_level: string;
-  recommendation: string;
+  relevant_symptoms: string[];
   overridden?: boolean;
 }
 
+interface DrugSideEffect {
+  category: string;
+  frequency: string;
+  frequency_percentage: string;
+  gender_specific: string;
+  requires_monitoring: string;
+  severity: string;
+  side_effect: string;
+}
+
 interface DrugCheckResult {
-  drugName: string;
-  ageGroup: string;
-  riskLevel: 'low' | 'medium' | 'high' | 'contraindicated';
-  riskScore: number;
-  saferAlternative: string[];
-  sideEffects: string[];
-  requiresMonitoring: boolean;
-  pregnancyRisk: string;
-  breastfeedingRisk: string;
-  specialConsiderations: string[];
+  age_group: string;
+  breastfeeding_risk: string | null;
+  drug_name: string;
+  pregnancy_risk: string | null;
+  requires_monitoring: boolean;
+  risk_level: string;
+  risk_score: number;
+  safer_alternatives: string[];
+  side_effects: DrugSideEffect[];
+  special_considerations: string[];
 }
 
 interface DrugCheckInput {
@@ -64,10 +78,10 @@ interface DrugCheckInput {
 }
 
 const ClinicalDecisionPage = () => {
-  const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(1);
   const [loading, setLoading] = useState(false);
-  
+  const [apiError, setApiError] = useState('');
+ 
   const [patientInfo, setPatientInfo] = useState<PatientInfo>({
     name: '',
     age: 0,
@@ -86,7 +100,8 @@ const ClinicalDecisionPage = () => {
   const [symptoms, setSymptoms] = useState<Record<string, number>>({});
   const [diagnosisResults, setDiagnosisResults] = useState<DiagnosisResult[]>([]);
   const [selectedDiagnosis, setSelectedDiagnosis] = useState<DiagnosisResult | null>(null);
-  
+  const [recommendation, setRecommendation] = useState('');
+ 
   // Drug Checker State
   const [drugCheckInput, setDrugCheckInput] = useState<DrugCheckInput>({
     drugName: '',
@@ -95,12 +110,26 @@ const ClinicalDecisionPage = () => {
   });
   const [drugCheckResults, setDrugCheckResults] = useState<DrugCheckResult[]>([]);
 
-  const symptomsList = [
-    'pelvic_pain', 'heavy_periods', 'fatigue', 'nausea', 'headache',
-    'back_pain', 'mood_changes', 'weight_gain', 'bloating', 'cramping',
-    'irregular_periods', 'hot_flashes', 'breast_tenderness', 'anxiety',
-    'depression', 'sleep_issues', 'joint_pain', 'digestive_issues'
-  ];
+ const symptomsList = [
+  'pelvic_pain', 'heavy_periods', 'painful_periods', 'fatigue', 'nausea', 'irregular_periods',
+  'weight_gain', 'acne', 'hair_loss', 'mood_swings', 'cold_sensitivity', 'joint_pain',
+  'butterfly_rash', 'fever', 'chest_pain', 'shortness_of_breath', 'jaw_pain', 'severe_headache',
+  'light_sensitivity', 'sound_sensitivity', 'widespread_pain', 'sleep_problems', 'memory_issues',
+  'bone_pain', 'fractures', 'back_pain', 'height_loss', 'weakness', 'pale_skin', 'cold_hands',
+  'frequent_urination', 'burning_urination', 'cloudy_urine', 'dizziness', 'bloating', 'dry_skin',
+  'depression', 'anxiety', 'muscle_weakness', 'posture_changes', 'stiffness', 'mouth_ulcers',
+  'kidney_problems', 'skin_darkening', 'rapid_heartbeat', 'diarrhea', 'headache', 'hot_flashes',
+  'night_sweats', 'abdominal_pain', 'tremors', 'muscle_stiffness', 'slow_movements',
+  'balance_problems', 'voice_changes', 'handwriting_changes', 'constipation', 'brain_fog',
+  'weight_fluctuations', 'extreme_fatigue', 'post_exertional_malaise', 'muscle_pain',
+  'sore_throat', 'joint_hypermobility', 'skin_elasticity', 'easy_bruising', 'chronic_pain',
+  'digestive_issues', 'heart_palpitations', 'weight_loss', 'skin_rash', 'anemia',
+  'numbness_tingling', 'vision_problems', 'cognitive_issues', 'bladder_problems',
+  'urinary_urgency', 'leg_discomfort', 'urge_to_move_legs', 'symptoms_worse_evening',
+  'loud_snoring', 'gasping_during_sleep', 'morning_headaches', 'daytime_sleepiness',
+  'difficulty_concentrating', 'difficulty_waking', 'salt_cravings', 'low_blood_pressure',
+  'low_libido', 'memory_problems', 'cold_sweats', 'mood_changes', 'chronic_fatigue'
+];
 
   const handleSymptomChange = (symptom: string, checked: boolean) => {
     setSymptoms(prev => ({
@@ -111,140 +140,95 @@ const ClinicalDecisionPage = () => {
 
   const handleDiagnosisSubmit = async () => {
     setLoading(true);
-    
-    // Simulate AI diagnosis
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    const mockResults: DiagnosisResult[] = [
-      {
-        condition: "Endometriosis",
-        confidence: 87.5,
-        confidence_level: "High",
-        recommendation: "Recommend laparoscopic examination and hormonal therapy evaluation."
-      },
-      {
-        condition: "PCOS",
-        confidence: 72.3,
-        confidence_level: "Medium",
-        recommendation: "Consider hormonal evaluation and ultrasound examination."
-      },
-      {
-        condition: "Fibromyalgia",
-        confidence: 45.8,
-        confidence_level: "Low",
-        recommendation: "Monitor symptoms and consider rheumatology consultation."
+    setApiError('');
+   
+    try {
+      const requestData = {
+        age: patientInfo.age,
+        gender: patientInfo.gender,
+        symptoms: symptoms
+      };
+
+      const response = await fetch(`${API_BASE_URL}/diagnosis`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestData),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
-    ];
-    
-    setDiagnosisResults(mockResults);
-    setSelectedDiagnosis(mockResults[0]);
-    setLoading(false);
-    setCurrentStep(2);
+
+      const data = await response.json();
+     
+      if (data.status === 'success') {
+        setDiagnosisResults(data.data.predictions);
+        setSelectedDiagnosis(data.data.predictions[0]);
+        setRecommendation(data.data.recommendation);
+        setCurrentStep(2);
+      } else {
+        throw new Error(data.message || 'Diagnosis failed');
+      }
+    } catch (error) {
+      console.error('Error calling diagnosis API:', error);
+      setApiError('Failed to get diagnosis. Please check your connection and try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleDrugCheck = async () => {
     if (!drugCheckInput.drugName.trim()) return;
-    
+   
     setLoading(true);
-    
-    // Simulate drug checker API
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    // Mock drug check results based on input
-    const mockResult: DrugCheckResult = {
-      drugName: drugCheckInput.drugName,
-      ageGroup: getAgeGroup(patientInfo.age),
-      riskLevel: getRiskLevel(drugCheckInput.drugName, drugCheckInput.pregnancy, drugCheckInput.breastfeeding),
-      riskScore: Math.floor(Math.random() * 100),
-      saferAlternative: getSaferAlternatives(drugCheckInput.drugName),
-      sideEffects: getSideEffects(drugCheckInput.drugName),
-      requiresMonitoring: getMonitoringRequirement(drugCheckInput.drugName),
-      pregnancyRisk: drugCheckInput.pregnancy ? getPregnancyRisk(drugCheckInput.drugName) : 'N/A',
-      breastfeedingRisk: drugCheckInput.breastfeeding ? getBreastfeedingRisk(drugCheckInput.drugName) : 'N/A',
-      specialConsiderations: getSpecialConsiderations(drugCheckInput.drugName, drugCheckInput.pregnancy, drugCheckInput.breastfeeding)
-    };
-    
-    setDrugCheckResults(prev => [mockResult, ...prev]);
-    setDrugCheckInput({ drugName: '', pregnancy: drugCheckInput.pregnancy, breastfeeding: drugCheckInput.breastfeeding });
-    setLoading(false);
-    setCurrentStep(3);
-  };
+    setApiError('');
+   
+    try {
+      const requestData = {
+        drug_name: drugCheckInput.drugName,
+        age: patientInfo.age,
+        is_pregnant: drugCheckInput.pregnancy,
+        is_breastfeeding: drugCheckInput.breastfeeding
+      };
 
-  // Helper functions for mock data
-  const getAgeGroup = (age: number): string => {
-    if (age < 18) return 'Pediatric';
-    if (age < 65) return 'Adult';
-    return 'Geriatric';
-  };
+      const response = await fetch(`${API_BASE_URL}/drug/analyze`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestData),
+      });
 
-  const getRiskLevel = (drug: string, pregnancy: boolean, breastfeeding: boolean): 'low' | 'medium' | 'high' | 'contraindicated' => {
-    const riskLevels = ['low', 'medium', 'high'];
-    if (pregnancy && ['aspirin', 'ibuprofen', 'warfarin'].some(d => drug.toLowerCase().includes(d))) {
-      return 'contraindicated';
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+     
+      if (data.status === 'success') {
+        setDrugCheckResults(prev => [data.data, ...prev]);
+        setDrugCheckInput({
+          drugName: '',
+          pregnancy: drugCheckInput.pregnancy,
+          breastfeeding: drugCheckInput.breastfeeding
+        });
+        setCurrentStep(3);
+      } else {
+        throw new Error(data.message || 'Drug analysis failed');
+      }
+    } catch (error) {
+      console.error('Error calling drug analysis API:', error);
+      setApiError('Failed to analyze drug. Please check your connection and try again.');
+    } finally {
+      setLoading(false);
     }
-    return riskLevels[Math.floor(Math.random() * riskLevels.length)] as 'low' | 'medium' | 'high';
-  };
-
-  const getSaferAlternatives = (drug: string): string[] => {
-    const alternatives: Record<string, string[]> = {
-      'ibuprofen': ['Acetaminophen', 'Topical NSAIDs'],
-      'aspirin': ['Acetaminophen', 'Low-dose aspirin (if indicated)'],
-      'naproxen': ['Acetaminophen', 'Celecoxib'],
-      'default': ['Consult pharmacist', 'Non-pharmacological alternatives']
-    };
-    
-    const drugKey = Object.keys(alternatives).find(key => 
-      drug.toLowerCase().includes(key)
-    ) || 'default';
-    
-    return alternatives[drugKey];
-  };
-
-  const getSideEffects = (drug: string): string[] => {
-    const commonSideEffects = [
-      'Nausea', 'Dizziness', 'Headache', 'Drowsiness', 
-      'Stomach upset', 'Dry mouth', 'Fatigue'
-    ];
-    return commonSideEffects.slice(0, Math.floor(Math.random() * 4) + 2);
-  };
-
-  const getMonitoringRequirement = (drug: string): boolean => {
-    const monitoringDrugs = ['warfarin', 'lithium', 'digoxin', 'phenytoin'];
-    return monitoringDrugs.some(d => drug.toLowerCase().includes(d)) || Math.random() > 0.6;
-  };
-
-  const getPregnancyRisk = (drug: string): string => {
-    const risks = ['Category A (Safe)', 'Category B (Probably Safe)', 'Category C (Use with Caution)', 'Category D (Avoid)', 'Category X (Contraindicated)'];
-    return risks[Math.floor(Math.random() * risks.length)];
-  };
-
-  const getBreastfeedingRisk = (drug: string): string => {
-    const risks = ['Compatible', 'Use with Caution', 'Monitor Infant', 'Avoid if Possible', 'Contraindicated'];
-    return risks[Math.floor(Math.random() * risks.length)];
-  };
-
-  const getSpecialConsiderations = (drug: string, pregnancy: boolean, breastfeeding: boolean): string[] => {
-    const considerations = [];
-    
-    if (pregnancy) {
-      considerations.push('Monitor fetal development regularly');
-      considerations.push('Consider dose adjustment in third trimester');
-    }
-    
-    if (breastfeeding) {
-      considerations.push('Monitor infant for adverse effects');
-      considerations.push('Consider timing doses after breastfeeding');
-    }
-    
-    considerations.push('Regular liver function monitoring may be required');
-    considerations.push('Avoid alcohol consumption');
-    
-    return considerations.slice(0, Math.floor(Math.random() * 3) + 1);
   };
 
   const handleOverrideDiagnosis = (diagnosis: DiagnosisResult) => {
-    const updatedResults = diagnosisResults.map(d => 
-      d.condition === diagnosis.condition 
+    const updatedResults = diagnosisResults.map(d =>
+      d.condition === diagnosis.condition
         ? { ...d, overridden: true }
         : d
     );
@@ -253,11 +237,12 @@ const ClinicalDecisionPage = () => {
 
   const handleFinalize = () => {
     alert('Diagnosis and drug checks finalized and saved to patient history.');
-    navigate('/patients');
+    // You can add navigation logic here
   };
 
   const getRiskColor = (level: string) => {
-    switch (level) {
+    const lowerLevel = level.toLowerCase();
+    switch (lowerLevel) {
       case 'low': return 'text-green-600 bg-green-100';
       case 'medium': return 'text-yellow-600 bg-yellow-100';
       case 'high': return 'text-red-600 bg-red-100';
@@ -267,10 +252,36 @@ const ClinicalDecisionPage = () => {
   };
 
   const getConfidenceColor = (level: string) => {
-    switch (level.toLowerCase()) {
+    const lowerLevel = level.toLowerCase();
+    switch (lowerLevel) {
       case 'high': return 'text-green-600 bg-green-100';
       case 'medium': return 'text-yellow-600 bg-yellow-100';
       case 'low': return 'text-red-600 bg-red-100';
+      case 'very low': return 'text-red-700 bg-red-200';
+      default: return 'text-gray-600 bg-gray-100';
+    }
+  };
+
+  const formatSymptomName = (symptom: string) => {
+    return symptom.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+  };
+
+  const getSeverityColor = (severity: string) => {
+    const lowerSeverity = severity.toLowerCase();
+    switch (lowerSeverity) {
+      case 'mild': return 'text-green-600 bg-green-100';
+      case 'moderate': return 'text-yellow-600 bg-yellow-100';
+      case 'severe': return 'text-red-600 bg-red-100';
+      default: return 'text-gray-600 bg-gray-100';
+    }
+  };
+
+  const getFrequencyColor = (frequency: string) => {
+    const lowerFreq = frequency.toLowerCase();
+    switch (lowerFreq) {
+      case 'rare': return 'text-green-600 bg-green-100';
+      case 'common': return 'text-yellow-600 bg-yellow-100';
+      case 'frequent': return 'text-red-600 bg-red-100';
       default: return 'text-gray-600 bg-gray-100';
     }
   };
@@ -283,7 +294,7 @@ const ClinicalDecisionPage = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-4">
               <button
-                onClick={() => navigate('/dashboard')}
+                onClick={() => window.history.back()}
                 className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors"
               >
                 <ArrowLeft className="h-5 w-5" />
@@ -299,13 +310,18 @@ const ClinicalDecisionPage = () => {
       </header>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* API Error Display */}
+        {apiError && (
+          <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+            <div className="flex items-center">
+              <AlertTriangle className="h-5 w-5 text-red-600 mr-2" />
+              <span className="text-red-800">{apiError}</span>
+            </div>
+          </div>
+        )}
+
         {/* Progress Steps */}
-        <motion.div
-          className="mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
+        <div className="mb-8">
           <div className="flex items-center justify-center space-x-8">
             {[
               { step: 1, title: 'Symptom Input', icon: <Activity className="h-5 w-5" /> },
@@ -314,8 +330,8 @@ const ClinicalDecisionPage = () => {
             ].map((item) => (
               <div key={item.step} className="flex items-center">
                 <div className={`flex items-center justify-center w-10 h-10 rounded-full border-2 ${
-                  currentStep >= item.step 
-                    ? 'bg-rose-600 border-rose-600 text-white' 
+                  currentStep >= item.step
+                    ? 'bg-rose-600 border-rose-600 text-white'
                     : 'border-gray-300 text-gray-400'
                 }`}>
                   {item.icon}
@@ -333,16 +349,11 @@ const ClinicalDecisionPage = () => {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Step 1: Symptom Input */}
         {currentStep === 1 && (
-          <motion.div
-            className="space-y-6"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div className="space-y-6">
             {/* Patient Information */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
@@ -428,8 +439,8 @@ const ClinicalDecisionPage = () => {
                       onChange={(e) => handleSymptomChange(symptom, e.target.checked)}
                       className="h-4 w-4 text-rose-600 focus:ring-rose-500 border-gray-300 rounded"
                     />
-                    <span className="text-sm font-medium text-gray-700 capitalize">
-                      {symptom.replace('_', ' ')}
+                    <span className="text-sm font-medium text-gray-700">
+                      {formatSymptomName(symptom)}
                     </span>
                   </label>
                 ))}
@@ -444,7 +455,7 @@ const ClinicalDecisionPage = () => {
               >
                 {loading ? (
                   <>
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                    <Loader2 className="h-5 w-5 animate-spin" />
                     <span>Analyzing...</span>
                   </>
                 ) : (
@@ -455,24 +466,28 @@ const ClinicalDecisionPage = () => {
                 )}
               </button>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Step 2: Diagnosis Results */}
         {currentStep === 2 && (
-          <motion.div
-            className="space-y-6"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div className="space-y-6">
             <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-6">AI Diagnosis Results</h3>
+             
+              {/* Recommendation */}
+              {recommendation && (
+                <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                  <h4 className="font-medium text-blue-900 mb-2">Recommendation:</h4>
+                  <p className="text-blue-800">{recommendation}</p>
+                </div>
+              )}
+
               <div className="space-y-4">
                 {diagnosisResults.map((diagnosis, index) => (
                   <div key={index} className={`p-4 rounded-lg border-2 transition-all cursor-pointer ${
-                    selectedDiagnosis?.condition === diagnosis.condition 
-                      ? 'border-rose-500 bg-rose-50' 
+                    selectedDiagnosis?.condition === diagnosis.condition
+                      ? 'border-rose-500 bg-rose-50'
                       : 'border-gray-200 hover:border-gray-300'
                   }`} onClick={() => setSelectedDiagnosis(diagnosis)}>
                     <div className="flex items-start justify-between">
@@ -485,7 +500,19 @@ const ClinicalDecisionPage = () => {
                             </span>
                           )}
                         </div>
-                        <p className="text-gray-600 mb-3">{diagnosis.recommendation}</p>
+                       
+                        {/* Relevant Symptoms */}
+                        <div className="mb-3">
+                          <p className="text-sm text-gray-600 mb-1">Relevant Symptoms:</p>
+                          <div className="flex flex-wrap gap-2">
+                            {diagnosis.relevant_symptoms.map((symptom, idx) => (
+                              <span key={idx} className="px-2 py-1 bg-gray-100 text-gray-700 rounded-full text-xs">
+                                {formatSymptomName(symptom)}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
                         <div className="flex items-center space-x-4">
                           <button
                             onClick={(e) => {
@@ -529,31 +556,26 @@ const ClinicalDecisionPage = () => {
                 <span>Check Medications</span>
               </button>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Step 3: Drug Checker */}
         {currentStep === 3 && (
-          <motion.div
-            className="space-y-6"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div className="space-y-6">
             {/* Drug Checker Input */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-6 flex items-center">
                 <Pill className="h-5 w-5 mr-2 text-rose-600" />
                 Drug Safety Checker
               </h3>
-              
+             
               <div className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="relative">
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
                     <input
                       type="text"
-                      placeholder="Enter drug name (e.g., Ibuprofen, Naproxen)"
+                      placeholder="Enter drug name (e.g., ACE_Inhibitors, Ibuprofen)"
                       value={drugCheckInput.drugName}
                       onChange={(e) => setDrugCheckInput(prev => ({ ...prev, drugName: e.target.value }))}
                       className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent"
@@ -561,7 +583,7 @@ const ClinicalDecisionPage = () => {
                   </div>
                   <div className="text-sm text-gray-600 flex items-center">
                     <UserCheck className="h-4 w-4 mr-1" />
-                    Patient Age: {patientInfo.age} years ({getAgeGroup(patientInfo.age)})
+                    Patient Age: {patientInfo.age} years
                   </div>
                 </div>
 
@@ -599,7 +621,7 @@ const ClinicalDecisionPage = () => {
                 >
                   {loading ? (
                     <>
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                      <Loader2 className="h-5 w-5 animate-spin" />
                       <span>Checking...</span>
                     </>
                   ) : (
@@ -620,19 +642,19 @@ const ClinicalDecisionPage = () => {
                   <div key={index} className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                     <div className="flex items-start justify-between mb-6">
                       <div>
-                        <h4 className="text-xl font-semibold text-gray-900 mb-2">{result.drugName}</h4>
+                        <h4 className="text-xl font-semibold text-gray-900 mb-2">{result.drug_name}</h4>
                         <div className="flex items-center space-x-4 text-sm text-gray-600">
-                          <span>Age Group: {result.ageGroup}</span>
-                          <span>Risk Score: {result.riskScore}/100</span>
+                          <span>Age Group: {result.age_group}</span>
+                          <span>Risk Score: {result.risk_score.toFixed(2)}/10</span>
                         </div>
                       </div>
                       <div className="text-right">
-                        <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${getRiskColor(result.riskLevel)}`}>
+                        <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${getRiskColor(result.risk_level)}`}>
                           <AlertTriangle className="h-4 w-4 mr-1" />
-                          {result.riskLevel.toUpperCase()} RISK
+                          {result.risk_level.toUpperCase()} RISK
                         </span>
                         <div className="mt-2 flex items-center text-sm">
-                          {result.requiresMonitoring ? (
+                          {result.requires_monitoring ? (
                             <span className="text-orange-600 flex items-center">
                               <Clock className="h-4 w-4 mr-1" />
                               Monitoring Required
@@ -647,96 +669,111 @@ const ClinicalDecisionPage = () => {
                       </div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                       {/* Side Effects */}
                       <div>
-                        <h5 className="font-medium text-gray-900 mb-3">Common Side Effects</h5>
-                        <ul className="space-y-1">
-                          {result.sideEffects.map((effect, idx) => (
-                            <li key={idx} className="text-sm text-gray-600 flex items-center">
-                              <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></div>
-                              {effect}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      {/* Safer Alternatives */}
-                      <div>
-                        <h5 className="font-medium text-gray-900 mb-3">Safer Alternatives</h5>
-                        <ul className="space-y-1">
-                          {result.saferAlternative.map((alt, idx) => (
-                            <li key={idx} className="text-sm text-green-600 flex items-center">
-                              <CheckCircle className="w-4 h-4 mr-2" />
-                              {alt}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      {/* Pregnancy & Breastfeeding Risks */}
-                      <div>
-                        <h5 className="font-medium text-gray-900 mb-3">Special Populations</h5>
-                        <div className="space-y-2">
-                          {result.pregnancyRisk !== 'N/A' && (
-                            <div className="text-sm">
-                              <span className="font-medium text-pink-600">Pregnancy:</span>
-                              <span className="ml-1 text-gray-600">{result.pregnancyRisk}</span>
+                        <h5 className="font-medium text-gray-900 mb-3">Side Effects</h5>
+                        <div className="space-y-3 max-h-64 overflow-y-auto">
+                          {result.side_effects.map((effect, idx) => (
+                            <div key={idx} className="p-3 border border-gray-200 rounded-lg">
+                              <div className="flex items-start justify-between mb-2">
+                                <span className="font-medium text-gray-800">
+                                  {formatSymptomName(effect.side_effect)}
+                                </span>
+                                <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(effect.severity)}`}>
+                                  {effect.severity}
+                                </span>
+                              </div>
+                              <div className="flex items-center justify-between text-sm text-gray-600">
+                                <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${getFrequencyColor(effect.frequency)}`}>
+                                  {effect.frequency} ({effect.frequency_percentage})
+                                </span>
+                                <div className="flex items-center space-x-2">
+                                  {effect.gender_specific !== "General" && (
+                                    <span className="text-purple-600 text-xs">
+                                      {effect.gender_specific.replace('_', ' ')}
+                                    </span>
+                                  )}
+                                  {effect.requires_monitoring === "Yes" && (
+                                    <span className="text-orange-600 text-xs flex items-center">
+                                      <Clock className="h-3 w-3 mr-1" />
+                                      Monitor
+                                    </span>
+                                  )}
+                                </div>
+                              </div>
+                              <div className="text-xs text-gray-500 mt-1">
+                                Category: {effect.category}
+                              </div>
                             </div>
-                          )}
-                          {result.breastfeedingRisk !== 'N/A' && (
-                            <div className="text-sm">
-                              <span className="font-medium text-blue-600">Breastfeeding:</span>
-                              <span className="ml-1 text-gray-600">{result.breastfeedingRisk}</span>
-                            </div>
-                          )}
+                          ))}
                         </div>
                       </div>
-                    </div>
 
-                    {/* Special Considerations */}
-                    {result.specialConsiderations.length > 0 && (
-                      <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-                        <h5 className="font-medium text-yellow-800 mb-2 flex items-center">
-                          <AlertTriangle className="h-4 w-4 mr-1" />
-                          Special Considerations
-                        </h5>
-                        <ul className="space-y-1">
-                          {result.specialConsiderations.map((consideration, idx) => (
-                            <li key={idx} className="text-sm text-yellow-700">
-                              • {consideration}
-                            </li>
-                          ))}
-                        </ul>
+                      {/* Alternatives & Considerations */}
+                      <div className="space-y-4">
+                        {/* Safer Alternatives */}
+                        {result.safer_alternatives.length > 0 && (
+                          <div>
+                            <h5 className="font-medium text-gray-900 mb-3">Safer Alternatives</h5>
+                            <div className="space-y-2">
+                              {result.safer_alternatives.map((alt, idx) => (
+                                <div key={idx} className="p-3 bg-green-50 border border-green-200 rounded-lg">
+                                  <span className="text-green-800 font-medium">{alt}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Pregnancy & Breastfeeding Warnings */}
+                        {(result.pregnancy_risk || result.breastfeeding_risk) && (
+                          <div>
+                            <h5 className="font-medium text-gray-900 mb-3">Special Warnings</h5>
+                            <div className="space-y-2">
+                              {result.pregnancy_risk && (
+                                <div className="p-3 bg-red-50 border border-red-200 rounded-lg">
+                                  <div className="flex items-center">
+                                    <Baby className="h-4 w-4 text-red-600 mr-2" />
+                                    <span className="font-medium text-red-800">Pregnancy Risk:</span>
+                                  </div>
+                                  <p className="text-red-700 mt-1">{result.pregnancy_risk}</p>
+                                </div>
+                              )}
+                              {result.breastfeeding_risk && (
+                                <div className="p-3 bg-orange-50 border border-orange-200 rounded-lg">
+                                  <div className="flex items-center">
+                                    <Heart className="h-4 w-4 text-orange-600 mr-2" />
+                                    <span className="font-medium text-orange-800">Breastfeeding Risk:</span>
+                                  </div>
+                                  <p className="text-orange-700 mt-1">{result.breastfeeding_risk}</p>
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Special Considerations */}
+                        {result.special_considerations.length > 0 && (
+                          <div>
+                            <h5 className="font-medium text-gray-900 mb-3">Special Considerations</h5>
+                            <div className="space-y-2">
+                              {result.special_considerations.map((consideration, idx) => (
+                                <div key={idx} className="p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                                  <span className="text-blue-800">{consideration}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
                       </div>
-                    )}
+                    </div>
                   </div>
                 ))}
               </div>
             )}
 
-            {/* Finalize Actions */}
-            <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Finalize Consultation</h3>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button
-                  onClick={handleFinalize}
-                  className="bg-rose-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-rose-700 transition-colors flex items-center space-x-2"
-                >
-                  <Save className="h-5 w-5" />
-                  <span>Save & Finalize</span>
-                </button>
-                <button className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors flex items-center space-x-2">
-                  <Send className="h-5 w-5" />
-                  <span>Send to Patient</span>
-                </button>
-                <button className="border border-blue-300 text-blue-700 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors flex items-center space-x-2">
-                  <Brain className="h-5 w-5" />
-                  <span>Mark for AI Training</span>
-                </button>
-              </div>
-            </div>
-
+            {/* Action Buttons */}
             <div className="flex justify-between">
               <button
                 onClick={() => setCurrentStep(2)}
@@ -744,8 +781,15 @@ const ClinicalDecisionPage = () => {
               >
                 Back to Diagnosis
               </button>
+              <button
+                onClick={handleFinalize}
+                className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors flex items-center space-x-2"
+              >
+                <Save className="h-5 w-5" />
+                <span>Finalize & Save</span>
+              </button>
             </div>
-          </motion.div>
+          </div>
         )}
       </div>
     </div>

@@ -4,7 +4,6 @@ import { AuthProvider, useAuth } from './contexts/AuthContext';
 import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/LoginPage';
 import DashboardPage from './pages/DashboardPage';
-import DiagnosisPage from './pages/DiagnosisPage';
 import PatientRecordsPage from './pages/PatientRecordsPage';
 import PatientProfilePage from './pages/PatientProfilePage';
 import ClinicalDecisionPage from './pages/ClinicalDecisionPage';
@@ -30,14 +29,7 @@ function App() {
                 </ProtectedRoute>
               } 
             />
-            <Route 
-              path="/diagnosis" 
-              element={
-                <ProtectedRoute>
-                  <DiagnosisPage />
-                </ProtectedRoute>
-              } 
-            />
+
             <Route 
               path="/clinical-decision" 
               element={

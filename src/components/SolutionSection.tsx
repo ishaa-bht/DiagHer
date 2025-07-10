@@ -37,7 +37,7 @@ const SolutionSection: React.FC = () => {
       icon: CheckCircle,
       title: 'Safe Treatment',
       description: 'Analyzes prescribed medications for women-specific side effects and suggests safer alternatives with transparent risk analysis.',
-      image: 'src/assets/treatment(1).jpg',
+      image: 'https://images.pexels.com/photos/7659564/pexels-photo-7659564.jpeg?auto=compress&cs=tinysrgb&w=600',
       color: 'emerald-600',
       alert: 'Safer Alternative Found'
     }
@@ -317,14 +317,13 @@ const SolutionSection: React.FC = () => {
                   damping: 25
                 }}
               >
-                {/* Medical grid overlay */}
-                <div className="absolute inset-0 opacity-5 pointer-events-none">
-                  <div className="w-full h-full bg-grid-pattern" />
-                </div>
-
                 {/* Medical icon with heartbeat */}
                 <motion.div 
-                  className={`w-16 h-16 bg-${step.color} rounded-2xl flex items-center justify-center mb-6 shadow-sm relative`}
+                  className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-sm relative ${
+                    step.color === 'rose-800' ? 'bg-rose-800' : 
+                    step.color === 'gray-700' ? 'bg-gray-700' : 
+                    'bg-emerald-600'
+                  }`}
                   initial={{ scale: 0.8, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   transition={{ 
@@ -380,7 +379,7 @@ const SolutionSection: React.FC = () => {
                   {step.description}
                 </motion.p>
 
-                {/* Medical image without scanning effect */}
+                {/* Medical image */}
                 <motion.div 
                   className="w-full h-48 rounded-xl overflow-hidden border border-gray-100 mb-4 bg-gray-50 relative"
                   initial={{ opacity: 0, scale: 1.02 }}
@@ -402,7 +401,7 @@ const SolutionSection: React.FC = () => {
                   />
                 </motion.div>
 
-                {/* Medical content without text animations */}
+                {/* Medical content */}
                 {step.sample && (
                   <div className="bg-gray-50 rounded-xl p-4 border border-gray-100 relative overflow-hidden">
                     <div className="text-sm text-gray-500 mb-2 flex items-center">
@@ -447,7 +446,9 @@ const SolutionSection: React.FC = () => {
                           />
                           {result.condition}
                         </span>
-                        <span className={`text-sm font-semibold text-${result.color}`}>
+                        <span className={`text-sm font-semibold ${
+                          result.color === 'rose-800' ? 'text-rose-800' : 'text-gray-600'
+                        }`}>
                           {result.percentage}
                         </span>
                       </div>

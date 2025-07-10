@@ -128,8 +128,8 @@ const ProblemSection: React.FC<ProblemSectionProps> = ({ scrollY }) => {
               }}
             >
               <div className="text-center">
-                <div className="text-3xl font-bold text-rose-800 hover:scale-110 transition-transform duration-300">67%</div>
-                <div className="text-sm text-gray-600 font-medium">Pain Dismissed</div>
+                {/* <div className="text-3xl font-bold text-rose-800 hover:scale-110 transition-transform duration-300">67%</div>
+                <div className="text-sm text-gray-600 font-medium">Pain Dismissed</div> */}
               </div>
             </div>
 
