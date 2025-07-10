@@ -1,0 +1,307 @@
+2025-07-06 08:05:15,465 - root - INFO - Starting DiagHer app with default config
+2025-07-06 08:05:16,519 - root - INFO - Starting DiagHer app with default config
+2025-07-06 08:05:16,527 - werkzeug - WARNING -  * Debugger is active!
+2025-07-06 08:07:53,218 - root - INFO - Starting DiagHer app with default config
+2025-07-06 08:08:03,007 - root - INFO - Starting DiagHer app with default config
+2025-07-06 08:27:39,158 - root - INFO - Starting DiagHer app with default config
+2025-07-06 08:27:40,150 - root - INFO - Starting DiagHer app with default config
+2025-07-06 08:27:40,176 - werkzeug - WARNING -  * Debugger is active!
+2025-07-06 08:30:37,042 - root - INFO - Starting DiagHer app with default config
+2025-07-06 08:30:38,027 - root - INFO - Starting DiagHer app with default config
+2025-07-06 08:30:38,054 - werkzeug - WARNING -  * Debugger is active!
+2025-07-06 08:32:00,296 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-06 08:32:04,398 - root - INFO - Model loaded from ml/models\diagnosis_model.pkl
+2025-07-06 08:32:04,406 - root - INFO - Model loaded from ml/models\diagnosis_scaler.pkl
+2025-07-06 08:32:04,406 - root - INFO - Model loaded from ml/models\diagnosis_encoder.pkl
+2025-07-06 08:32:04,412 - root - INFO - Model loaded from ml/models\diagnosis_features.pkl
+2025-07-06 08:32:04,415 - root - INFO - Diagnosis model loaded successfully
+2025-07-06 08:32:04,434 - root - INFO - Generated 1 diagnosis predictions
+2025-07-06 08:32:04,434 - root - INFO - Diagnosis prediction made for Female, age 30
+2025-07-06 08:46:00,767 - root - INFO - Starting DiagHer app with default config
+2025-07-06 08:46:01,880 - root - INFO - Starting DiagHer app with default config
+2025-07-06 08:46:01,899 - werkzeug - WARNING -  * Debugger is active!
+2025-07-06 08:47:22,359 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-06 08:47:23,523 - root - INFO - Model loaded from ml/models\diagnosis_model.pkl
+2025-07-06 08:47:23,528 - root - INFO - Model loaded from ml/models\diagnosis_scaler.pkl
+2025-07-06 08:47:23,528 - root - INFO - Model loaded from ml/models\diagnosis_encoder.pkl
+2025-07-06 08:47:23,528 - root - INFO - Model loaded from ml/models\diagnosis_features.pkl
+2025-07-06 08:47:23,528 - root - INFO - Diagnosis model loaded successfully
+2025-07-06 08:47:23,536 - root - INFO - Generated 1 diagnosis predictions
+2025-07-06 08:47:23,541 - root - ERROR - Error in diagnosis endpoint: tuple indices must be integers or slices, not str
+2025-07-06 08:47:39,172 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-06 08:47:39,181 - root - INFO - Generated 1 diagnosis predictions
+2025-07-06 08:47:39,181 - root - ERROR - Error in diagnosis endpoint: tuple indices must be integers or slices, not str
+2025-07-06 08:48:17,952 - root - INFO - Starting DiagHer app with default config
+2025-07-06 08:48:17,964 - werkzeug - WARNING -  * Debugger is active!
+2025-07-06 08:49:53,670 - root - INFO - Starting DiagHer app with default config
+2025-07-06 08:49:53,691 - werkzeug - WARNING -  * Debugger is active!
+2025-07-06 08:49:57,357 - root - INFO - Starting DiagHer app with default config
+2025-07-06 08:49:57,375 - werkzeug - WARNING -  * Debugger is active!
+2025-07-06 08:50:10,696 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-06 08:50:10,696 - root - INFO - Received data: {'age': 30, 'gender': 'Female', 'symptoms': {'pelvic_pain': 1, 'heavy_periods': 0, 'painful_periods': 0, 'fatigue': 1, 'nausea': 1, 'irregular_periods': 0}}
+2025-07-06 08:50:11,625 - root - INFO - Model loaded from ml/models\diagnosis_model.pkl
+2025-07-06 08:50:11,625 - root - INFO - Model loaded from ml/models\diagnosis_scaler.pkl
+2025-07-06 08:50:11,625 - root - INFO - Model loaded from ml/models\diagnosis_encoder.pkl
+2025-07-06 08:50:11,625 - root - INFO - Model loaded from ml/models\diagnosis_features.pkl
+2025-07-06 08:50:11,625 - root - INFO - Diagnosis model loaded successfully
+2025-07-06 08:50:11,625 - root - INFO - Generated 1 diagnosis predictions
+2025-07-06 08:50:11,625 - root - INFO - Predictions: [('Healthy', np.float64(0.8280618168517795))]
+2025-07-06 08:50:11,625 - root - INFO - Diagnosis prediction made for Female, age 30
+2025-07-07 17:15:36,196 - root - INFO - Starting DiagHer app with default config
+2025-07-07 17:15:37,421 - root - INFO - Starting DiagHer app with default config
+2025-07-07 17:15:37,437 - werkzeug - WARNING -  * Debugger is active!
+2025-07-07 17:20:09,725 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-07 17:20:09,725 - root - INFO - Received data: {'age': 30, 'gender': 'Female', 'symptoms': {'pelvic_pain': 1, 'heavy_periods': 0, 'painful_periods': 0, 'fatigue': 1, 'nausea': 1, 'irregular_periods': 0}}
+2025-07-07 17:20:12,418 - root - INFO - Model loaded from ml/models\diagnosis_model.pkl
+2025-07-07 17:20:12,418 - root - INFO - Model loaded from ml/models\diagnosis_scaler.pkl
+2025-07-07 17:20:12,429 - root - INFO - Model loaded from ml/models\diagnosis_encoder.pkl
+2025-07-07 17:20:12,429 - root - INFO - Model loaded from ml/models\diagnosis_features.pkl
+2025-07-07 17:20:12,429 - root - INFO - Diagnosis model loaded successfully
+2025-07-07 17:20:12,447 - root - INFO - Generated 1 diagnosis predictions
+2025-07-07 17:20:12,447 - root - INFO - Predictions: [('Healthy', np.float64(0.8280618168517795))]
+2025-07-07 17:20:12,447 - root - INFO - Diagnosis prediction made for Female, age 30
+2025-07-08 12:42:08,864 - root - INFO - Starting DiagHer app with default config
+2025-07-08 12:42:09,920 - root - INFO - Starting DiagHer app with default config
+2025-07-08 12:42:09,936 - werkzeug - WARNING -  * Debugger is active!
+2025-07-09 10:59:57,483 - root - INFO - Starting DiagHer app with default config
+2025-07-09 10:59:58,719 - root - INFO - Starting DiagHer app with default config
+2025-07-09 10:59:58,742 - werkzeug - WARNING -  * Debugger is active!
+2025-07-09 11:00:08,189 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-09 11:00:08,191 - root - INFO - Received data: {'age': 30, 'gender': 'Female', 'symptoms': {'pelvic_pain': 1, 'heavy_periods': 0, 'painful_periods': 0, 'fatigue': 1, 'nausea': 1, 'irregular_periods': 0}}
+2025-07-09 11:00:11,273 - root - INFO - Model loaded from ml/models\diagnosis_model.pkl
+2025-07-09 11:00:11,279 - root - INFO - Model loaded from ml/models\diagnosis_scaler.pkl
+2025-07-09 11:00:11,279 - root - INFO - Model loaded from ml/models\diagnosis_encoder.pkl
+2025-07-09 11:00:11,283 - root - INFO - Model loaded from ml/models\diagnosis_features.pkl
+2025-07-09 11:00:11,287 - root - INFO - Diagnosis model loaded successfully
+2025-07-09 11:00:11,314 - root - INFO - Generated 1 diagnosis predictions
+2025-07-09 11:00:11,320 - root - INFO - Predictions: [('Healthy', np.float64(0.8280618168517795))]
+2025-07-09 11:00:11,322 - root - INFO - Diagnosis prediction made for Female, age 30
+2025-07-09 15:23:24,816 - root - INFO - Starting DiagHer app with default config
+2025-07-09 15:23:25,594 - root - INFO - Starting DiagHer app with default config
+2025-07-09 15:23:25,621 - werkzeug - WARNING -  * Debugger is active!
+2025-07-09 15:23:47,853 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-09 15:23:47,853 - root - INFO - Received diagnosis request for patient age: 30
+2025-07-09 15:23:48,481 - root - INFO - Model loaded from ml/models\diagnosis_model.pkl
+2025-07-09 15:23:48,481 - root - INFO - Model loaded from ml/models\diagnosis_scaler.pkl
+2025-07-09 15:23:48,481 - root - INFO - Model loaded from ml/models\diagnosis_encoder.pkl
+2025-07-09 15:23:48,481 - root - INFO - Model loaded from ml/models\diagnosis_features.pkl
+2025-07-09 15:23:48,481 - root - INFO - Diagnosis model loaded successfully
+2025-07-09 15:23:48,499 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-09 15:23:48,499 - root - INFO - Successful diagnosis prediction for Female, age 30
+2025-07-09 17:52:09,298 - root - INFO - Starting DiagHer app with default config
+2025-07-09 17:52:09,339 - werkzeug - WARNING -  * Debugger is active!
+2025-07-09 17:52:14,010 - root - INFO - Starting DiagHer app with default config
+2025-07-09 17:52:14,035 - werkzeug - WARNING -  * Debugger is active!
+2025-07-09 17:52:16,634 - root - INFO - Starting DiagHer app with default config
+2025-07-09 17:52:16,651 - werkzeug - WARNING -  * Debugger is active!
+2025-07-09 17:54:54,045 - root - INFO - Starting DiagHer app with default config
+2025-07-09 17:54:54,062 - werkzeug - WARNING -  * Debugger is active!
+2025-07-09 17:57:37,145 - root - INFO - Starting DiagHer app with default config
+2025-07-09 17:57:37,172 - werkzeug - WARNING -  * Debugger is active!
+2025-07-09 17:57:40,331 - root - INFO - Starting DiagHer app with default config
+2025-07-09 17:57:40,347 - werkzeug - WARNING -  * Debugger is active!
+2025-07-09 18:21:43,846 - root - INFO - Starting DiagHer app with default config
+2025-07-09 18:21:45,314 - root - INFO - Starting DiagHer app with default config
+2025-07-09 18:21:45,347 - werkzeug - WARNING -  * Debugger is active!
+2025-07-09 18:24:48,632 - root - INFO - API call: POST /api/v1/drug/analyze from 127.0.0.1
+2025-07-09 19:42:30,154 - root - INFO - Starting DiagHer app with default config
+2025-07-09 19:42:30,950 - root - INFO - Starting DiagHer app with default config
+2025-07-09 19:42:30,964 - werkzeug - WARNING -  * Debugger is active!
+2025-07-09 19:42:33,878 - root - INFO - API call: POST /api/v1/drug/analyze from 127.0.0.1
+2025-07-09 19:42:48,444 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-09 19:42:48,444 - root - INFO - Received diagnosis request for patient age: 30
+2025-07-09 19:42:51,011 - root - INFO - Model loaded from ml/models\diagnosis_model.pkl
+2025-07-09 19:42:51,013 - root - INFO - Model loaded from ml/models\diagnosis_scaler.pkl
+2025-07-09 19:42:51,015 - root - INFO - Model loaded from ml/models\diagnosis_encoder.pkl
+2025-07-09 19:42:51,016 - root - INFO - Model loaded from ml/models\diagnosis_features.pkl
+2025-07-09 19:42:51,017 - root - INFO - Diagnosis model loaded successfully
+2025-07-09 19:42:51,026 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-09 19:42:51,027 - root - INFO - Successful diagnosis prediction for Female, age 30
+2025-07-09 22:27:53,889 - root - INFO - Starting DiagHer app with default config
+2025-07-09 22:27:55,216 - root - INFO - Starting DiagHer app with default config
+2025-07-09 22:27:55,245 - werkzeug - WARNING -  * Debugger is active!
+2025-07-09 22:33:54,358 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-09 22:33:54,360 - root - INFO - Received diagnosis request for patient age: 30
+2025-07-09 22:33:58,244 - root - INFO - Model loaded from ml/models\diagnosis_model.pkl
+2025-07-09 22:33:58,253 - root - INFO - Model loaded from ml/models\diagnosis_scaler.pkl
+2025-07-09 22:33:58,253 - root - INFO - Model loaded from ml/models\diagnosis_encoder.pkl
+2025-07-09 22:33:58,253 - root - INFO - Model loaded from ml/models\diagnosis_features.pkl
+2025-07-09 22:33:58,253 - root - INFO - Diagnosis model loaded successfully
+2025-07-09 22:33:58,276 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-09 22:33:58,276 - root - INFO - Successful diagnosis prediction for Female, age 30
+2025-07-09 22:34:10,313 - root - INFO - API call: POST /api/v1/drug/analyze from 127.0.0.1
+2025-07-09 23:21:12,589 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-09 23:21:12,594 - root - INFO - Received diagnosis request for patient age: 30
+2025-07-09 23:21:12,627 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-09 23:21:12,627 - root - INFO - Successful diagnosis prediction for Female, age 30
+2025-07-09 23:21:55,961 - root - INFO - API call: POST /api/v1/drug/analyze from 127.0.0.1
+2025-07-09 23:22:57,048 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-09 23:22:57,050 - root - INFO - Received diagnosis request for patient age: 30
+2025-07-09 23:22:57,059 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-09 23:22:57,059 - root - INFO - Successful diagnosis prediction for Female, age 30
+2025-07-09 23:23:21,707 - root - INFO - API call: POST /api/v1/drug/analyze from 127.0.0.1
+2025-07-09 23:23:46,571 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-09 23:23:46,573 - root - INFO - Received diagnosis request for patient age: 30
+2025-07-09 23:23:46,579 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-09 23:23:46,579 - root - INFO - Successful diagnosis prediction for Female, age 30
+2025-07-09 23:24:13,705 - root - INFO - API call: POST /api/v1/drug/analyze from 127.0.0.1
+2025-07-09 23:25:42,256 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-09 23:25:42,256 - root - INFO - Received diagnosis request for patient age: 30
+2025-07-09 23:25:42,259 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-09 23:25:42,259 - root - INFO - Successful diagnosis prediction for Female, age 30
+2025-07-09 23:26:23,556 - root - INFO - API call: POST /api/v1/drug/analyze from 127.0.0.1
+2025-07-09 23:39:34,156 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-09 23:39:34,157 - root - INFO - Received diagnosis request for patient age: 30
+2025-07-09 23:39:34,164 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-09 23:39:34,164 - root - INFO - Successful diagnosis prediction for Female, age 30
+2025-07-09 23:44:20,526 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-09 23:44:20,526 - root - INFO - Received diagnosis request for patient age: 40
+2025-07-09 23:44:20,535 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-09 23:44:20,535 - root - INFO - Successful diagnosis prediction for Female, age 40
+2025-07-09 23:46:33,060 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-09 23:46:33,061 - root - INFO - Received diagnosis request for patient age: 21
+2025-07-09 23:46:33,070 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-09 23:46:33,070 - root - INFO - Successful diagnosis prediction for Female, age 21
+2025-07-09 23:49:50,101 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-09 23:49:50,101 - root - INFO - Received diagnosis request for patient age: 22
+2025-07-09 23:49:50,103 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-09 23:49:50,103 - root - INFO - Successful diagnosis prediction for Female, age 22
+2025-07-09 23:53:47,244 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-09 23:53:47,246 - root - INFO - Received diagnosis request for patient age: 22
+2025-07-09 23:53:47,254 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-09 23:53:47,254 - root - INFO - Successful diagnosis prediction for Female, age 22
+2025-07-10 10:15:23,791 - root - INFO - Starting DiagHer app with default config
+2025-07-10 10:15:24,842 - root - INFO - Starting DiagHer app with default config
+2025-07-10 10:15:24,865 - werkzeug - WARNING -  * Debugger is active!
+2025-07-10 10:24:57,133 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-10 10:24:57,135 - root - INFO - Received diagnosis request for patient age: 34
+2025-07-10 10:25:01,127 - root - INFO - Model loaded from ml/models\diagnosis_model.pkl
+2025-07-10 10:25:01,127 - root - INFO - Model loaded from ml/models\diagnosis_scaler.pkl
+2025-07-10 10:25:01,127 - root - INFO - Model loaded from ml/models\diagnosis_encoder.pkl
+2025-07-10 10:25:01,127 - root - INFO - Model loaded from ml/models\diagnosis_features.pkl
+2025-07-10 10:25:01,134 - root - INFO - Diagnosis model loaded successfully
+2025-07-10 10:25:01,160 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-10 10:25:01,167 - root - INFO - Successful diagnosis prediction for Female, age 34
+2025-07-10 10:25:37,574 - root - INFO - API call: POST /api/v1/drug/analyze from 127.0.0.1
+2025-07-10 10:26:40,097 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-10 10:26:40,098 - root - INFO - Received diagnosis request for patient age: 34
+2025-07-10 10:26:40,105 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-10 10:26:40,105 - root - INFO - Successful diagnosis prediction for Female, age 34
+2025-07-10 10:52:33,673 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-10 10:52:33,675 - root - INFO - Received diagnosis request for patient age: 34
+2025-07-10 10:52:33,679 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-10 10:52:33,679 - root - INFO - Successful diagnosis prediction for Female, age 34
+2025-07-10 10:53:04,769 - root - INFO - API call: POST /api/v1/drug/analyze from 127.0.0.1
+2025-07-10 10:53:29,563 - root - INFO - API call: POST /api/v1/drug/analyze from 127.0.0.1
+2025-07-10 10:59:42,354 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-10 10:59:42,355 - root - INFO - Received diagnosis request for patient age: 34
+2025-07-10 10:59:42,357 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-10 10:59:42,357 - root - INFO - Successful diagnosis prediction for Female, age 34
+2025-07-10 11:00:12,429 - root - INFO - API call: POST /api/v1/drug/analyze from 127.0.0.1
+2025-07-10 11:14:44,942 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-10 11:14:44,943 - root - INFO - Received diagnosis request for patient age: 34
+2025-07-10 11:14:44,949 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-10 11:14:44,949 - root - INFO - Successful diagnosis prediction for Female, age 34
+2025-07-10 11:15:06,707 - root - INFO - API call: POST /api/v1/drug/analyze from 127.0.0.1
+2025-07-10 11:45:27,456 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-10 11:45:27,458 - root - INFO - Received diagnosis request for patient age: 34
+2025-07-10 11:45:27,463 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-10 11:45:27,464 - root - INFO - Successful diagnosis prediction for Female, age 34
+2025-07-10 11:46:10,088 - root - INFO - API call: POST /api/v1/drug/analyze from 127.0.0.1
+2025-07-10 12:00:48,506 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-10 12:00:48,506 - root - INFO - Received diagnosis request for patient age: 34
+2025-07-10 12:00:48,517 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-10 12:00:48,518 - root - INFO - Successful diagnosis prediction for Female, age 34
+2025-07-10 12:01:16,004 - root - INFO - API call: POST /api/v1/drug/analyze from 127.0.0.1
+2025-07-10 12:04:24,026 - root - INFO - Starting DiagHer app with default config
+2025-07-10 12:04:24,054 - werkzeug - WARNING -  * Debugger is active!
+2025-07-10 12:16:40,035 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-10 12:16:40,037 - root - INFO - Received diagnosis request for patient age: 34
+2025-07-10 12:16:42,326 - root - INFO - Model loaded from ml/models\diagnosis_model.pkl
+2025-07-10 12:16:42,326 - root - INFO - Model loaded from ml/models\diagnosis_scaler.pkl
+2025-07-10 12:16:42,326 - root - INFO - Model loaded from ml/models\diagnosis_encoder.pkl
+2025-07-10 12:16:42,326 - root - INFO - Model loaded from ml/models\diagnosis_features.pkl
+2025-07-10 12:16:42,343 - root - INFO - Diagnosis model loaded successfully
+2025-07-10 12:16:42,349 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-10 12:16:42,350 - root - INFO - Successful diagnosis prediction for Female, age 34
+2025-07-10 12:17:45,040 - root - INFO - API call: POST /api/v1/drug/analyze from 127.0.0.1
+2025-07-10 12:17:56,729 - root - INFO - API call: POST /api/v1/drug/analyze from 127.0.0.1
+2025-07-10 13:02:11,957 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-10 13:02:11,959 - root - INFO - Received diagnosis request for patient age: 34
+2025-07-10 13:02:11,985 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-10 13:02:11,985 - root - INFO - Successful diagnosis prediction for Female, age 34
+2025-07-10 13:04:59,860 - root - INFO - Starting DiagHer app with default config
+2025-07-10 13:04:59,917 - werkzeug - WARNING -  * Debugger is active!
+2025-07-10 13:11:14,867 - root - INFO - Starting DiagHer app with default config
+2025-07-10 13:11:16,032 - root - INFO - Starting DiagHer app with default config
+2025-07-10 13:11:16,065 - werkzeug - WARNING -  * Debugger is active!
+2025-07-10 13:16:10,484 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-10 13:16:10,484 - root - INFO - Received diagnosis request for patient age: 34
+2025-07-10 13:16:13,202 - root - INFO - Model loaded from ml/models\diagnosis_model.pkl
+2025-07-10 13:16:13,202 - root - INFO - Model loaded from ml/models\diagnosis_scaler.pkl
+2025-07-10 13:16:13,202 - root - INFO - Model loaded from ml/models\diagnosis_encoder.pkl
+2025-07-10 13:16:13,209 - root - INFO - Model loaded from ml/models\diagnosis_features.pkl
+2025-07-10 13:16:13,209 - root - INFO - Diagnosis model loaded successfully
+2025-07-10 13:16:13,229 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-10 13:16:13,229 - root - INFO - Successful diagnosis prediction for Female, age 34
+2025-07-10 13:16:45,149 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-10 13:16:45,153 - root - INFO - Received diagnosis request for patient age: 30
+2025-07-10 13:16:45,156 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-10 13:16:45,160 - root - INFO - Successful diagnosis prediction for Female, age 30
+2025-07-10 13:20:19,290 - root - INFO - Starting DiagHer app with default config
+2025-07-10 13:20:20,545 - root - INFO - Starting DiagHer app with default config
+2025-07-10 13:20:20,585 - werkzeug - WARNING -  * Debugger is active!
+2025-07-10 13:20:27,470 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-10 13:20:27,470 - root - INFO - Received diagnosis request for patient age: 30
+2025-07-10 13:20:28,783 - root - INFO - Model loaded from ml/models\diagnosis_model.pkl
+2025-07-10 13:20:28,783 - root - INFO - Model loaded from ml/models\diagnosis_scaler.pkl
+2025-07-10 13:20:28,790 - root - INFO - Model loaded from ml/models\diagnosis_encoder.pkl
+2025-07-10 13:20:28,792 - root - INFO - Model loaded from ml/models\diagnosis_features.pkl
+2025-07-10 13:20:28,792 - root - INFO - Diagnosis model loaded successfully
+2025-07-10 13:20:28,796 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-10 13:20:28,800 - root - INFO - Successful diagnosis prediction for Female, age 30
+2025-07-10 13:23:50,346 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-10 13:23:50,346 - root - INFO - Received diagnosis request for patient age: 34
+2025-07-10 13:23:50,422 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-10 13:23:50,432 - root - INFO - Successful diagnosis prediction for Female, age 34
+2025-07-10 13:27:16,604 - root - INFO - Starting DiagHer app with default config
+2025-07-10 13:27:16,639 - werkzeug - WARNING -  * Debugger is active!
+2025-07-10 13:27:21,044 - root - INFO - Starting DiagHer app with default config
+2025-07-10 13:27:21,072 - werkzeug - WARNING -  * Debugger is active!
+2025-07-10 13:27:42,480 - root - INFO - Starting DiagHer app with default config
+2025-07-10 13:27:43,545 - root - INFO - Starting DiagHer app with default config
+2025-07-10 13:27:43,556 - werkzeug - WARNING -  * Debugger is active!
+2025-07-10 13:27:47,950 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-10 13:27:47,950 - root - INFO - Received diagnosis request for patient age: 30
+2025-07-10 13:27:48,955 - root - INFO - Model loaded from ml/models\diagnosis_model.pkl
+2025-07-10 13:27:48,956 - root - INFO - Model loaded from ml/models\diagnosis_scaler.pkl
+2025-07-10 13:27:48,956 - root - INFO - Model loaded from ml/models\diagnosis_encoder.pkl
+2025-07-10 13:27:48,956 - root - INFO - Model loaded from ml/models\diagnosis_features.pkl
+2025-07-10 13:27:48,963 - root - INFO - Diagnosis model loaded successfully
+2025-07-10 13:27:48,973 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-10 13:27:48,975 - root - INFO - Successful diagnosis prediction for Female, age 30
+2025-07-10 13:30:43,918 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-10 13:30:43,920 - root - INFO - Received diagnosis request for patient age: 34
+2025-07-10 13:30:43,936 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-10 13:30:43,959 - root - INFO - Successful diagnosis prediction for Female, age 34
+2025-07-10 14:50:50,497 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-10 14:50:50,502 - root - INFO - Received diagnosis request for patient age: 34
+2025-07-10 14:50:50,528 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-10 14:50:50,528 - root - INFO - Successful diagnosis prediction for Female, age 34
+2025-07-10 15:23:24,992 - root - INFO - Starting DiagHer app with default config
+2025-07-10 15:23:25,055 - werkzeug - WARNING -  * Debugger is active!
+2025-07-10 15:23:49,537 - root - INFO - Starting DiagHer app with default config
+2025-07-10 15:23:49,562 - werkzeug - WARNING -  * Debugger is active!
+2025-07-10 15:24:17,074 - root - INFO - Starting DiagHer app with default config
+2025-07-10 15:24:18,095 - root - INFO - Starting DiagHer app with default config
+2025-07-10 15:24:18,117 - werkzeug - WARNING -  * Debugger is active!
+2025-07-10 18:28:07,000 - root - INFO - API call: POST /api/v1/diagnosis from 127.0.0.1
+2025-07-10 18:28:07,011 - root - INFO - Received diagnosis request for patient age: 34
+2025-07-10 18:28:11,653 - root - INFO - Model loaded from ml/models\diagnosis_model.pkl
+2025-07-10 18:28:11,653 - root - INFO - Model loaded from ml/models\diagnosis_scaler.pkl
+2025-07-10 18:28:11,653 - root - INFO - Model loaded from ml/models\diagnosis_encoder.pkl
+2025-07-10 18:28:11,661 - root - INFO - Model loaded from ml/models\diagnosis_features.pkl
+2025-07-10 18:28:11,661 - root - INFO - Diagnosis model loaded successfully
+2025-07-10 18:28:11,703 - root - INFO - Generated detailed prediction for 3 conditions
+2025-07-10 18:28:11,703 - root - INFO - Successful diagnosis prediction for Female, age 34
+2025-07-10 18:28:26,469 - root - INFO - API call: POST /api/v1/drug/analyze from 127.0.0.1
