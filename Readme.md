@@ -50,6 +50,7 @@ DiagHer bridges this gap by:
 ---
 
 ## 🛠️ How It Works
+![System Architecture](https://raw.githubusercontent.com/ishaa-bht/DiagHer/refs/heads/main/interface/Medical%20Center.png)
 
 ### 1. Symptom Analysis
 ```
