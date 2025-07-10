@@ -67,7 +67,6 @@ DiagHer bridges this gap by:
 - Urgent care centers
 - Telemedicine platforms
 
----
 
 
 ---
@@ -93,23 +92,6 @@ DiagHer bridges this gap by:
 - **Regulatory Compliance**: Meet requirements for equitable healthcare delivery
 
 ---
-
-## 🚀 Getting Started
-
-### For Healthcare Providers
-1. **Registration**: Sign up for DiagHer platform access
-2. **Training**: Complete onboarding modules on gender-aware care
-3. **Integration**: Connect with existing EHR systems
-4. **Implementation**: Begin using DiagHer in clinical practice
-
-### System Requirements
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-- Stable internet connection
-- Compatible EHR system (optional)
-- Healthcare provider credentials
-
----
-
 
 ## 🤝 Contributing
 
