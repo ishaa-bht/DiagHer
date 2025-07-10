@@ -52,22 +52,6 @@ DiagHer bridges this gap by:
 ## 🛠️ How It Works
 ![System Architecture](https://raw.githubusercontent.com/ishaa-bht/DiagHer/refs/heads/main/interface/Medical%20Center.png)
 
-### 1. Symptom Analysis
-```
-Doctor Input → AI Processing → Gender-Specific Disease Probabilities
-```
-
-### 2. Medication Review
-```
-Prescribed Medication → Safety Analysis → Alternative Recommendations
-```
-
-### 3. Continuous Learning
-```
-Clinical Outcomes → System Learning → Improved Accuracy
-```
-
----
 
 ## 🏥 Target Users
 
@@ -85,19 +69,6 @@ Clinical Outcomes → System Learning → Improved Accuracy
 
 ---
 
-## 🔧 Technical Architecture
-
-### Core Components
-- **AI Engine**: Advanced machine learning algorithms for pattern recognition
-- **Medical Database**: Comprehensive repository of gender-specific health data
-- **User Interface**: Intuitive clinical workflow integration
-- **Learning Module**: Continuous improvement through outcome feedback
-
-### Data Sources
-- Peer-reviewed medical literature
-- Clinical trial data with gender-specific outcomes
-- Real-world evidence from healthcare providers
-- Regulatory safety databases
 
 ---
 
